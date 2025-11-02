@@ -1,0 +1,108 @@
+[gd_scene load_steps=12 format=3 uid="uid://dhlx2kklnan3f"]
+
+[ext_resource type="FontFile" uid="uid://ytg3ax0foex2" path="res://FortalesiaPlain_PERSONAL_USE_ONLY.otf" id="1_n8gqf"]
+[ext_resource type="Script" uid="uid://d1gt3in23qqxr" path="res://deathscene_4.gd" id="1_nv08o"]
+[ext_resource type="Texture2D" uid="uid://bquygua6u34ge" path="res://Screenshot 2025-10-24 140326.png" id="2_g173d"]
+[ext_resource type="Texture2D" uid="uid://4xy6n7or5ke3" path="res://Screenshot 2025-10-24 140148.png" id="3_0rncx"]
+[ext_resource type="AudioStream" uid="uid://bjukqdd27wsig" path="res://death sounds 2.mp3" id="5_g173d"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_dbqhl"]
+texture = ExtResource("2_g173d")
+modulate_color = Color(0.370364, 0.370364, 0.370364, 1)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_r7xr4"]
+texture = ExtResource("3_0rncx")
+modulate_color = Color(0.525101, 0.525101, 0.525101, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_hmxyl"]
+bg_color = Color(0.104517, 0.310111, 0.310198, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_n8gqf"]
+bg_color = Color(0.292412, 0.7608, 0.760561, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ru8oi"]
+bg_color = Color(0.532202, 0.239708, 0.252021, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_fmlk4"]
+bg_color = Color(0.87451, 0.6, 0.6, 1)
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource("1_nv08o")
+
+[node name="Panel" type="Panel" parent="."]
+offset_right = 565.0
+offset_bottom = 649.0
+theme_override_styles/panel = SubResource("StyleBoxTexture_dbqhl")
+
+[node name="Panel2" type="Panel" parent="."]
+offset_left = 561.0
+offset_top = 5.0
+offset_right = 1157.0
+offset_bottom = 644.0
+theme_override_styles/panel = SubResource("StyleBoxTexture_r7xr4")
+
+[node name="Button" type="Button" parent="."]
+offset_left = 315.0
+offset_top = 270.0
+offset_right = 829.0
+offset_bottom = 409.0
+theme_override_colors/font_disabled_color = Color(0, 0.666667, 0, 1)
+theme_override_colors/font_hover_pressed_color = Color(0, 0.698039, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0.701961, 0, 1)
+theme_override_colors/icon_disabled_color = Color(0, 0.678431, 0, 1)
+theme_override_colors/icon_hover_pressed_color = Color(0, 0.678431, 0, 1)
+theme_override_colors/icon_hover_color = Color(0, 0.705882, 0, 1)
+theme_override_colors/icon_pressed_color = Color(0, 0.705882, 0, 1)
+theme_override_colors/icon_focus_color = Color(0, 0.717647, 0, 1)
+theme_override_colors/icon_normal_color = Color(0, 0.721569, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0.705882, 0, 1)
+theme_override_colors/font_color = Color(0, 0.733333, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0.752941, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0.752941, 0, 1)
+theme_override_font_sizes/font_size = 60
+theme_override_styles/hover = SubResource("StyleBoxFlat_hmxyl")
+theme_override_styles/normal = SubResource("StyleBoxFlat_n8gqf")
+text = "Return to level"
+
+[node name="Button2" type="Button" parent="."]
+offset_left = 316.0
+offset_top = 431.0
+offset_right = 833.0
+offset_bottom = 571.0
+theme_override_colors/font_disabled_color = Color(0, 0.580392, 0, 1)
+theme_override_colors/font_hover_pressed_color = Color(0, 0.568627, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0.568627, 0, 1)
+theme_override_colors/icon_disabled_color = Color(0, 0.603922, 0, 1)
+theme_override_colors/icon_hover_pressed_color = Color(0, 0.635294, 0, 1)
+theme_override_colors/icon_hover_color = Color(0, 0.580392, 0, 1)
+theme_override_colors/icon_pressed_color = Color(0, 0.639216, 0, 1)
+theme_override_colors/icon_focus_color = Color(0, 0.580392, 0, 1)
+theme_override_colors/icon_normal_color = Color(0, 0.584314, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0.611765, 0, 1)
+theme_override_colors/font_color = Color(0, 0.592157, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0.647059, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0.678431, 0, 1)
+theme_override_font_sizes/font_size = 60
+theme_override_styles/hover = SubResource("StyleBoxFlat_ru8oi")
+theme_override_styles/normal = SubResource("StyleBoxFlat_fmlk4")
+text = "Main menu"
+
+[node name="Label" type="Label" parent="."]
+offset_left = 330.0
+offset_top = 107.0
+offset_right = 804.0
+offset_bottom = 239.0
+theme_override_colors/font_color = Color(0.818136, 0.644238, 0.203163, 1)
+theme_override_fonts/font = ExtResource("1_n8gqf")
+theme_override_font_sizes/font_size = 59
+text = "Why?... Would you die? 
+-Poetry"
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+position = Vector2(1603, 1244)
+stream = ExtResource("5_g173d")
+volume_db = 24.0
+autoplay = true
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="Button2" to="." method="_on_button_2_pressed"]

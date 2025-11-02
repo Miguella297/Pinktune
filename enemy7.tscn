@@ -1,0 +1,91 @@
+[gd_scene load_steps=10 format=3 uid="uid://w6l8gf4x0qup"]
+
+[ext_resource type="Texture2D" uid="uid://byitgs6gx1gld" path="res://Bottom Hit (54x52).png" id="1_cajd4"]
+[ext_resource type="Script" uid="uid://h6dabject4d3" path="res://area_2d_8+12.gd" id="2_qc0wp"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qc0wp"]
+atlas = ExtResource("1_cajd4")
+region = Rect2(108, 0, 54, 52)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mook4"]
+atlas = ExtResource("1_cajd4")
+region = Rect2(162, 0, 54, 52)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_l8qor"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qc0wp")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_mook4")
+}],
+"loop": true,
+"name": &"default",
+"speed": 6.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_cajd4"]
+size = Vector2(43, 41.8)
+
+[sub_resource type="Animation" id="Animation_qc0wp"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_cajd4"]
+resource_name = "spikehead"
+loop_mode = 2
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5, 1),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(0, 0), Vector2(80, 0), Vector2(0, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_qc0wp"]
+_data = {
+&"RESET": SubResource("Animation_qc0wp"),
+&"spikehead": SubResource("Animation_cajd4")
+}
+
+[node name="Spikehead" type="Node2D"]
+
+[node name="Sprite" type="AnimatedSprite2D" parent="."]
+texture_filter = 1
+sprite_frames = SubResource("SpriteFrames_l8qor")
+autoplay = "default"
+frame_progress = 0.114591
+
+[node name="Area2D8+12" type="Area2D" parent="Sprite"]
+script = ExtResource("2_qc0wp")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Sprite/Area2D8+12"]
+texture_filter = 1
+position = Vector2(0.991257, 1.9)
+shape = SubResource("RectangleShape2D_cajd4")
+
+[node name="Marker2D" type="Marker2D" parent="."]
+position = Vector2(80, 0)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_qc0wp")
+}
+autoplay = "spikehead"

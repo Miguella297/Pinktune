@@ -1,0 +1,107 @@
+[gd_scene load_steps=12 format=3 uid="uid://1ijckqwc4xms"]
+
+[ext_resource type="Script" uid="uid://bqr5a7crhdkcm" path="res://level_4_5.gd" id="1_430ah"]
+[ext_resource type="Texture2D" uid="uid://bs3bdbi538wqa" path="res://Screenshot 2025-10-24 142916.png" id="1_chjhd"]
+[ext_resource type="Texture2D" uid="uid://d2qji0d0qb2ma" path="res://Screenshot 2025-10-24 143142.png" id="3_bpwgn"]
+[ext_resource type="FontFile" uid="uid://bkn1da7sfppe3" path="res://Oups.otf" id="4_yh1d2"]
+[ext_resource type="AudioStream" uid="uid://c8mttgo3avpn1" path="res://celebration 5.mp3" id="5_bpwgn"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_6qiuw"]
+texture = ExtResource("1_chjhd")
+modulate_color = Color(0.0572078, 0.543461, 0, 1)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_vbu4l"]
+texture = ExtResource("3_bpwgn")
+modulate_color = Color(0.480359, 0.479471, 0, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_pekt2"]
+bg_color = Color(0.401041, 0.0242866, 0.401191, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_chjhd"]
+bg_color = Color(0.6, 0.321569, 0.6, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_6qiuw"]
+bg_color = Color(0.423247, 0.0551714, 0.331148, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_jsd2m"]
+bg_color = Color(0.904394, 0.326361, 0.827855, 1)
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource("1_430ah")
+
+[node name="Panel" type="Panel" parent="."]
+offset_right = 576.0
+offset_bottom = 644.0
+theme_override_styles/panel = SubResource("StyleBoxTexture_6qiuw")
+
+[node name="Panel2" type="Panel" parent="."]
+offset_left = 577.0
+offset_top = -4.0
+offset_right = 1157.0
+offset_bottom = 646.0
+theme_override_styles/panel = SubResource("StyleBoxTexture_vbu4l")
+
+[node name="Button" type="Button" parent="."]
+offset_left = 240.0
+offset_top = 218.0
+offset_right = 938.0
+offset_bottom = 381.0
+theme_override_colors/font_disabled_color = Color(0.537255, 0, 0, 1)
+theme_override_colors/font_hover_pressed_color = Color(0.603922, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0.607843, 0, 0, 1)
+theme_override_colors/icon_disabled_color = Color(0.576471, 0, 0, 1)
+theme_override_colors/icon_hover_pressed_color = Color(0.631373, 0, 0, 1)
+theme_override_colors/icon_hover_color = Color(0.631373, 0, 0, 1)
+theme_override_colors/icon_pressed_color = Color(0.596078, 0, 0, 1)
+theme_override_colors/icon_focus_color = Color(0.592157, 0, 0, 1)
+theme_override_colors/icon_normal_color = Color(0.592157, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0.568627, 0, 0, 1)
+theme_override_colors/font_color = Color(0.635294, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0.576471, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0.596078, 0, 0, 1)
+theme_override_font_sizes/font_size = 75
+theme_override_styles/hover = SubResource("StyleBoxFlat_pekt2")
+theme_override_styles/normal = SubResource("StyleBoxFlat_chjhd")
+text = "next level"
+
+[node name="Button2" type="Button" parent="."]
+offset_left = 244.0
+offset_top = 407.0
+offset_right = 938.0
+offset_bottom = 559.0
+theme_override_colors/font_disabled_color = Color(0.631373, 0, 0, 1)
+theme_override_colors/font_hover_pressed_color = Color(0.67451, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0.666667, 0, 0, 1)
+theme_override_colors/icon_disabled_color = Color(0.686275, 0, 0, 1)
+theme_override_colors/icon_hover_pressed_color = Color(0.705882, 0, 0, 1)
+theme_override_colors/icon_hover_color = Color(0.705882, 0, 0, 1)
+theme_override_colors/icon_pressed_color = Color(0.678431, 0, 0, 1)
+theme_override_colors/icon_focus_color = Color(0.729412, 0, 0, 1)
+theme_override_colors/icon_normal_color = Color(0.639216, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0.666667, 0, 0, 1)
+theme_override_colors/font_color = Color(0.67451, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0.690196, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0.717647, 0, 0, 1)
+theme_override_font_sizes/font_size = 75
+theme_override_styles/hover = SubResource("StyleBoxFlat_6qiuw")
+theme_override_styles/normal = SubResource("StyleBoxFlat_jsd2m")
+text = "Main menu"
+
+[node name="Label" type="Label" parent="."]
+offset_left = 104.0
+offset_top = 86.0
+offset_right = 1120.0
+offset_bottom = 210.0
+theme_override_colors/font_color = Color(0.107798, 0.344803, 0.999997, 1)
+theme_override_fonts/font = ExtResource("4_yh1d2")
+theme_override_font_sizes/font_size = 59
+text = "Congrats on beating that level too!!!"
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+position = Vector2(1603, 1244)
+stream = ExtResource("5_bpwgn")
+volume_db = 24.0
+autoplay = true
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="Button2" to="." method="_on_button_2_pressed"]

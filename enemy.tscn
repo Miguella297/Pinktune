@@ -1,0 +1,70 @@
+[gd_scene load_steps=7 format=3 uid="uid://bteecpqxkciqi"]
+
+[ext_resource type="PackedScene" uid="uid://c1q0i4kapwv5x" path="res://sprite.tscn" id="1_7k104"]
+[ext_resource type="Script" uid="uid://f6gb7v0vsogm" path="res://area_2d_22.gd" id="2_4gyqm"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_qi2p4"]
+radius = 23.3452
+
+[sub_resource type="Animation" id="Animation_qi2p4"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(32, 36)]
+}
+
+[sub_resource type="Animation" id="Animation_4gyqm"]
+resource_name = "roll"
+length = 4.0
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1.93333, 4),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(0, 40), Vector2(700, 40), Vector2(0, 40)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_iifgy"]
+_data = {
+&"RESET": SubResource("Animation_qi2p4"),
+&"roll": SubResource("Animation_4gyqm")
+}
+
+[node name="Enemy" type="Node2D"]
+
+[node name="Sprite" parent="." instance=ExtResource("1_7k104")]
+position = Vector2(32, 36)
+scale = Vector2(2.07143, 1.78571)
+
+[node name="Area2D22" type="Area2D" parent="Sprite"]
+position = Vector2(-15.4483, -20.72)
+scale = Vector2(0.482759, 0.56)
+script = ExtResource("2_4gyqm")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Sprite/Area2D22"]
+position = Vector2(32, 38)
+shape = SubResource("CircleShape2D_qi2p4")
+
+[node name="Marker2D" type="Marker2D" parent="."]
+position = Vector2(700, 40)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+root_node = NodePath("../Sprite")
+libraries = {
+&"": SubResource("AnimationLibrary_iifgy")
+}
+autoplay = "roll"

@@ -1,0 +1,107 @@
+[gd_scene load_steps=12 format=3 uid="uid://jh8w0j3i3crn"]
+
+[ext_resource type="Script" uid="uid://8owco6l7gx8k" path="res://deathscene_8.gd" id="1_edvjv"]
+[ext_resource type="Texture2D" uid="uid://bd1jsdwpo4v8o" path="res://joy.png" id="2_fc6dg"]
+[ext_resource type="Texture2D" uid="uid://bfeldw1tmer5t" path="res://thumbs up.png" id="3_0scqx"]
+[ext_resource type="FontFile" uid="uid://bsah4p2405t81" path="res://Super Joyful.ttf" id="4_becbl"]
+[ext_resource type="AudioStream" uid="uid://coe5mwkcy43yj" path="res://Main Characters/Pink Man/hallow sound.mp3" id="5_fc6dg"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_6q135"]
+texture = ExtResource("2_fc6dg")
+modulate_color = Color(1.11904e-06, 0.33031, 0.198329, 1)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_yag7l"]
+texture = ExtResource("3_0scqx")
+modulate_color = Color(0.079228, 0.454918, 0, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_kysna"]
+bg_color = Color(0.6, 0.036, 0.036, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_6kwlf"]
+bg_color = Color(0.6, 0.414, 0.414, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_4hgll"]
+bg_color = Color(0.0435178, 0.285755, 0.421748, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_spbfu"]
+bg_color = Color(0.342843, 0.616357, 0.904707, 1)
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource("1_edvjv")
+
+[node name="Panel" type="Panel" parent="."]
+offset_right = 585.0
+offset_bottom = 649.0
+theme_override_styles/panel = SubResource("StyleBoxTexture_6q135")
+
+[node name="Panel2" type="Panel" parent="."]
+offset_left = 585.0
+offset_right = 1150.0
+offset_bottom = 647.0
+theme_override_styles/panel = SubResource("StyleBoxTexture_yag7l")
+
+[node name="Button" type="Button" parent="."]
+offset_left = 256.0
+offset_top = 267.0
+offset_right = 911.0
+offset_bottom = 398.0
+theme_override_colors/font_disabled_color = Color(0.8239, 0.0420819, 0.452487, 1)
+theme_override_colors/font_hover_pressed_color = Color(0.685163, 0.0421414, 0.374076, 1)
+theme_override_colors/font_hover_color = Color(0.670648, 0.0484826, 0.342029, 1)
+theme_override_colors/icon_disabled_color = Color(0.659493, 0.0403551, 0.335297, 1)
+theme_override_colors/icon_hover_pressed_color = Color(0.693413, 0.0643442, 0.364369, 1)
+theme_override_colors/icon_hover_color = Color(0.823592, 0.0219315, 0.350894, 1)
+theme_override_colors/icon_pressed_color = Color(0.769131, 0.0367189, 0.326375, 1)
+theme_override_colors/icon_focus_color = Color(0.773557, 0.0752091, 0.38137, 1)
+theme_override_colors/icon_normal_color = Color(0.721632, 0.0447774, 0.3819, 1)
+theme_override_colors/font_outline_color = Color(0.881666, 0.0845435, 0.407647, 1)
+theme_override_colors/font_color = Color(0.926994, 0.0691539, 0.369087, 1)
+theme_override_colors/font_focus_color = Color(0.749564, 0.0530405, 0.37578, 1)
+theme_override_colors/font_pressed_color = Color(0.967952, 0.0947001, 0.451046, 1)
+theme_override_font_sizes/font_size = 60
+theme_override_styles/hover = SubResource("StyleBoxFlat_kysna")
+theme_override_styles/normal = SubResource("StyleBoxFlat_6kwlf")
+text = "To da level"
+
+[node name="Button2" type="Button" parent="."]
+offset_left = 259.0
+offset_top = 415.0
+offset_right = 912.0
+offset_bottom = 544.0
+theme_override_colors/font_disabled_color = Color(0.760884, 0.380516, 0.0527325, 1)
+theme_override_colors/font_hover_pressed_color = Color(0.779917, 0.405029, 0.0727391, 1)
+theme_override_colors/font_hover_color = Color(0.922788, 0.564591, 0.104564, 1)
+theme_override_colors/icon_disabled_color = Color(0.910604, 0.456222, 0.0858822, 1)
+theme_override_colors/icon_hover_pressed_color = Color(0.91964, 0.545527, 0.190729, 1)
+theme_override_colors/icon_hover_color = Color(0.590994, 0.283747, 0.0417624, 1)
+theme_override_colors/icon_pressed_color = Color(0.868797, 0.508698, 0.161856, 1)
+theme_override_colors/icon_focus_color = Color(0.931037, 0.477033, 0.177772, 1)
+theme_override_colors/icon_normal_color = Color(0.897037, 0.424288, 0.12465, 1)
+theme_override_colors/font_outline_color = Color(0.84134, 0.342651, 0.103733, 1)
+theme_override_colors/font_color = Color(0.9, 0.38385, 0.063, 1)
+theme_override_colors/font_focus_color = Color(0.741683, 0.308653, 0.0730266, 1)
+theme_override_colors/font_pressed_color = Color(0.928718, 0.392715, 0.0715964, 1)
+theme_override_font_sizes/font_size = 60
+theme_override_styles/hover = SubResource("StyleBoxFlat_4hgll")
+theme_override_styles/normal = SubResource("StyleBoxFlat_spbfu")
+text = "To da Main menu"
+
+[node name="Label" type="Label" parent="."]
+offset_left = 348.0
+offset_top = 130.0
+offset_right = 812.0
+offset_bottom = 250.0
+theme_override_colors/font_color = Color(0.367393, 0.674332, 0.242259, 1)
+theme_override_fonts/font = ExtResource("4_becbl")
+theme_override_font_sizes/font_size = 100
+text = "Try again !!"
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+position = Vector2(1937.25, 1719.5)
+stream = ExtResource("5_fc6dg")
+volume_db = 14.095
+autoplay = true
+max_distance = 2875.0
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="Button2" to="." method="_on_button_2_pressed"]

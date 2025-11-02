@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://coe5mwkcy43yj"
+path="res://.godot/imported/hallow sound.mp3-85ead0c8b4041b052e1a2861e792f576.mp3str"
+
+[deps]
+
+source_file="res://Main Characters/Pink Man/hallow sound.mp3"
+dest_files=["res://.godot/imported/hallow sound.mp3-85ead0c8b4041b052e1a2861e792f576.mp3str"]
+
+[params]
+
+loop=true
+loop_offset=0.0
+bpm=0.0
+beat_count=0
+bar_beats=4

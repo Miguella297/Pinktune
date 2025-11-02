@@ -1,0 +1,107 @@
+[gd_scene load_steps=12 format=3 uid="uid://7hwd34glqpq7"]
+
+[ext_resource type="Script" uid="uid://7ab80wy6e51t" path="res://level_8_9.gd" id="1_8mjst"]
+[ext_resource type="FontFile" uid="uid://c86scw2qhfm8h" path="res://Spooky Theme.otf" id="1_ia8eg"]
+[ext_resource type="Texture2D" uid="uid://dn042s67x78q0" path="res://hallow.png" id="1_pkbwq"]
+[ext_resource type="Texture2D" uid="uid://dfqdg4h52vo3i" path="res://pumpkins.png" id="2_8mjst"]
+[ext_resource type="AudioStream" uid="uid://c5hgjfyt2wqbr" path="res://enthusiasm.mp3" id="5_1dph7"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_1dph7"]
+texture = ExtResource("1_pkbwq")
+modulate_color = Color(0.660423, 0.290618, 0.0913223, 1)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_nyt27"]
+texture = ExtResource("2_8mjst")
+modulate_color = Color(0.72, 0.10056, 0.0792, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_lxavp"]
+bg_color = Color(0.51, 0.0918, 0.15453, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ia8eg"]
+bg_color = Color(0.714287, 0.413982, 0.566812, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_qhcgn"]
+bg_color = Color(0.308777, 0.17698, 0.0358971, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_pkbwq"]
+bg_color = Color(0.897334, 0.580855, 0.371979, 1)
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource("1_8mjst")
+
+[node name="Panel" type="Panel" parent="."]
+offset_right = 595.0
+offset_bottom = 649.0
+theme_override_styles/panel = SubResource("StyleBoxTexture_1dph7")
+
+[node name="Panel2" type="Panel" parent="."]
+offset_left = 595.0
+offset_right = 1149.0
+offset_bottom = 648.0
+theme_override_styles/panel = SubResource("StyleBoxTexture_nyt27")
+
+[node name="Button" type="Button" parent="."]
+offset_left = 213.0
+offset_top = 237.0
+offset_right = 933.0
+offset_bottom = 381.0
+theme_override_colors/font_disabled_color = Color(0.833958, 0.103984, 0.440641, 1)
+theme_override_colors/font_hover_pressed_color = Color(0.646416, 0.0485721, 0.369292, 1)
+theme_override_colors/font_hover_color = Color(0.86958, 0.102589, 0.459504, 1)
+theme_override_colors/icon_disabled_color = Color(0.780591, 0.0783834, 0.446473, 1)
+theme_override_colors/icon_hover_pressed_color = Color(0.710699, 0.10747, 0.362483, 1)
+theme_override_colors/icon_hover_color = Color(0.560765, 0.0600681, 0.29598, 1)
+theme_override_colors/icon_pressed_color = Color(0.63578, 0.0537097, 0.31619, 1)
+theme_override_colors/icon_focus_color = Color(0.644541, 0.0727838, 0.351459, 1)
+theme_override_colors/icon_normal_color = Color(0.633786, 0.044822, 0.337585, 1)
+theme_override_colors/font_outline_color = Color(0.623947, 0.0759412, 0.352838, 1)
+theme_override_colors/font_color = Color(0.623477, 0.0750351, 0.356493, 1)
+theme_override_colors/font_focus_color = Color(0.618923, 0.0629944, 0.28935, 1)
+theme_override_colors/font_pressed_color = Color(0.822934, 0.101025, 0.395265, 1)
+theme_override_font_sizes/font_size = 50
+theme_override_styles/hover = SubResource("StyleBoxFlat_lxavp")
+theme_override_styles/normal = SubResource("StyleBoxFlat_ia8eg")
+text = "Next level, almost there!"
+
+[node name="Button2" type="Button" parent="."]
+offset_left = 215.0
+offset_top = 400.0
+offset_right = 935.0
+offset_bottom = 533.0
+theme_override_colors/font_disabled_color = Color(0.496711, 0.216522, 0.034073, 1)
+theme_override_colors/font_hover_pressed_color = Color(0.594562, 0.276021, 0.0638852, 1)
+theme_override_colors/font_hover_color = Color(0.621347, 0.249255, 0.0198919, 1)
+theme_override_colors/icon_disabled_color = Color(0.623177, 0.269547, 0.075868, 1)
+theme_override_colors/icon_hover_pressed_color = Color(0.549503, 0.275479, 0.032274, 1)
+theme_override_colors/icon_hover_color = Color(0.605918, 0.240954, 0.0571394, 1)
+theme_override_colors/icon_pressed_color = Color(0.589088, 0.281769, 0.0448596, 1)
+theme_override_colors/icon_focus_color = Color(0.605688, 0.265568, 0.043811, 1)
+theme_override_colors/icon_normal_color = Color(0.711376, 0.316998, 0.0849513, 1)
+theme_override_colors/font_outline_color = Color(0.688025, 0.31795, 0.0793403, 1)
+theme_override_colors/font_color = Color(0.649269, 0.311592, 0.0632627, 1)
+theme_override_colors/font_focus_color = Color(0.697429, 0.331864, 0.047796, 1)
+theme_override_colors/font_pressed_color = Color(0.867474, 0.387278, 0.0768339, 1)
+theme_override_font_sizes/font_size = 50
+theme_override_styles/hover = SubResource("StyleBoxFlat_qhcgn")
+theme_override_styles/normal = SubResource("StyleBoxFlat_pkbwq")
+text = "Back to main menu"
+
+[node name="Label" type="Label" parent="."]
+offset_left = 45.0
+offset_top = 109.0
+offset_right = 1119.0
+offset_bottom = 205.0
+theme_override_colors/font_color = Color(0.93716, 0.172978, 0.164519, 1)
+theme_override_fonts/font = ExtResource("1_ia8eg")
+theme_override_font_sizes/font_size = 55
+text = "Congrats! You are almost there!"
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+position = Vector2(1937.25, 1719.5)
+stream = ExtResource("5_1dph7")
+volume_db = 24.0
+autoplay = true
+max_distance = 2875.0
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="Button2" to="." method="_on_button_2_pressed"]

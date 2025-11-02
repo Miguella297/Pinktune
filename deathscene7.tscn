@@ -1,0 +1,107 @@
+[gd_scene load_steps=12 format=3 uid="uid://t2grlebb8eaf"]
+
+[ext_resource type="Script" uid="uid://dgg3qxound70n" path="res://deathscene_7.gd" id="1_5i6v0"]
+[ext_resource type="Texture2D" uid="uid://dshut41fvy0mh" path="res://h 1.png" id="2_jbarr"]
+[ext_resource type="Texture2D" uid="uid://c36o21hdsx6wa" path="res://h 2.png" id="3_tx5ki"]
+[ext_resource type="FontFile" uid="uid://sgfk1rgwxa8i" path="res://Urban Shadow Script.otf" id="4_nr12j"]
+[ext_resource type="AudioStream" uid="uid://b2nxduir5e0eo" path="res://Halloween sound 1.mp3" id="5_jbarr"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ubpfr"]
+texture = ExtResource("2_jbarr")
+modulate_color = Color(0.156467, 0.320729, 0.732076, 1)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_7ng52"]
+texture = ExtResource("3_tx5ki")
+modulate_color = Color(0.985455, 0.366013, 0.13788, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_dads7"]
+bg_color = Color(0.6, 0.012, 0.012, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_h7ywp"]
+bg_color = Color(0.51, 0.0969, 0.103785, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_gx7hb"]
+bg_color = Color(0.06, 0.06, 0.06, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_q8p6o"]
+bg_color = Color(0.22, 0.22, 0.22, 1)
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource("1_5i6v0")
+
+[node name="Panel" type="Panel" parent="."]
+offset_right = 581.0
+offset_bottom = 652.0
+theme_override_styles/panel = SubResource("StyleBoxTexture_ubpfr")
+
+[node name="Panel2" type="Panel" parent="."]
+offset_left = 582.0
+offset_top = -2.0
+offset_right = 1157.0
+offset_bottom = 652.0
+theme_override_styles/panel = SubResource("StyleBoxTexture_7ng52")
+
+[node name="Button" type="Button" parent="."]
+offset_left = 282.0
+offset_top = 248.0
+offset_right = 882.0
+offset_bottom = 393.0
+theme_override_colors/font_disabled_color = Color(0.822337, 0.322714, 0.797388, 1)
+theme_override_colors/font_hover_pressed_color = Color(0.820136, 0.290398, 0.738541, 1)
+theme_override_colors/font_hover_color = Color(0.857652, 0.285464, 0.775192, 1)
+theme_override_colors/icon_disabled_color = Color(0.94432, 0.321147, 0.708843, 1)
+theme_override_colors/icon_hover_pressed_color = Color(0.916761, 0.279731, 0.663378, 1)
+theme_override_colors/icon_hover_color = Color(0.892911, 0.366038, 0.768049, 1)
+theme_override_colors/icon_pressed_color = Color(0.939861, 0.336371, 0.766904, 1)
+theme_override_colors/icon_focus_color = Color(0.911398, 0.318264, 0.752355, 1)
+theme_override_colors/icon_normal_color = Color(0.82791, 0.306112, 0.677494, 1)
+theme_override_colors/font_outline_color = Color(0.877726, 0.295257, 0.76431, 1)
+theme_override_colors/font_color = Color(0.819166, 0.223772, 0.729732, 1)
+theme_override_colors/font_focus_color = Color(0.875749, 0.318611, 0.717634, 1)
+theme_override_colors/font_pressed_color = Color(0.5612, 0.244, 0.61, 1)
+theme_override_font_sizes/font_size = 40
+theme_override_styles/hover = SubResource("StyleBoxFlat_dads7")
+theme_override_styles/normal = SubResource("StyleBoxFlat_h7ywp")
+text = "Retun to you know where"
+
+[node name="Button2" type="Button" parent="."]
+offset_left = 282.0
+offset_top = 403.0
+offset_right = 884.0
+offset_bottom = 545.0
+theme_override_colors/font_disabled_color = Color(0.361759, 0.291305, 0.0975319, 1)
+theme_override_colors/font_hover_pressed_color = Color(0.410899, 0.32818, 0.136034, 1)
+theme_override_colors/font_hover_color = Color(0.44797, 0.340704, 0.143098, 1)
+theme_override_colors/icon_disabled_color = Color(0.445753, 0.343184, 0.116432, 1)
+theme_override_colors/icon_hover_pressed_color = Color(0.499318, 0.362696, 0.123175, 1)
+theme_override_colors/icon_hover_color = Color(0.40886, 0.330663, 0.105277, 1)
+theme_override_colors/icon_pressed_color = Color(0.461838, 0.36739, 0.103519, 1)
+theme_override_colors/icon_focus_color = Color(0.378291, 0.282374, 0.104393, 1)
+theme_override_colors/icon_normal_color = Color(0.468997, 0.363056, 0.119674, 1)
+theme_override_colors/font_outline_color = Color(0.411422, 0.313949, 0.0909081, 1)
+theme_override_colors/font_color = Color(0.553455, 0.431304, 0.12015, 1)
+theme_override_colors/font_focus_color = Color(0.552398, 0.415905, 0.113168, 1)
+theme_override_colors/font_pressed_color = Color(0.665352, 0.500886, 0.119618, 1)
+theme_override_font_sizes/font_size = 49
+theme_override_styles/hover = SubResource("StyleBoxFlat_gx7hb")
+theme_override_styles/normal = SubResource("StyleBoxFlat_q8p6o")
+text = "Get to main menu"
+
+[node name="Label" type="Label" parent="."]
+offset_left = 238.0
+offset_top = 134.0
+offset_right = 927.0
+offset_bottom = 226.0
+theme_override_colors/font_color = Color(0.180587, 0.491187, 0.634557, 1)
+theme_override_fonts/font = ExtResource("4_nr12j")
+theme_override_font_sizes/font_size = 91
+text = "hOw you dIe? iT sO eAsY "
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+position = Vector2(1937.25, 1719.5)
+stream = ExtResource("5_jbarr")
+volume_db = 24.0
+autoplay = true
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="Button2" to="." method="_on_button_2_pressed"]

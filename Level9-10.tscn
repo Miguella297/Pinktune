@@ -1,0 +1,108 @@
+[gd_scene load_steps=12 format=3 uid="uid://cvydf0uarxtr"]
+
+[ext_resource type="Script" uid="uid://do83s66y1inle" path="res://level_9_10.gd" id="1_0hnqw"]
+[ext_resource type="Texture2D" uid="uid://dpvyg25bm2ogg" path="res://happyagain.png" id="2_qi6l7"]
+[ext_resource type="Texture2D" uid="uid://bf0k3i2a6v74k" path="res://happyagain2.png" id="3_ddsx2"]
+[ext_resource type="FontFile" uid="uid://sgfk1rgwxa8i" path="res://Urban Shadow Script.otf" id="4_wap0s"]
+[ext_resource type="AudioStream" uid="uid://dx3mbdiwxry5" path="res://celebrate.mp3" id="5_qi6l7"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ff7ou"]
+texture = ExtResource("2_qi6l7")
+modulate_color = Color(0.555356, 0.994601, 0.542134, 1)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_4fe14"]
+texture = ExtResource("3_ddsx2")
+modulate_color = Color(0.872628, 0.649296, 0.172757, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_c4yux"]
+bg_color = Color(0.46048, 0.283016, 0.0875633, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_guxmo"]
+bg_color = Color(0.870095, 0.488022, 0.219673, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_0alxr"]
+bg_color = Color(0.172116, 0.280788, 0.0781175, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_q6put"]
+bg_color = Color(0.344705, 0.695107, 0.293086, 1)
+
+[node name="Level9-10" type="Node2D"]
+script = ExtResource("1_0hnqw")
+
+[node name="Panel" type="Panel" parent="."]
+offset_right = 578.0
+offset_bottom = 648.0
+theme_override_styles/panel = SubResource("StyleBoxTexture_ff7ou")
+
+[node name="Panel2" type="Panel" parent="."]
+offset_left = 578.0
+offset_top = 1.0
+offset_right = 1152.0
+offset_bottom = 647.0
+theme_override_styles/panel = SubResource("StyleBoxTexture_4fe14")
+
+[node name="Button" type="Button" parent="."]
+offset_left = 259.0
+offset_top = 253.0
+offset_right = 930.0
+offset_bottom = 398.0
+theme_override_colors/font_disabled_color = Color(0.61323, 0.0494214, 0.566167, 1)
+theme_override_colors/font_hover_pressed_color = Color(0.64728, 0.12417, 0.591331, 1)
+theme_override_colors/font_hover_color = Color(0.71972, 0.0825528, 0.605447, 1)
+theme_override_colors/icon_disabled_color = Color(0.728419, 0.0738946, 0.649324, 1)
+theme_override_colors/icon_hover_pressed_color = Color(0.572643, 0.0500064, 0.498177, 1)
+theme_override_colors/icon_hover_color = Color(0.694809, 0.092035, 0.541827, 1)
+theme_override_colors/icon_pressed_color = Color(0.646412, 0.0371633, 0.599079, 1)
+theme_override_colors/icon_focus_color = Color(0.681183, 0.0724971, 0.601684, 1)
+theme_override_colors/icon_normal_color = Color(0.658424, 0.0379985, 0.49434, 1)
+theme_override_colors/font_outline_color = Color(0.637486, 0.047865, 0.558121, 1)
+theme_override_colors/font_color = Color(0.751579, 0.0676036, 0.578526, 1)
+theme_override_colors/font_focus_color = Color(0.753912, 0.107697, 0.44608, 1)
+theme_override_colors/font_pressed_color = Color(0.824395, 0.155303, 0.511774, 1)
+theme_override_font_sizes/font_size = 56
+theme_override_styles/hover = SubResource("StyleBoxFlat_c4yux")
+theme_override_styles/normal = SubResource("StyleBoxFlat_guxmo")
+text = "Play next level"
+
+[node name="Button2" type="Button" parent="."]
+offset_left = 261.0
+offset_top = 424.0
+offset_right = 932.0
+offset_bottom = 565.0
+theme_override_colors/font_disabled_color = Color(0.87, 0.43935, 0.087, 1)
+theme_override_colors/font_hover_pressed_color = Color(0.92, 0.4922, 0.092, 1)
+theme_override_colors/font_hover_color = Color(0.94, 0.544887, 0.0282, 1)
+theme_override_colors/icon_disabled_color = Color(0.93, 0.619845, 0.1209, 1)
+theme_override_colors/icon_hover_pressed_color = Color(0.92, 0.5681, 0.138, 1)
+theme_override_colors/icon_hover_color = Color(0.87, 0.46545, 0.087, 1)
+theme_override_colors/icon_pressed_color = Color(0.9, 0.5373, 0.063, 1)
+theme_override_colors/icon_focus_color = Color(0.88, 0.557333, 0.1056, 1)
+theme_override_colors/icon_normal_color = Color(0.91, 0.58604, 0.1001, 1)
+theme_override_colors/font_outline_color = Color(0.88, 0.5038, 0.044, 1)
+theme_override_colors/font_color = Color(0.74, 0.4144, 0.0888, 1)
+theme_override_colors/font_focus_color = Color(0.94, 0.499297, 0.0282, 1)
+theme_override_colors/font_pressed_color = Color(0.93, 0.51646, 0.0744, 1)
+theme_override_font_sizes/font_size = 50
+theme_override_styles/hover = SubResource("StyleBoxFlat_0alxr")
+theme_override_styles/normal = SubResource("StyleBoxFlat_q6put")
+text = "Return to main menu"
+
+[node name="Label" type="Label" parent="."]
+offset_left = 406.0
+offset_top = 122.0
+offset_right = 761.0
+offset_bottom = 242.0
+theme_override_colors/font_color = Color(0.353944, 0.405152, 0.797566, 1)
+theme_override_fonts/font = ExtResource("4_wap0s")
+theme_override_font_sizes/font_size = 120
+text = "Well done!"
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+position = Vector2(2385.13, 1984.25)
+stream = ExtResource("5_qi6l7")
+volume_db = 14.095
+autoplay = true
+max_distance = 2875.0
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="Button2" to="." method="_on_button_2_pressed"]

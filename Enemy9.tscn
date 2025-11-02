@@ -1,0 +1,70 @@
+[gd_scene load_steps=10 format=3 uid="uid://b21rvxpcbfap1"]
+
+[ext_resource type="Texture2D" uid="uid://b21fi0a0nsjhc" path="res://Jump (28x28).png" id="1_gmda1"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vsg0w"]
+atlas = ExtResource("1_gmda1")
+region = Rect2(84, 0, 28, 28)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4pcup"]
+atlas = ExtResource("1_gmda1")
+region = Rect2(56, 0, 28, 28)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xl6vi"]
+atlas = ExtResource("1_gmda1")
+region = Rect2(28, 0, 28, 28)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qgkn8"]
+atlas = ExtResource("1_gmda1")
+region = Rect2(112, 0, 28, 28)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_aqx0d"]
+atlas = ExtResource("1_gmda1")
+region = Rect2(140, 0, 28, 28)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_nipim"]
+atlas = ExtResource("1_gmda1")
+region = Rect2(168, 0, 28, 28)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bdqmw"]
+atlas = ExtResource("1_gmda1")
+region = Rect2(196, 0, 28, 28)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_gm2tj"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vsg0w")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4pcup")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xl6vi")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qgkn8")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_aqx0d")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_nipim")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bdqmw")
+}],
+"loop": true,
+"name": &"default",
+"speed": 14.0
+}]
+
+[node name="Trampoline" type="Node2D"]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+texture_filter = 1
+position = Vector2(0.999998, -1)
+scale = Vector2(1.71429, 1.75)
+sprite_frames = SubResource("SpriteFrames_gm2tj")
+autoplay = "default"
+frame_progress = 0.205899

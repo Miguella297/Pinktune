@@ -1,0 +1,94 @@
+[gd_scene load_steps=10 format=3 uid="uid://dpvo0utp61lyb"]
+
+[ext_resource type="Script" uid="uid://obs3i8cnqccq" path="res://deathpage.gd" id="1_5053b"]
+[ext_resource type="Texture2D" uid="uid://cvujmihkkn8at" path="res://skull.png" id="1_eegoi"]
+[ext_resource type="FontFile" uid="uid://bkn1da7sfppe3" path="res://Oups.otf" id="2_5053b"]
+[ext_resource type="AudioStream" uid="uid://b3m512wlyts4q" path="res://death voice pinktune.mp3" id="4_3dyuy"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_3dyuy"]
+texture = ExtResource("1_eegoi")
+modulate_color = Color(0.450648, 0.450648, 0.450648, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_4i43w"]
+bg_color = Color(0.453831, 0.453838, 0.122078, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_eegoi"]
+bg_color = Color(0.269343, 0.281699, 0.0804057, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_pdypu"]
+bg_color = Color(0.506951, 0.192522, 0.512239, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_5053b"]
+bg_color = Color(0.889823, 0.426679, 0.563688, 1)
+
+[node name="Deathpage" type="Node2D"]
+script = ExtResource("1_5053b")
+
+[node name="Panel" type="Panel" parent="."]
+offset_right = 1148.0
+offset_bottom = 644.0
+theme_override_styles/panel = SubResource("StyleBoxTexture_3dyuy")
+
+[node name="Button" type="Button" parent="."]
+offset_left = 300.0
+offset_top = 215.0
+offset_right = 826.0
+offset_bottom = 371.0
+theme_override_colors/font_disabled_color = Color(0.750361, 0.469019, 0.768212, 1)
+theme_override_colors/font_hover_pressed_color = Color(0.755126, 0.423153, 0.766813, 1)
+theme_override_colors/font_hover_color = Color(0.872109, 0.451175, 0.862115, 1)
+theme_override_colors/icon_disabled_color = Color(0.8237, 0.356706, 0.773714, 1)
+theme_override_colors/icon_hover_pressed_color = Color(0.774129, 0.268436, 0.76038, 1)
+theme_override_colors/icon_hover_color = Color(0.728753, 0.314559, 0.804833, 1)
+theme_override_colors/icon_pressed_color = Color(0.794759, 0.39435, 0.806551, 1)
+theme_override_colors/icon_focus_color = Color(0.666998, 0.288126, 0.873322, 1)
+theme_override_colors/icon_normal_color = Color(0.778943, 0.390356, 0.803618, 1)
+theme_override_colors/font_outline_color = Color(0.830655, 0.34826, 0.855313, 1)
+theme_override_colors/font_color = Color(0.890263, 0.487816, 0.905614, 1)
+theme_override_colors/font_focus_color = Color(0.698318, 0.250663, 0.743733, 1)
+theme_override_colors/font_pressed_color = Color(0.569529, 0.319835, 0.740645, 1)
+theme_override_font_sizes/font_size = 43
+theme_override_styles/hover = SubResource("StyleBoxFlat_4i43w")
+theme_override_styles/normal = SubResource("StyleBoxFlat_eegoi")
+text = "Return to level"
+
+[node name="Label" type="Label" parent="."]
+offset_left = 50.0
+offset_top = 120.0
+offset_right = 1122.0
+offset_bottom = 191.0
+theme_override_colors/font_color = Color(0.206038, 0.434083, 1, 1)
+theme_override_fonts/font = ExtResource("2_5053b")
+theme_override_font_sizes/font_size = 60
+text = "I believe you have died fellow human XD"
+
+[node name="Button2" type="Button" parent="."]
+offset_left = 300.0
+offset_top = 385.0
+offset_right = 831.0
+offset_bottom = 553.0
+theme_override_colors/font_disabled_color = Color(0.898276, 1.10701e-06, 9.62615e-07, 1)
+theme_override_colors/font_hover_pressed_color = Color(0.919281, 3.00817e-06, 7.70092e-07, 1)
+theme_override_colors/font_hover_color = Color(0.870387, 1.44392e-06, 1.2514e-06, 1)
+theme_override_colors/icon_disabled_color = Color(0.794399, 2.26215e-06, 0, 1)
+theme_override_colors/icon_hover_pressed_color = Color(0.713726, 0, 0, 1)
+theme_override_colors/icon_hover_color = Color(0.72549, 0, 0, 1)
+theme_override_colors/icon_pressed_color = Color(0.862745, 0, 0, 1)
+theme_override_colors/icon_focus_color = Color(0.839216, 0, 0, 1)
+theme_override_colors/icon_normal_color = Color(0.811765, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0.803922, 0, 0, 1)
+theme_override_colors/font_color = Color(0.961518, 4.45209e-06, 9.62615e-07, 1)
+theme_override_colors/font_focus_color = Color(0.768627, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0.854902, 0, 0, 1)
+theme_override_font_sizes/font_size = 36
+theme_override_styles/hover = SubResource("StyleBoxFlat_pdypu")
+theme_override_styles/normal = SubResource("StyleBoxFlat_5053b")
+text = "Return to main menu
+"
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("4_3dyuy")
+autoplay = true
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="Button2" to="." method="_on_button_2_pressed"]

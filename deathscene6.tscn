@@ -1,0 +1,130 @@
+[gd_scene load_steps=16 format=3 uid="uid://dkjdxd6owkqjq"]
+
+[ext_resource type="Script" uid="uid://caxnfol0imjpe" path="res://deathscene_6.gd" id="1_t3sxe"]
+[ext_resource type="Texture2D" uid="uid://fjcvohoelmuv" path="res://belt.png" id="2_6ojt8"]
+[ext_resource type="Texture2D" uid="uid://k38dbb04rnn8" path="res://Screenshot 2025-10-24 195505.png" id="3_3pbmp"]
+[ext_resource type="Texture2D" uid="uid://y60sinj72vl5" path="res://yoda.png" id="4_70h5o"]
+[ext_resource type="Texture2D" uid="uid://dn7sf3w83u8qa" path="res://boy.png" id="5_b78y6"]
+[ext_resource type="FontFile" uid="uid://sgfk1rgwxa8i" path="res://Urban Shadow Script.otf" id="6_ng5vi"]
+[ext_resource type="AudioStream" uid="uid://fm5sxqq1ueq1" path="res://getout.mp3" id="7_6ojt8"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ytydh"]
+texture = ExtResource("2_6ojt8")
+modulate_color = Color(0.827425, 0.126364, 2.13701e-05, 1)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_lmwn5"]
+texture = ExtResource("3_3pbmp")
+modulate_color = Color(0.396889, 0.396889, 0.396889, 1)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_sgajp"]
+texture = ExtResource("4_70h5o")
+modulate_color = Color(1, 0.545098, 1, 1)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_xrn5t"]
+texture = ExtResource("5_b78y6")
+modulate_color = Color(0.54099, 0.54099, 0.54099, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_4b7qv"]
+bg_color = Color(0.166378, 0.333991, 0.169626, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_v5uge"]
+bg_color = Color(0.6, 0.941176, 0.6, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_2lhy7"]
+bg_color = Color(0.0115216, 0.141545, 0.162156, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_aodea"]
+bg_color = Color(0.109804, 0.921569, 0.6, 1)
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource("1_t3sxe")
+
+[node name="Panel" type="Panel" parent="."]
+offset_right = 580.0
+offset_bottom = 351.0
+theme_override_styles/panel = SubResource("StyleBoxTexture_ytydh")
+
+[node name="Panel2" type="Panel" parent="."]
+offset_left = 584.0
+offset_top = 1.0
+offset_right = 1157.0
+offset_bottom = 352.0
+theme_override_styles/panel = SubResource("StyleBoxTexture_lmwn5")
+
+[node name="Panel3" type="Panel" parent="."]
+offset_left = 3.0
+offset_top = 354.0
+offset_right = 587.0
+offset_bottom = 651.0
+theme_override_styles/panel = SubResource("StyleBoxTexture_sgajp")
+
+[node name="Panel4" type="Panel" parent="."]
+offset_left = 589.0
+offset_top = 356.0
+offset_right = 1149.0
+offset_bottom = 644.0
+theme_override_styles/panel = SubResource("StyleBoxTexture_xrn5t")
+
+[node name="Button" type="Button" parent="."]
+offset_left = 286.0
+offset_top = 238.0
+offset_right = 859.0
+offset_bottom = 410.0
+theme_override_colors/font_disabled_color = Color(0.65098, 0, 0.243137, 1)
+theme_override_colors/font_hover_pressed_color = Color(0.663965, 0.0651647, 0.213174, 1)
+theme_override_colors/font_hover_color = Color(0.704088, 0.0818056, 0.229286, 1)
+theme_override_colors/icon_disabled_color = Color(0.782707, 0.0825989, 0.297959, 1)
+theme_override_colors/icon_hover_pressed_color = Color(0.808713, 0.0937477, 0.334435, 1)
+theme_override_colors/icon_hover_color = Color(0.773568, 0.0673054, 0.385158, 1)
+theme_override_colors/icon_pressed_color = Color(0.864963, 0.0923024, 0.349363, 1)
+theme_override_colors/icon_focus_color = Color(0.885197, 0.138844, 0.390655, 1)
+theme_override_colors/icon_normal_color = Color(0.89274, 0.096418, 0.383179, 1)
+theme_override_colors/font_outline_color = Color(0.906451, 0.128405, 0.34509, 1)
+theme_override_colors/font_color = Color(0.92074, 0.154138, 0.37212, 1)
+theme_override_colors/font_focus_color = Color(0.943224, 0.128815, 0.3832, 1)
+theme_override_colors/font_pressed_color = Color(0.904107, 0.143812, 0.362984, 1)
+theme_override_font_sizes/font_size = 45
+theme_override_styles/hover = SubResource("StyleBoxFlat_4b7qv")
+theme_override_styles/normal = SubResource("StyleBoxFlat_v5uge")
+text = "GET BACK to the level"
+
+[node name="Button2" type="Button" parent="."]
+offset_left = 286.0
+offset_top = 425.0
+offset_right = 856.0
+offset_bottom = 596.0
+theme_override_colors/font_disabled_color = Color(0.0486176, 0.348241, 0.35639, 1)
+theme_override_colors/font_hover_pressed_color = Color(0.0626578, 0.330891, 0.338249, 1)
+theme_override_colors/font_hover_color = Color(0.0760449, 0.314705, 0.323398, 1)
+theme_override_colors/icon_disabled_color = Color(0.0584722, 0.324911, 0.354434, 1)
+theme_override_colors/icon_hover_pressed_color = Color(0.0444713, 0.301172, 0.30268, 1)
+theme_override_colors/icon_hover_color = Color(0.0612236, 0.292143, 0.316014, 1)
+theme_override_colors/icon_pressed_color = Color(0.0428697, 0.30379, 0.348325, 1)
+theme_override_colors/icon_focus_color = Color(0.0803852, 0.316926, 0.367921, 1)
+theme_override_colors/icon_normal_color = Color(0.0444074, 0.305632, 0.336448, 1)
+theme_override_colors/font_outline_color = Color(0.0788345, 0.28731, 0.311176, 1)
+theme_override_colors/font_color = Color(0.0736909, 0.277221, 0.339328, 1)
+theme_override_colors/font_focus_color = Color(0.0814363, 0.306119, 0.33808, 1)
+theme_override_colors/font_pressed_color = Color(0.143391, 0.273464, 0.378133, 1)
+theme_override_font_sizes/font_size = 45
+theme_override_styles/hover = SubResource("StyleBoxFlat_2lhy7")
+theme_override_styles/normal = SubResource("StyleBoxFlat_aodea")
+text = "GET BACK to Main menu"
+
+[node name="Label" type="Label" parent="."]
+offset_left = 66.0
+offset_top = 141.0
+offset_right = 1208.0
+offset_bottom = 208.0
+theme_override_fonts/font = ExtResource("6_ng5vi")
+theme_override_font_sizes/font_size = 66
+text = "Im getting tired of having to write \"you died\" for every level"
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+position = Vector2(1655.25, 1316.5)
+stream = ExtResource("7_6ojt8")
+volume_db = 24.0
+autoplay = true
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="Button2" to="." method="_on_button_2_pressed"]

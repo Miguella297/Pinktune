@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://dt17od1r3jdgj"
+path="res://.godot/imported/past lives.mp3-6f7d7be877a0ea5130b6b31d1945d9f3.mp3str"
+
+[deps]
+
+source_file="res://past lives.mp3"
+dest_files=["res://.godot/imported/past lives.mp3-6f7d7be877a0ea5130b6b31d1945d9f3.mp3str"]
+
+[params]
+
+loop=true
+loop_offset=0.0
+bpm=0.0
+beat_count=0
+bar_beats=4

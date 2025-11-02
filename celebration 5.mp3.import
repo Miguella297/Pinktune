@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://c8mttgo3avpn1"
+path="res://.godot/imported/celebration 5.mp3-966f0700736ceee70909fe9b415f193d.mp3str"
+
+[deps]
+
+source_file="res://celebration 5.mp3"
+dest_files=["res://.godot/imported/celebration 5.mp3-966f0700736ceee70909fe9b415f193d.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

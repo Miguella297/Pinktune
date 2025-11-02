@@ -1,0 +1,175 @@
+[gd_scene load_steps=21 format=3 uid="uid://ccwcs2o32cl31"]
+
+[ext_resource type="Texture2D" uid="uid://v2d8yn65sco" path="res://Main Characters/Mask Dude/Run (32x32).png" id="1_w4kwf"]
+[ext_resource type="Script" uid="uid://cy3fv8ho2do6x" path="res://area_2d_9+12.gd" id="2_bypv5"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bypv5"]
+atlas = ExtResource("1_w4kwf")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jkob4"]
+atlas = ExtResource("1_w4kwf")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_aceqy"]
+atlas = ExtResource("1_w4kwf")
+region = Rect2(64, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ebq4k"]
+atlas = ExtResource("1_w4kwf")
+region = Rect2(96, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_nkkar"]
+atlas = ExtResource("1_w4kwf")
+region = Rect2(128, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_w2hav"]
+atlas = ExtResource("1_w4kwf")
+region = Rect2(160, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6owif"]
+atlas = ExtResource("1_w4kwf")
+region = Rect2(192, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_js4od"]
+atlas = ExtResource("1_w4kwf")
+region = Rect2(224, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_yms68"]
+atlas = ExtResource("1_w4kwf")
+region = Rect2(256, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_k8sn1"]
+atlas = ExtResource("1_w4kwf")
+region = Rect2(288, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_eb2pv"]
+atlas = ExtResource("1_w4kwf")
+region = Rect2(320, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_o3a7h"]
+atlas = ExtResource("1_w4kwf")
+region = Rect2(352, 0, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_begdj"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bypv5")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jkob4")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_aceqy")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ebq4k")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_nkkar")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_w2hav")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6owif")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_js4od")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_yms68")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_k8sn1")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_eb2pv")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_o3a7h")
+}],
+"loop": true,
+"name": &"default",
+"speed": 26.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_w4kwf"]
+size = Vector2(18.4898, 26.2295)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_jkob4"]
+size = Vector2(31, 50.5)
+
+[sub_resource type="Animation" id="Animation_vkk85"]
+resource_name = "maskdude"
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("AnimatedSprite2D:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5, 1),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(-2, -2.5), Vector2(100, -2.5), Vector2(-2, -2.5)]
+}
+
+[sub_resource type="Animation" id="Animation_inq71"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("AnimatedSprite2D:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-2, -2.5)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_yksm0"]
+_data = {
+&"RESET": SubResource("Animation_inq71"),
+&"maskdude": SubResource("Animation_vkk85")
+}
+
+[node name="enemy12" type="Node2D"]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+texture_filter = 1
+position = Vector2(-2, -2.5)
+scale = Vector2(1.53125, 1.90625)
+sprite_frames = SubResource("SpriteFrames_begdj")
+autoplay = "default"
+frame = 2
+frame_progress = 0.886902
+
+[node name="Area2D" type="Area2D" parent="AnimatedSprite2D"]
+position = Vector2(1.95918, 2.38806)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="AnimatedSprite2D/Area2D"]
+position = Vector2(-0.755102, -3.69954)
+shape = SubResource("RectangleShape2D_w4kwf")
+
+[node name="Area2D9+12" type="Area2D" parent="AnimatedSprite2D"]
+position = Vector2(1.30612, 1.31148)
+scale = Vector2(0.653061, 0.52459)
+script = ExtResource("2_bypv5")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="AnimatedSprite2D/Area2D9+12"]
+position = Vector2(0, -4.75)
+shape = SubResource("RectangleShape2D_jkob4")
+
+[node name="Marker2D" type="Marker2D" parent="."]
+position = Vector2(100, 0)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_yksm0")
+}
+autoplay = "maskdude"

@@ -1,0 +1,107 @@
+[gd_scene load_steps=12 format=3 uid="uid://oxj4gunfkrj2"]
+
+[ext_resource type="Texture2D" uid="uid://du6axlls2vs3i" path="res://On (38x38).png" id="1_b3rlr"]
+[ext_resource type="Script" uid="uid://uspiym8nd35a" path="res://area_2d_8+13.gd" id="2_ame3b"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ame3b"]
+atlas = ExtResource("1_b3rlr")
+region = Rect2(266, 0, 38, 38)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_m8gj8"]
+atlas = ExtResource("1_b3rlr")
+region = Rect2(228, 0, 38, 38)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4fq1l"]
+atlas = ExtResource("1_b3rlr")
+region = Rect2(190, 0, 38, 38)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3nv7u"]
+atlas = ExtResource("1_b3rlr")
+region = Rect2(152, 0, 38, 38)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_qphfn"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ame3b")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_m8gj8")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4fq1l")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3nv7u")
+}],
+"loop": true,
+"name": &"default",
+"speed": 25.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_k4s7q"]
+radius = 17.586
+
+[sub_resource type="Animation" id="Animation_4aay7"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("../AnimatedSprite2D:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1, -2)]
+}
+
+[sub_resource type="Animation" id="Animation_h6ifg"]
+resource_name = "chain2"
+length = 6.0
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("../AnimatedSprite2D:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 3, 6),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(1, -2), Vector2(350, -2), Vector2(1, -2)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_2tl5q"]
+_data = {
+&"RESET": SubResource("Animation_4aay7"),
+&"chain2": SubResource("Animation_h6ifg")
+}
+
+[node name="Chain2" type="Node2D"]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+texture_filter = 1
+position = Vector2(1, -2)
+scale = Vector2(1.15789, 1.21053)
+sprite_frames = SubResource("SpriteFrames_qphfn")
+autoplay = "default"
+frame_progress = 0.926245
+
+[node name="Area2D8+13" type="Area2D" parent="AnimatedSprite2D"]
+script = ExtResource("2_ame3b")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="AnimatedSprite2D/Area2D8+13"]
+shape = SubResource("CircleShape2D_k4s7q")
+
+[node name="Marker2D" type="Marker2D" parent="."]
+position = Vector2(350, 0)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+root_node = NodePath("../Marker2D")
+libraries = {
+&"": SubResource("AnimationLibrary_2tl5q")
+}
+autoplay = "chain2"

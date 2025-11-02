@@ -1,0 +1,131 @@
+[gd_scene load_steps=15 format=3 uid="uid://c55731e6fgp1p"]
+
+[ext_resource type="Script" uid="uid://eli8qannxu0s" path="res://level_78.gd" id="1_7ujq8"]
+[ext_resource type="Texture2D" uid="uid://c08vww7igv1bq" path="res://halloween 3.png" id="2_65lrw"]
+[ext_resource type="Texture2D" uid="uid://ds16drpx1tq2x" path="res://halloween 5.png" id="3_imnrm"]
+[ext_resource type="Texture2D" uid="uid://b32ultpjqqvsj" path="res://halloween 6.png" id="4_jm8yb"]
+[ext_resource type="FontFile" uid="uid://c86scw2qhfm8h" path="res://Spooky Theme.otf" id="5_xpkpq"]
+[ext_resource type="AudioStream" uid="uid://c6viwmmsh0iej" path="res://Halloween sound 2.mp3" id="6_65lrw"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_1nc1g"]
+texture = ExtResource("2_65lrw")
+modulate_color = Color(0.927497, 0, 0.193531, 1)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_bg4ys"]
+texture = ExtResource("2_65lrw")
+modulate_color = Color(0.290869, 0.368292, 0.580087, 1)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_5gcmp"]
+texture = ExtResource("3_imnrm")
+modulate_color = Color(0.472627, 0.371586, 0.0714812, 1)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ka8lx"]
+texture = ExtResource("4_jm8yb")
+modulate_color = Color(0.47788, 0.47788, 0.47788, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_yhmpw"]
+bg_color = Color(0.139003, 0.23879, 0.426447, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_nh6vy"]
+bg_color = Color(0.292, 0.27, 0.6, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_88skx"]
+bg_color = Color(0.141366, 0.205498, 0.37936, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_tjqeo"]
+bg_color = Color(0.303675, 0.474506, 0.609657, 1)
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource("1_7ujq8")
+
+[node name="Panel" type="Panel" parent="."]
+offset_right = 546.0
+offset_bottom = 344.0
+theme_override_styles/panel = SubResource("StyleBoxTexture_1nc1g")
+
+[node name="Panel2" type="Panel" parent="."]
+offset_left = 546.0
+offset_right = 1151.0
+offset_bottom = 344.0
+theme_override_styles/panel = SubResource("StyleBoxTexture_bg4ys")
+
+[node name="Panel3" type="Panel" parent="."]
+offset_left = 549.0
+offset_top = 344.0
+offset_right = 1152.0
+offset_bottom = 646.0
+theme_override_styles/panel = SubResource("StyleBoxTexture_5gcmp")
+
+[node name="Panel4" type="Panel" parent="."]
+offset_left = 2.0
+offset_top = 344.0
+offset_right = 549.0
+offset_bottom = 645.0
+theme_override_styles/panel = SubResource("StyleBoxTexture_ka8lx")
+
+[node name="Button" type="Button" parent="."]
+offset_left = 296.0
+offset_top = 258.0
+offset_right = 806.0
+offset_bottom = 402.0
+theme_override_colors/font_disabled_color = Color(0.943428, 0.549939, 0.691538, 1)
+theme_override_colors/font_hover_pressed_color = Color(0.993028, 0.677667, 0.854988, 1)
+theme_override_colors/font_hover_color = Color(0.996952, 0.680564, 0.826814, 1)
+theme_override_colors/icon_disabled_color = Color(0.948091, 0.728333, 0.820028, 1)
+theme_override_colors/icon_hover_pressed_color = Color(0.873048, 0.599245, 0.819954, 1)
+theme_override_colors/icon_hover_color = Color(0.917037, 0.545986, 0.802403, 1)
+theme_override_colors/icon_pressed_color = Color(0.912487, 0.574456, 0.780013, 1)
+theme_override_colors/icon_focus_color = Color(0.891143, 0.467372, 0.770137, 1)
+theme_override_colors/icon_normal_color = Color(0.939045, 0.473685, 0.757671, 1)
+theme_override_colors/font_outline_color = Color(0.868151, 0.438834, 0.69759, 1)
+theme_override_colors/font_color = Color(0.887424, 0.539136, 0.750331, 1)
+theme_override_colors/font_focus_color = Color(0.827164, 0.446981, 0.717019, 1)
+theme_override_colors/font_pressed_color = Color(0.893211, 0.518892, 0.730165, 1)
+theme_override_font_sizes/font_size = 60
+theme_override_styles/hover = SubResource("StyleBoxFlat_yhmpw")
+theme_override_styles/normal = SubResource("StyleBoxFlat_nh6vy")
+text = "Next level "
+
+[node name="Button2" type="Button" parent="."]
+offset_left = 295.0
+offset_top = 419.0
+offset_right = 808.0
+offset_bottom = 548.0
+theme_override_colors/font_disabled_color = Color(0.683081, 0.314986, 0.208964, 1)
+theme_override_colors/font_hover_pressed_color = Color(0.634968, 0.295601, 0.195918, 1)
+theme_override_colors/font_hover_color = Color(0.574802, 0.26665, 0.169531, 1)
+theme_override_colors/icon_disabled_color = Color(0.632746, 0.258541, 0.0902509, 1)
+theme_override_colors/icon_hover_pressed_color = Color(0.526364, 0.205169, 0.101289, 1)
+theme_override_colors/icon_hover_color = Color(0.501645, 0.23279, 0.0667867, 1)
+theme_override_colors/icon_pressed_color = Color(0.472267, 0.233833, 0.136501, 1)
+theme_override_colors/icon_focus_color = Color(0.379345, 0.172557, 0.0797215, 1)
+theme_override_colors/icon_normal_color = Color(0.489972, 0.279964, 0.128368, 1)
+theme_override_colors/font_outline_color = Color(0.517795, 0.329675, 0.196607, 1)
+theme_override_colors/font_color = Color(0.588933, 0.317732, 0.164184, 1)
+theme_override_colors/font_focus_color = Color(0.587767, 0.33941, 0.14369, 1)
+theme_override_colors/font_pressed_color = Color(0.468248, 0.277304, 0.123357, 1)
+theme_override_font_sizes/font_size = 60
+theme_override_styles/hover = SubResource("StyleBoxFlat_88skx")
+theme_override_styles/normal = SubResource("StyleBoxFlat_tjqeo")
+text = "Main menu"
+
+[node name="Label" type="Label" parent="."]
+offset_left = 85.0
+offset_top = 173.0
+offset_right = 1105.0
+offset_bottom = 230.0
+theme_override_colors/font_color = Color(0.524934, 0.444471, 0.148962, 1)
+theme_override_fonts/font = ExtResource("5_xpkpq")
+theme_override_font_sizes/font_size = 44
+text = "I know you were ragebaited by that one"
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+position = Vector2(1937.25, 1719.5)
+stream = ExtResource("6_65lrw")
+volume_db = 24.0
+pitch_scale = 0.92
+autoplay = true
+max_distance = 4096.0
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="Button2" to="." method="_on_button_2_pressed"]

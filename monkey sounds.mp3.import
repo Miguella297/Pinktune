@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://bo8g81co4jkwc"
+path="res://.godot/imported/monkey sounds.mp3-62e760be00278961234305ce7d01f18b.mp3str"
+
+[deps]
+
+source_file="res://monkey sounds.mp3"
+dest_files=["res://.godot/imported/monkey sounds.mp3-62e760be00278961234305ce7d01f18b.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

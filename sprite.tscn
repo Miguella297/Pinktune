@@ -1,0 +1,32 @@
+[gd_scene load_steps=5 format=3 uid="uid://c1q0i4kapwv5x"]
+
+[ext_resource type="Texture2D" uid="uid://v1ix2eii3ixl" path="res://Spiked Ball.png" id="1_64nw0"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_85fgi"]
+atlas = ExtResource("1_64nw0")
+region = Rect2(0, 0, 28, 28)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_go338"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_85fgi")
+}],
+"loop": false,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_a1cqo"]
+radius = 12.8926
+
+[node name="Sprite" type="AnimatedSprite2D"]
+texture_filter = 1
+scale = Vector2(2.57143, 2.42857)
+sprite_frames = SubResource("SpriteFrames_go338")
+autoplay = "default"
+
+[node name="Vision2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Vision2D"]
+shape = SubResource("CircleShape2D_a1cqo")

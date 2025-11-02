@@ -1,0 +1,47 @@
+[gd_scene load_steps=7 format=3 uid="uid://dmrsaww5arxkl"]
+
+[ext_resource type="Texture2D" uid="uid://bhkvh1ubabj60" path="res://On (16x32).png" id="1_jfe6r"]
+[ext_resource type="Script" uid="uid://c4bxyve5eweym" path="res://area_2d_99.gd" id="2_jugo2"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jugo2"]
+atlas = ExtResource("1_jfe6r")
+region = Rect2(0, 0, 16, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_b3jlp"]
+atlas = ExtResource("1_jfe6r")
+region = Rect2(16, 0, 16, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fb6pl"]
+atlas = ExtResource("1_jfe6r")
+region = Rect2(32, 0, 16, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_cp8lj"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jugo2")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_b3jlp")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fb6pl")
+}],
+"loop": true,
+"name": &"default",
+"speed": 8.0
+}]
+
+[node name="enemy2" type="Node2D"]
+
+[node name="Sprite" type="AnimatedSprite2D" parent="."]
+texture_filter = 1
+position = Vector2(-2, 2)
+scale = Vector2(3.875, 1.46875)
+sprite_frames = SubResource("SpriteFrames_cp8lj")
+autoplay = "default"
+frame = 2
+frame_progress = 0.361919
+
+[node name="Area2D99" type="Area2D" parent="Sprite"]
+script = ExtResource("2_jugo2")

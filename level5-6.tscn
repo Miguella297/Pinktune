@@ -1,0 +1,93 @@
+[gd_scene load_steps=10 format=3 uid="uid://jae6enj0hihb"]
+
+[ext_resource type="FontFile" uid="uid://bkn1da7sfppe3" path="res://Oups.otf" id="1_0e7j5"]
+[ext_resource type="Texture2D" uid="uid://bt6a8v2vrgdsp" path="res://happy.png" id="1_58qhk"]
+[ext_resource type="Script" uid="uid://iqog5u72l3hk" path="res://button_2.gd" id="2_tn0sx"]
+[ext_resource type="AudioStream" uid="uid://dxey24mgpl3qa" path="res://err.mp3" id="4_rdhqi"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_tn0sx"]
+texture = ExtResource("1_58qhk")
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_viokk"]
+bg_color = Color(0.482915, 0.203549, 0.328096, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_0e7j5"]
+bg_color = Color(0.879721, 0.457506, 0.436193, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_58qhk"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_tn0sx"]
+bg_color = Color(0.32549, 0.6, 0.6, 1)
+
+[node name="Node2D" type="Node2D"]
+
+[node name="Panel" type="Panel" parent="."]
+offset_right = 1149.0
+offset_bottom = 650.0
+theme_override_styles/panel = SubResource("StyleBoxTexture_tn0sx")
+
+[node name="Button" type="Button" parent="."]
+offset_left = 285.0
+offset_top = 253.0
+offset_right = 926.0
+offset_bottom = 405.0
+theme_override_colors/font_disabled_color = Color(0.352763, 0.552752, 1, 1)
+theme_override_colors/font_hover_pressed_color = Color(0.379009, 0.572699, 1, 1)
+theme_override_colors/font_hover_color = Color(0.260018, 0.479398, 1, 1)
+theme_override_colors/icon_disabled_color = Color(0.253321, 0.473895, 1, 1)
+theme_override_colors/icon_hover_pressed_color = Color(0.333018, 0.537534, 1, 1)
+theme_override_colors/icon_hover_color = Color(0.178607, 0.410125, 1, 1)
+theme_override_colors/icon_pressed_color = Color(0.206035, 0.434082, 1, 1)
+theme_override_colors/icon_focus_color = Color(0.0567996, 0.282913, 0.948034, 1)
+theme_override_colors/icon_normal_color = Color(0.19921, 0.428185, 1, 1)
+theme_override_colors/font_outline_color = Color(0.136623, 0.372036, 0.999999, 1)
+theme_override_colors/font_color = Color(0.0294932, 0.266677, 0.999992, 1)
+theme_override_colors/font_focus_color = Color(0.191801, 0.41678, 0.980018, 1)
+theme_override_colors/font_pressed_color = Color(0.181444, 0.415129, 0.871952, 1)
+theme_override_font_sizes/font_size = 60
+theme_override_styles/hover = SubResource("StyleBoxFlat_viokk")
+theme_override_styles/normal = SubResource("StyleBoxFlat_0e7j5")
+text = "Next level"
+
+[node name="Button2" type="Button" parent="."]
+offset_left = 294.0
+offset_top = 423.0
+offset_right = 933.0
+offset_bottom = 571.0
+theme_override_colors/font_disabled_color = Color(0.658824, 0, 0, 1)
+theme_override_colors/font_hover_pressed_color = Color(0.631373, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0.686275, 0, 0, 1)
+theme_override_colors/icon_disabled_color = Color(0.690196, 0, 0, 1)
+theme_override_colors/icon_hover_pressed_color = Color(0.756863, 0, 0, 1)
+theme_override_colors/icon_hover_color = Color(0.647059, 0, 0, 1)
+theme_override_colors/icon_pressed_color = Color(0.611765, 0, 0, 1)
+theme_override_colors/icon_focus_color = Color(0.635294, 0, 0, 1)
+theme_override_colors/icon_normal_color = Color(0.682353, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0.647059, 0, 0, 1)
+theme_override_colors/font_color = Color(0.65098, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0.678431, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0.698039, 0, 0, 1)
+theme_override_font_sizes/font_size = 60
+theme_override_styles/hover = SubResource("StyleBoxFlat_58qhk")
+theme_override_styles/normal = SubResource("StyleBoxFlat_tn0sx")
+text = "Main menu"
+script = ExtResource("2_tn0sx")
+
+[node name="Label" type="Label" parent="."]
+offset_left = 71.0
+offset_top = 107.0
+offset_right = 1104.0
+offset_bottom = 203.0
+theme_override_colors/font_color = Color(0, 0.564706, 0, 1)
+theme_override_fonts/font = ExtResource("1_0e7j5")
+theme_override_font_sizes/font_size = 70
+text = "CONGRATS ON MAKING IT TILL HERE!"
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+position = Vector2(1655.25, 1316.5)
+stream = ExtResource("4_rdhqi")
+volume_db = 24.0
+autoplay = true
+
+[connection signal="pressed" from="Button" to="Button2" method="_on_button_pressed"]
+[connection signal="pressed" from="Button2" to="Button2" method="_on_pressed"]
