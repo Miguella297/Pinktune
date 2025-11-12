@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://bqcpmh2dt3cdb"
+path="res://.godot/imported/cake by the ocean.mp3-12d9bff135ae97cea5f8e35d8b494ee3.mp3str"
+
+[deps]
+
+source_file="res://cake by the ocean.mp3"
+dest_files=["res://.godot/imported/cake by the ocean.mp3-12d9bff135ae97cea5f8e35d8b494ee3.mp3str"]
+
+[params]
+
+loop=true
+loop_offset=0.0
+bpm=0.0
+beat_count=0
+bar_beats=4

@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://sgxsp2dvovlp"
+path="res://.godot/imported/young hearts.mp3-83b3a120d5f690d52eb80eb3b23f8db0.mp3str"
+
+[deps]
+
+source_file="res://young hearts.mp3"
+dest_files=["res://.godot/imported/young hearts.mp3-83b3a120d5f690d52eb80eb3b23f8db0.mp3str"]
+
+[params]
+
+loop=true
+loop_offset=0.0
+bpm=0.0
+beat_count=0
+bar_beats=4

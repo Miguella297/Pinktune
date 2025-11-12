@@ -1,0 +1,133 @@
+[gd_scene load_steps=16 format=3 uid="uid://cyq6k63d7c4w2"]
+
+[ext_resource type="Texture2D" uid="uid://clufpafq3sw7i" path="res://boulder push.png" id="1_b2ofq"]
+[ext_resource type="FontFile" uid="uid://bsah4p2405t81" path="res://Super Joyful.ttf" id="1_h7sl7"]
+[ext_resource type="Script" uid="uid://der8e65xgvqtv" path="res://deathscene_12.gd" id="1_s5i0g"]
+[ext_resource type="Texture2D" uid="uid://bdo7qff43ptem" path="res://mountain.png" id="2_h1r17"]
+[ext_resource type="Texture2D" uid="uid://dxtbiq6606h7n" path="res://your time.png" id="3_bs08d"]
+[ext_resource type="Texture2D" uid="uid://cb626nguhdp3j" path="res://move it.png" id="4_s5i0g"]
+[ext_resource type="AudioStream" uid="uid://do77jci1sy53f" path="res://beatboxer.mp3" id="7_wlwv4"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_bs08d"]
+texture = ExtResource("1_b2ofq")
+modulate_color = Color(0.999996, 0.442369, 0.45899, 1)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_s5i0g"]
+texture = ExtResource("2_h1r17")
+modulate_color = Color(0.21315, 0.494196, 0.497551, 1)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_wlwv4"]
+texture = ExtResource("3_bs08d")
+modulate_color = Color(0.633757, 0.633757, 0.633757, 1)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_djuys"]
+texture = ExtResource("4_s5i0g")
+modulate_color = Color(0.535683, 0.360416, 0.0441196, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_g5me5"]
+bg_color = Color(0.461426, 0.23491, 0.0225041, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_h7sl7"]
+bg_color = Color(0.761919, 0.441808, 0.174652, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_3kff6"]
+bg_color = Color(0.018615, 0.293247, 0.369287, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_b2ofq"]
+bg_color = Color(0.229394, 0.634081, 0.903502, 1)
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource("1_s5i0g")
+
+[node name="Panel" type="Panel" parent="."]
+offset_right = 586.0
+offset_bottom = 340.0
+theme_override_styles/panel = SubResource("StyleBoxTexture_bs08d")
+
+[node name="Panel2" type="Panel" parent="."]
+offset_left = 586.0
+offset_right = 1152.0
+offset_bottom = 340.0
+theme_override_styles/panel = SubResource("StyleBoxTexture_s5i0g")
+
+[node name="Panel3" type="Panel" parent="."]
+offset_left = -2.0
+offset_top = 340.0
+offset_right = 585.0
+offset_bottom = 646.0
+theme_override_styles/panel = SubResource("StyleBoxTexture_wlwv4")
+
+[node name="Panel4" type="Panel" parent="."]
+offset_left = 587.0
+offset_top = 340.0
+offset_right = 1150.0
+offset_bottom = 648.0
+theme_override_styles/panel = SubResource("StyleBoxTexture_djuys")
+
+[node name="Button" type="Button" parent="."]
+offset_left = 244.0
+offset_top = 251.0
+offset_right = 887.0
+offset_bottom = 388.0
+theme_override_colors/font_disabled_color = Color(0.813125, 0.0966526, 0.286909, 1)
+theme_override_colors/font_hover_pressed_color = Color(0.914085, 0.170262, 0.316436, 1)
+theme_override_colors/font_hover_color = Color(0.824821, 0.141879, 0.260621, 1)
+theme_override_colors/icon_disabled_color = Color(0.793229, 0.11147, 0.30056, 1)
+theme_override_colors/icon_hover_pressed_color = Color(0.790271, 0.0867614, 0.315945, 1)
+theme_override_colors/icon_hover_color = Color(0.813476, 0.0819691, 0.242654, 1)
+theme_override_colors/icon_pressed_color = Color(0.738826, 0.102895, 0.219698, 1)
+theme_override_colors/icon_focus_color = Color(0.666758, 0.0638577, 0.20522, 1)
+theme_override_colors/icon_normal_color = Color(0.620562, 0.106213, 0.164303, 1)
+theme_override_colors/font_outline_color = Color(0.648963, 0.0663368, 0.190301, 1)
+theme_override_colors/font_color = Color(0.624437, 0.0895639, 0.18462, 1)
+theme_override_colors/font_focus_color = Color(0.696289, 0.0980949, 0.195228, 1)
+theme_override_colors/font_pressed_color = Color(0.816389, 0.0606323, 0.185443, 1)
+theme_override_font_sizes/font_size = 50
+theme_override_styles/hover = SubResource("StyleBoxFlat_g5me5")
+theme_override_styles/normal = SubResource("StyleBoxFlat_h7sl7")
+text = "Keep trying cause why not"
+
+[node name="Button2" type="Button" parent="."]
+offset_left = 244.0
+offset_top = 405.0
+offset_right = 888.0
+offset_bottom = 543.0
+theme_override_colors/font_disabled_color = Color(0.478103, 0.0967962, 0.631037, 1)
+theme_override_colors/font_hover_pressed_color = Color(0.485214, 0.0970254, 0.70812, 1)
+theme_override_colors/font_hover_color = Color(0.493158, 0.102438, 0.690856, 1)
+theme_override_colors/icon_disabled_color = Color(0.514762, 0.0808041, 0.620094, 1)
+theme_override_colors/icon_hover_pressed_color = Color(0.591155, 0.0408055, 0.627557, 1)
+theme_override_colors/icon_hover_color = Color(0.44645, 0.0681267, 0.523306, 1)
+theme_override_colors/icon_pressed_color = Color(0.529784, 0.0882132, 0.633017, 1)
+theme_override_colors/icon_focus_color = Color(0.524594, 0.0372011, 0.574314, 1)
+theme_override_colors/icon_normal_color = Color(0.532627, 0.0113151, 0.618811, 1)
+theme_override_colors/font_outline_color = Color(0.485552, 0.0236914, 0.565873, 1)
+theme_override_colors/font_color = Color(0.482641, 0.0412671, 0.563462, 1)
+theme_override_colors/font_focus_color = Color(0.46606, 0.0593291, 0.587062, 1)
+theme_override_colors/font_pressed_color = Color(0.463881, 0.0962773, 0.562804, 1)
+theme_override_font_sizes/font_size = 45
+theme_override_styles/hover = SubResource("StyleBoxFlat_3kff6")
+theme_override_styles/normal = SubResource("StyleBoxFlat_b2ofq")
+text = "Back to the main menu bruh"
+
+[node name="Label" type="Label" parent="."]
+offset_left = 208.0
+offset_top = 86.0
+offset_right = 929.0
+offset_bottom = 206.0
+theme_override_colors/font_color = Color(0.355012, 0.67562, 0.264818, 1)
+theme_override_fonts/font = ExtResource("1_h7sl7")
+theme_override_font_sizes/font_size = 100
+text = "Dont give up now!"
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+position = Vector2(2526.25, 1953.5)
+scale = Vector2(1, 1.00407)
+stream = ExtResource("7_wlwv4")
+volume_db = 24.0
+pitch_scale = 1.15
+autoplay = true
+max_distance = 4096.0
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="Button2" to="." method="_on_button_2_pressed"]

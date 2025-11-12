@@ -8,7 +8,7 @@ func _ready():
 	connect("body_entered", _on_body_entered)
 
 func _on_body_entered(body):
-	#check if the body is in your player (assuming it's a KinematicBody2D or a Characterbody2D)
+	# check if the body is in your player (assuming it's a KinematicBody2D or a Characterbody2D)
 	
 	if body.is_in_group("player"):
 		call_deferred("_fix")

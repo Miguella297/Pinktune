@@ -1,0 +1,131 @@
+[gd_scene load_steps=16 format=3 uid="uid://bsmyulx514t6n"]
+
+[ext_resource type="Texture2D" uid="uid://pyh3svl7dqmg" path="res://Main Characters/Pink Man/scarecrow.png" id="1_5it60"]
+[ext_resource type="FontFile" uid="uid://dogew4kss7h6u" path="res://Main Characters/Mask Dude/Spicy Sale.ttf" id="1_tax3c"]
+[ext_resource type="Script" uid="uid://d3edlr6rkmtsx" path="res://deathscene_13.gd" id="1_xnyd4"]
+[ext_resource type="Texture2D" uid="uid://i7tm34we2i6x" path="res://Main Characters/Pink Man/spooky halloween.png" id="2_0eewy"]
+[ext_resource type="Texture2D" uid="uid://p6fb388ms3lx" path="res://Main Characters/Pink Man/blocks.png" id="3_so668"]
+[ext_resource type="Texture2D" uid="uid://cb5m7cxotwiwe" path="res://car.png" id="4_xnyd4"]
+[ext_resource type="AudioStream" uid="uid://dc3dpshjocpob" path="res://deathscene.mp3" id="7_xwkxm"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_so668"]
+texture = ExtResource("1_5it60")
+modulate_color = Color(0.854953, 0, 0.221686, 1)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_xnyd4"]
+texture = ExtResource("2_0eewy")
+modulate_color = Color(0.883903, 0.370551, 0.203422, 1)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_xwkxm"]
+texture = ExtResource("3_so668")
+modulate_color = Color(0.462792, 0.413444, 0.833198, 1)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ilp2c"]
+texture = ExtResource("4_xnyd4")
+modulate_color = Color(0.474282, 1, 0.38472, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_1vmv5"]
+bg_color = Color(0.0604103, 0.337445, 0.411152, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_tax3c"]
+bg_color = Color(0.119757, 0.7294, 0.844333, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_7crqb"]
+bg_color = Color(0.196341, 0.394986, 0.175254, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_5it60"]
+bg_color = Color(0.512663, 0.659663, 0.254278, 1)
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource("1_xnyd4")
+
+[node name="Panel" type="Panel" parent="."]
+offset_right = 576.0
+offset_bottom = 344.0
+theme_override_styles/panel = SubResource("StyleBoxTexture_so668")
+
+[node name="Panel2" type="Panel" parent="."]
+offset_left = 576.0
+offset_right = 1152.0
+offset_bottom = 345.0
+theme_override_styles/panel = SubResource("StyleBoxTexture_xnyd4")
+
+[node name="Panel3" type="Panel" parent="."]
+offset_top = 344.0
+offset_right = 575.0
+offset_bottom = 650.0
+theme_override_styles/panel = SubResource("StyleBoxTexture_xwkxm")
+
+[node name="Panel4" type="Panel" parent="."]
+offset_left = 575.0
+offset_top = 345.0
+offset_right = 1151.0
+offset_bottom = 650.0
+theme_override_styles/panel = SubResource("StyleBoxTexture_ilp2c")
+
+[node name="Button" type="Button" parent="."]
+offset_left = 317.0
+offset_top = 257.0
+offset_right = 834.0
+offset_bottom = 376.0
+theme_override_colors/font_disabled_color = Color(0.54717, 0.297616, 0.0316022, 1)
+theme_override_colors/font_hover_pressed_color = Color(0.62992, 0.352103, 0.0269636, 1)
+theme_override_colors/font_hover_color = Color(0.512696, 0.304162, 0.0519558, 1)
+theme_override_colors/icon_disabled_color = Color(0.606671, 0.347526, 0.0589212, 1)
+theme_override_colors/icon_hover_pressed_color = Color(0.665212, 0.389765, 0.111216, 1)
+theme_override_colors/icon_hover_color = Color(0.561026, 0.324989, 0.0520085, 1)
+theme_override_colors/icon_pressed_color = Color(0.65582, 0.346542, 0.0963698, 1)
+theme_override_colors/icon_focus_color = Color(0.626862, 0.369521, 0.0880635, 1)
+theme_override_colors/icon_normal_color = Color(0.62531, 0.388907, 0.0939876, 1)
+theme_override_colors/font_outline_color = Color(0.622522, 0.372003, 0.108041, 1)
+theme_override_colors/font_color = Color(0.53181, 0.308919, 0.0522265, 1)
+theme_override_colors/font_focus_color = Color(0.620343, 0.374166, 0.0905107, 1)
+theme_override_colors/font_pressed_color = Color(0.638744, 0.415026, 0.116411, 1)
+theme_override_font_sizes/font_size = 60
+theme_override_styles/hover = SubResource("StyleBoxFlat_1vmv5")
+theme_override_styles/normal = SubResource("StyleBoxFlat_tax3c")
+text = "RETRY IT AGAIN!!"
+
+[node name="Button2" type="Button" parent="."]
+offset_left = 316.0
+offset_top = 393.0
+offset_right = 843.0
+offset_bottom = 507.0
+theme_override_colors/font_disabled_color = Color(0.599113, 0.149482, 0.188648, 1)
+theme_override_colors/font_hover_pressed_color = Color(0.572598, 0.0825735, 0.154701, 1)
+theme_override_colors/font_hover_color = Color(0.590909, 0.132856, 0.153667, 1)
+theme_override_colors/icon_disabled_color = Color(0.607792, 0.0749415, 0.205537, 1)
+theme_override_colors/icon_hover_pressed_color = Color(0.537682, 0.080665, 0.173057, 1)
+theme_override_colors/icon_hover_color = Color(0.649913, 0.0545304, 0.207288, 1)
+theme_override_colors/icon_pressed_color = Color(0.657092, 0.098499, 0.209797, 1)
+theme_override_colors/icon_focus_color = Color(0.57273, 0.0778578, 0.169984, 1)
+theme_override_colors/icon_normal_color = Color(0.572409, 0.0920465, 0.130747, 1)
+theme_override_colors/font_outline_color = Color(0.666154, 0.0647303, 0.209532, 1)
+theme_override_colors/font_color = Color(0.610574, 0.0457647, 0.227568, 1)
+theme_override_colors/font_focus_color = Color(0.611327, 0.057551, 0.21323, 1)
+theme_override_colors/font_pressed_color = Color(0.560828, 0.0421685, 0.192345, 1)
+theme_override_font_sizes/font_size = 30
+theme_override_styles/hover = SubResource("StyleBoxFlat_7crqb")
+theme_override_styles/normal = SubResource("StyleBoxFlat_5it60")
+text = "MAIN MENU YOU DISAPPOINTMENT"
+
+[node name="Label" type="Label" parent="."]
+offset_left = 107.0
+offset_top = 154.0
+offset_right = 1055.0
+offset_bottom = 237.0
+theme_override_colors/font_color = Color(0.0619066, 0.247135, 0.83144, 1)
+theme_override_fonts/font = ExtResource("1_tax3c")
+theme_override_font_sizes/font_size = 50
+text = "Ur close but you need to be closer."
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+position = Vector2(2526.25, 1953.5)
+scale = Vector2(1, 1.00407)
+stream = ExtResource("7_xwkxm")
+volume_db = 24.0
+autoplay = true
+max_distance = 4096.0
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="Button2" to="." method="_on_button_2_pressed"]

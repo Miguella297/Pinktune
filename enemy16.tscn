@@ -1,0 +1,107 @@
+[gd_scene load_steps=12 format=3 uid="uid://dptd5ejua5t0j"]
+
+[ext_resource type="Texture2D" uid="uid://ck4lwfj0vso1c" path="res://Blink (54x52).png" id="1_3hirt"]
+[ext_resource type="Script" uid="uid://dawr4vh88ycko" path="res://area_2d_11+16.gd" id="2_qudm1"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qudm1"]
+atlas = ExtResource("1_3hirt")
+region = Rect2(0, 0, 54, 52)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_b72ww"]
+atlas = ExtResource("1_3hirt")
+region = Rect2(54, 0, 54, 52)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ksyyn"]
+atlas = ExtResource("1_3hirt")
+region = Rect2(108, 0, 54, 52)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_d7hcd"]
+atlas = ExtResource("1_3hirt")
+region = Rect2(162, 0, 54, 52)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_hqxxm"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qudm1")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_b72ww")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ksyyn")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_d7hcd")
+}],
+"loop": true,
+"name": &"default",
+"speed": 7.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_o2yvq"]
+size = Vector2(41, 42)
+
+[sub_resource type="Animation" id="Animation_hy6e7"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("../AnimatedSprite2D:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_ji1ie"]
+resource_name = "Spikeblink"
+length = 4.0
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("../AnimatedSprite2D:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 2, 4),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(0, 0), Vector2(620, 0), Vector2(0, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_8xu22"]
+_data = {
+&"RESET": SubResource("Animation_hy6e7"),
+&"Spikeblink": SubResource("Animation_ji1ie")
+}
+
+[node name="Node2D" type="Node2D"]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+texture_filter = 1
+sprite_frames = SubResource("SpriteFrames_hqxxm")
+autoplay = "default"
+frame = 2
+frame_progress = 0.728481
+
+[node name="Area2D11+16" type="Area2D" parent="AnimatedSprite2D"]
+script = ExtResource("2_qudm1")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="AnimatedSprite2D/Area2D11+16"]
+position = Vector2(0.5, 1)
+shape = SubResource("RectangleShape2D_o2yvq")
+
+[node name="Marker2D" type="Marker2D" parent="."]
+position = Vector2(620, 0)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+root_node = NodePath("../Marker2D")
+libraries = {
+&"": SubResource("AnimationLibrary_8xu22")
+}
+autoplay = "Spikeblink"

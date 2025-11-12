@@ -1,0 +1,164 @@
+[gd_scene load_steps=20 format=3 uid="uid://b5vsrsnyk7iqs"]
+
+[ext_resource type="Texture2D" uid="uid://cnalx2r5udlha" path="res://Main Characters/Ninja Frog/Run (32x32).png" id="1_8ggl5"]
+[ext_resource type="Script" uid="uid://y0vr7lgrerx4" path="res://area_2d_13+16.gd" id="2_atppt"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_atppt"]
+atlas = ExtResource("1_8ggl5")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rauoq"]
+atlas = ExtResource("1_8ggl5")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ihot8"]
+atlas = ExtResource("1_8ggl5")
+region = Rect2(64, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kqxaj"]
+atlas = ExtResource("1_8ggl5")
+region = Rect2(96, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1syfp"]
+atlas = ExtResource("1_8ggl5")
+region = Rect2(128, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xnbmn"]
+atlas = ExtResource("1_8ggl5")
+region = Rect2(160, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_eacqp"]
+atlas = ExtResource("1_8ggl5")
+region = Rect2(192, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hx1vw"]
+atlas = ExtResource("1_8ggl5")
+region = Rect2(224, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lv7su"]
+atlas = ExtResource("1_8ggl5")
+region = Rect2(256, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4xogw"]
+atlas = ExtResource("1_8ggl5")
+region = Rect2(288, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2vgwl"]
+atlas = ExtResource("1_8ggl5")
+region = Rect2(320, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ctnc3"]
+atlas = ExtResource("1_8ggl5")
+region = Rect2(352, 0, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_tovrq"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_atppt")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_rauoq")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ihot8")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_kqxaj")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1syfp")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xnbmn")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_eacqp")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hx1vw")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_lv7su")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4xogw")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2vgwl")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ctnc3")
+}],
+"loop": true,
+"name": &"default",
+"speed": 30.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_8ggl5"]
+size = Vector2(22.6316, 27.5556)
+
+[sub_resource type="Animation" id="Animation_e48r4"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("../AnimatedSprite2D:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_p5eb3"]
+resource_name = "brownboy"
+length = 2.0
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("../AnimatedSprite2D:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1, 2),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(0, 0), Vector2(70, 0), Vector2(0, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_xrfh1"]
+_data = {
+&"RESET": SubResource("Animation_e48r4"),
+&"brownboy": SubResource("Animation_p5eb3")
+}
+
+[node name="Node2D" type="Node2D"]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+texture_filter = 1
+scale = Vector2(1.1875, 1.125)
+sprite_frames = SubResource("SpriteFrames_tovrq")
+autoplay = "default"
+frame = 6
+frame_progress = 0.149932
+
+[node name="Area2D13+16" type="Area2D" parent="AnimatedSprite2D"]
+script = ExtResource("2_atppt")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="AnimatedSprite2D/Area2D13+16"]
+position = Vector2(2.15789, -0.444445)
+shape = SubResource("RectangleShape2D_8ggl5")
+
+[node name="Marker2D" type="Marker2D" parent="."]
+position = Vector2(70, 0)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+root_node = NodePath("../Marker2D")
+libraries = {
+&"": SubResource("AnimationLibrary_xrfh1")
+}
+autoplay = "brownboy"

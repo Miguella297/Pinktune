@@ -1,4 +1,4 @@
-[gd_scene load_steps=38 format=3 uid="uid://cce4xfmpm8x8d"]
+[gd_scene load_steps=40 format=3 uid="uid://cce4xfmpm8x8d"]
 
 [ext_resource type="Texture2D" uid="uid://cqus17hlyn2li" path="res://Brown.png" id="1_jwggh"]
 [ext_resource type="Texture2D" uid="uid://b6psmtajx6xjj" path="res://Terrain (16x16).png" id="2_du311"]
@@ -21,6 +21,7 @@
 [ext_resource type="Script" uid="uid://hd58if7okhch" path="res://area_2d_9+14.gd" id="19_6n8r0"]
 [ext_resource type="Script" uid="uid://ctdv2txohl6v8" path="res://area_2d_9+15.gd" id="20_mwf0f"]
 [ext_resource type="AudioStream" uid="uid://qowjofddhef5" path="res://sure thing.mp3" id="21_y5x48"]
+[ext_resource type="Script" uid="uid://chqcx78t1f01b" path="res://area_2d_9+16.gd" id="22_qqnna"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_hp5fk"]
 texture = ExtResource("2_du311")
@@ -360,6 +361,9 @@ size = Vector2(58.5, 15)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_y5x48"]
 size = Vector2(29.4375, 17.125)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_qqnna"]
+size = Vector2(60, 20)
+
 [node name="Node2D" type="Node2D"]
 
 [node name="TextureRect" type="TextureRect" parent="."]
@@ -502,3 +506,11 @@ stream = ExtResource("21_y5x48")
 volume_db = 24.0
 autoplay = true
 max_distance = 2875.0
+
+[node name="Area2D9+16" type="Area2D" parent="."]
+position = Vector2(929.5, 218.75)
+script = ExtResource("22_qqnna")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D9+16"]
+position = Vector2(-1.5, 0)
+shape = SubResource("RectangleShape2D_qqnna")

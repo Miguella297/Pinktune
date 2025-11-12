@@ -1,0 +1,121 @@
+[gd_scene load_steps=14 format=3 uid="uid://df0pibc53iq4q"]
+
+[ext_resource type="Script" uid="uid://b347w03pk6sqi" path="res://deathscene_11.gd" id="1_2g3xt"]
+[ext_resource type="FontFile" uid="uid://c6n15j2w0ogps" path="res://LAUGHTER.ttf" id="1_7g4tq"]
+[ext_resource type="Texture2D" uid="uid://bf0k3i2a6v74k" path="res://happyagain2.png" id="2_uvd3u"]
+[ext_resource type="Texture2D" uid="uid://bt6a8v2vrgdsp" path="res://happy.png" id="3_qse3b"]
+[ext_resource type="Texture2D" uid="uid://c1ys4j14ahiw0" path="res://coolguy.png" id="4_vghn4"]
+[ext_resource type="AudioStream" uid="uid://b8utqjc5nxxr3" path="res://still waiting jazz emu.mp3" id="6_qse3b"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_mtar7"]
+texture = ExtResource("2_uvd3u")
+modulate_color = Color(0.779466, 0.149829, 0.645427, 1)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_j5qaq"]
+texture = ExtResource("3_qse3b")
+modulate_color = Color(0.427493, 0.427493, 0.427493, 1)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_n6jub"]
+texture = ExtResource("4_vghn4")
+modulate_color = Color(0.594379, 0.514096, 0.970598, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_rfmna"]
+bg_color = Color(0.0636065, 0.203292, 0.0869041, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_7g4tq"]
+bg_color = Color(0.186383, 0.670806, 0.379978, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_2g3xt"]
+bg_color = Color(0.30988, 0.196482, 0.0135364, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_fvdd7"]
+bg_color = Color(0.710408, 0.587204, 0.189833, 1)
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource("1_2g3xt")
+
+[node name="Panel" type="Panel" parent="."]
+offset_left = -2.0
+offset_right = 539.0
+offset_bottom = 358.0
+theme_override_styles/panel = SubResource("StyleBoxTexture_mtar7")
+
+[node name="Panel2" type="Panel" parent="."]
+offset_left = 539.0
+offset_top = 1.0
+offset_right = 1151.0
+offset_bottom = 358.0
+theme_override_styles/panel = SubResource("StyleBoxTexture_j5qaq")
+
+[node name="Panel3" type="Panel" parent="."]
+offset_left = 1.0
+offset_top = 358.0
+offset_right = 1152.0
+offset_bottom = 646.0
+theme_override_styles/panel = SubResource("StyleBoxTexture_n6jub")
+
+[node name="Button" type="Button" parent="."]
+offset_left = 262.0
+offset_top = 171.0
+offset_right = 894.0
+offset_bottom = 306.0
+theme_override_colors/font_disabled_color = Color(0.461949, 0.247714, 0.0322738, 1)
+theme_override_colors/font_hover_pressed_color = Color(0.524135, 0.276473, 0.038663, 1)
+theme_override_colors/font_hover_color = Color(0.620636, 0.295489, 0.0477299, 1)
+theme_override_colors/icon_disabled_color = Color(0.442031, 0.224246, 0.0277364, 1)
+theme_override_colors/icon_hover_pressed_color = Color(0.52886, 0.251171, 0.0544345, 1)
+theme_override_colors/icon_hover_color = Color(0.434867, 0.210086, 0.0198094, 1)
+theme_override_colors/icon_pressed_color = Color(0.541216, 0.261191, 0.0560252, 1)
+theme_override_colors/icon_focus_color = Color(0.575483, 0.272726, 0.0491656, 1)
+theme_override_colors/icon_normal_color = Color(0.507028, 0.270741, 0.0299662, 1)
+theme_override_colors/font_outline_color = Color(0.587331, 0.32316, 0.0821695, 1)
+theme_override_colors/font_color = Color(0.472685, 0.258085, 0.0560289, 1)
+theme_override_colors/font_focus_color = Color(0.52106, 0.258518, 0.0447035, 1)
+theme_override_colors/font_pressed_color = Color(0.647356, 0.312577, 0.0871066, 1)
+theme_override_font_sizes/font_size = 50
+theme_override_styles/hover = SubResource("StyleBoxFlat_rfmna")
+theme_override_styles/normal = SubResource("StyleBoxFlat_7g4tq")
+text = "Try again on level 11"
+
+[node name="Button2" type="Button" parent="."]
+offset_left = 257.0
+offset_top = 334.0
+offset_right = 898.0
+offset_bottom = 463.0
+theme_override_colors/font_disabled_color = Color(0.490075, 0.0405191, 0.158062, 1)
+theme_override_colors/font_hover_pressed_color = Color(0.605234, 0.0684526, 0.242051, 1)
+theme_override_colors/font_hover_color = Color(0.494957, 0.0895434, 0.139654, 1)
+theme_override_colors/icon_disabled_color = Color(0.509599, 0.0914, 0.178279, 1)
+theme_override_colors/icon_hover_pressed_color = Color(0.608976, 0.111596, 0.253511, 1)
+theme_override_colors/icon_hover_color = Color(0.584559, 0.131899, 0.221562, 1)
+theme_override_colors/icon_pressed_color = Color(0.567129, 0.0933194, 0.17414, 1)
+theme_override_colors/icon_focus_color = Color(0.68786, 0.100778, 0.268935, 1)
+theme_override_colors/icon_normal_color = Color(0.630113, 0.0365442, 0.246961, 1)
+theme_override_colors/font_outline_color = Color(0.530994, 0.0830298, 0.188276, 1)
+theme_override_colors/font_color = Color(0.628467, 0.0552438, 0.231714, 1)
+theme_override_colors/font_focus_color = Color(0.475363, 0.0212794, 0.163593, 1)
+theme_override_colors/font_pressed_color = Color(0.648224, 0.0566871, 0.219482, 1)
+theme_override_font_sizes/font_size = 50
+theme_override_styles/hover = SubResource("StyleBoxFlat_2g3xt")
+theme_override_styles/normal = SubResource("StyleBoxFlat_fvdd7")
+text = "Main menu for failures."
+
+[node name="Label" type="Label" parent="."]
+offset_left = 356.0
+offset_top = 61.0
+offset_right = 795.0
+offset_bottom = 158.0
+theme_override_colors/font_color = Color(0.655764, 0.30688, 0, 1)
+theme_override_fonts/font = ExtResource("1_7g4tq")
+theme_override_font_sizes/font_size = 100
+text = "You failure"
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+position = Vector2(2680.13, 2231.25)
+stream = ExtResource("6_qse3b")
+volume_db = 24.0
+autoplay = true
+max_distance = 2875.0
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="Button2" to="." method="_on_button_2_pressed"]

@@ -1,0 +1,152 @@
+[gd_scene load_steps=19 format=3 uid="uid://ccir0vrd6ph1c"]
+
+[ext_resource type="Texture2D" uid="uid://du6axlls2vs3i" path="res://On (38x38).png" id="1_0p2nj"]
+[ext_resource type="Script" uid="uid://bagc8ancd8dbr" path="res://area_2d_13+15.gd" id="2_yq0vq"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xdgju"]
+atlas = ExtResource("1_0p2nj")
+region = Rect2(0, 0, 38, 38)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6ak2f"]
+atlas = ExtResource("1_0p2nj")
+region = Rect2(38, 0, 38, 38)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pxj77"]
+atlas = ExtResource("1_0p2nj")
+region = Rect2(76, 0, 38, 38)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ugw52"]
+atlas = ExtResource("1_0p2nj")
+region = Rect2(114, 0, 38, 38)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bn1dt"]
+atlas = ExtResource("1_0p2nj")
+region = Rect2(152, 0, 38, 38)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_s7gxn"]
+atlas = ExtResource("1_0p2nj")
+region = Rect2(190, 0, 38, 38)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_k7686"]
+atlas = ExtResource("1_0p2nj")
+region = Rect2(228, 0, 38, 38)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7c32u"]
+atlas = ExtResource("1_0p2nj")
+region = Rect2(266, 0, 38, 38)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_e26q6"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xdgju")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6ak2f")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_pxj77")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ugw52")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bn1dt")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_s7gxn")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_k7686")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7c32u")
+}],
+"loop": true,
+"name": &"default",
+"speed": 50.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_vo7li"]
+radius = 18.6815
+
+[sub_resource type="Animation" id="Animation_e20tv"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("../AnimatedSprite2D:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_3iuxq"]
+resource_name = "blade"
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("../AnimatedSprite2D:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5, 1),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(0, 0), Vector2(-70, 0), Vector2(0, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_a28my"]
+_data = {
+&"RESET": SubResource("Animation_e20tv"),
+&"blade": SubResource("Animation_3iuxq")
+}
+
+[sub_resource type="Animation" id="Animation_6ak2f"]
+length = 0.001
+
+[sub_resource type="Animation" id="Animation_xdgju"]
+resource_name = "brownboy"
+length = 2.0
+loop_mode = 1
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_pxj77"]
+_data = {
+&"RESET": SubResource("Animation_6ak2f"),
+&"brownboy": SubResource("Animation_xdgju")
+}
+
+[node name="Node2D" type="Node2D"]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+texture_filter = 1
+sprite_frames = SubResource("SpriteFrames_e26q6")
+autoplay = "default"
+frame_progress = 0.989476
+
+[node name="Area2D13+15" type="Area2D" parent="AnimatedSprite2D"]
+script = ExtResource("2_yq0vq")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="AnimatedSprite2D/Area2D13+15"]
+shape = SubResource("CircleShape2D_vo7li")
+
+[node name="Marker2D" type="Marker2D" parent="."]
+position = Vector2(-70, 0)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+root_node = NodePath("../Marker2D")
+libraries = {
+&"": SubResource("AnimationLibrary_a28my")
+}
+autoplay = "blade"
+
+[node name="AnimationPlayer2" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_pxj77")
+}
+autoplay = "brownboy"

@@ -1,0 +1,64 @@
+[gd_scene load_steps=4 format=3 uid="uid://dfycajpelaxwr"]
+
+[ext_resource type="Script" uid="uid://bj726mbdlkdpd" path="res://deathscene_14.gd" id="1_eucbu"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_2r4tx"]
+bg_color = Color(6.257e-07, 0.347509, 0.480391, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_eucbu"]
+bg_color = Color(1.54018e-06, 0.675831, 0.757134, 1)
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource("1_eucbu")
+
+[node name="Panel" type="Panel" parent="."]
+offset_right = 1151.0
+offset_bottom = 338.0
+
+[node name="Panel2" type="Panel" parent="."]
+offset_top = 338.0
+offset_right = 586.0
+offset_bottom = 647.0
+
+[node name="Panel3" type="Panel" parent="."]
+offset_left = 586.0
+offset_top = 338.0
+offset_right = 1151.0
+offset_bottom = 648.0
+
+[node name="Button" type="Button" parent="."]
+offset_left = 289.0
+offset_top = 241.0
+offset_right = 885.0
+offset_bottom = 354.0
+theme_override_colors/font_disabled_color = Color(0.507563, 0.306498, 0.0917263, 1)
+theme_override_colors/font_hover_pressed_color = Color(0.487321, 0.303073, 0.069881, 1)
+theme_override_colors/font_hover_color = Color(0.511611, 0.321673, 0.0971666, 1)
+theme_override_colors/icon_disabled_color = Color(0.507429, 0.306339, 0.0978293, 1)
+theme_override_colors/icon_hover_pressed_color = Color(0.48982, 0.317273, 0.118768, 1)
+theme_override_colors/icon_hover_color = Color(0.436212, 0.298525, 0.120645, 1)
+theme_override_colors/icon_pressed_color = Color(0.45007, 0.273946, 0.0773155, 1)
+theme_override_colors/icon_focus_color = Color(0.495666, 0.313745, 0.112268, 1)
+theme_override_colors/icon_normal_color = Color(0.505488, 0.307632, 0.0993968, 1)
+theme_override_colors/font_outline_color = Color(0.493866, 0.297522, 0.0968756, 1)
+theme_override_colors/font_color = Color(0.404052, 0.268145, 0.0884016, 1)
+theme_override_colors/font_focus_color = Color(0.515317, 0.319158, 0.0971875, 1)
+theme_override_colors/font_pressed_color = Color(0.401628, 0.269062, 0.100489, 1)
+theme_override_font_sizes/font_size = 60
+theme_override_styles/hover = SubResource("StyleBoxFlat_2r4tx")
+theme_override_styles/normal = SubResource("StyleBoxFlat_eucbu")
+text = "Try it again !"
+
+[node name="Button2" type="Button" parent="."]
+offset_left = 291.0
+offset_top = 370.0
+offset_right = 887.0
+offset_bottom = 467.0
+
+[node name="Button3" type="Button" parent="."]
+offset_left = 164.496
+offset_top = 476.137
+offset_right = 172.496
+offset_bottom = 484.137
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

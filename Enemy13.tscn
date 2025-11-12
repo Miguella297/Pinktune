@@ -91,6 +91,21 @@ animations = [{
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_u4ees"]
 size = Vector2(35, 49)
 
+[sub_resource type="Animation" id="Animation_vsswg"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("AnimatedSprite2D:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-9.53674e-07, -3)]
+}
+
 [sub_resource type="Animation" id="Animation_s4q8j"]
 resource_name = "ninja frog enemy"
 length = 2.0
@@ -106,21 +121,6 @@ tracks/0/keys = {
 "transitions": PackedFloat32Array(1, 1, 1),
 "update": 0,
 "values": [Vector2(0, -3), Vector2(100, -3), Vector2(0, -3)]
-}
-
-[sub_resource type="Animation" id="Animation_vsswg"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("AnimatedSprite2D:position")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector2(-9.53674e-07, -3)]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_d2ka6"]

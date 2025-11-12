@@ -1,0 +1,169 @@
+[gd_scene load_steps=21 format=3 uid="uid://bl52w62gx10ul"]
+
+[ext_resource type="Script" uid="uid://bxv6cg7rlnbbn" path="res://thank_you.gd" id="1_k681s"]
+[ext_resource type="Texture2D" uid="uid://dxtbiq6606h7n" path="res://your time.png" id="1_u66jl"]
+[ext_resource type="Texture2D" uid="uid://bdo7qff43ptem" path="res://mountain.png" id="2_k681s"]
+[ext_resource type="Texture2D" uid="uid://dfqdg4h52vo3i" path="res://pumpkins.png" id="3_4eeoe"]
+[ext_resource type="Texture2D" uid="uid://ds16drpx1tq2x" path="res://halloween 5.png" id="4_484de"]
+[ext_resource type="Texture2D" uid="uid://bf0k3i2a6v74k" path="res://happyagain2.png" id="5_hw8f3"]
+[ext_resource type="Texture2D" uid="uid://dcwgavt41vv5r" path="res://mask man.png" id="6_q6pmm"]
+[ext_resource type="FontFile" uid="uid://dogew4kss7h6u" path="res://Main Characters/Mask Dude/Spicy Sale.ttf" id="7_oc5sg"]
+[ext_resource type="FontFile" uid="uid://sgfk1rgwxa8i" path="res://Urban Shadow Script.otf" id="8_lploq"]
+[ext_resource type="AudioStream" uid="uid://bocdwen4iydsw" path="res://thank you.mp3" id="10_4eeoe"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_o3asx"]
+texture = ExtResource("1_u66jl")
+modulate_color = Color(0.295344, 0.602904, 0.42855, 1)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_xkuym"]
+texture = ExtResource("2_k681s")
+modulate_color = Color(0.520516, 0.497296, 0.314331, 1)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_kv46l"]
+texture = ExtResource("3_4eeoe")
+modulate_color = Color(0.3, 0.096, 0.096, 1)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_2noyq"]
+texture = ExtResource("4_484de")
+modulate_color = Color(0.883906, 0, 0.21129, 1)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_08b4k"]
+texture = ExtResource("5_hw8f3")
+modulate_color = Color(0.123902, 0.397534, 0.27545, 1)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_03bih"]
+texture = ExtResource("6_q6pmm")
+modulate_color = Color(0.677155, 0.485964, 0.123879, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_il8w8"]
+bg_color = Color(0.0181877, 0.305475, 0.40882, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_a5ttr"]
+bg_color = Color(0.311235, 0.613247, 0.941345, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_qin8g"]
+bg_color = Color(0.340816, 0.232138, 0.0517837, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_xrkuj"]
+bg_color = Color(0.789579, 0.544117, 0.175721, 1)
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource("1_k681s")
+
+[node name="Panel" type="Panel" parent="."]
+offset_right = 395.0
+offset_bottom = 351.0
+theme_override_styles/panel = SubResource("StyleBoxTexture_o3asx")
+
+[node name="Panel2" type="Panel" parent="."]
+offset_left = 395.0
+offset_top = 1.0
+offset_right = 780.0
+offset_bottom = 351.0
+theme_override_styles/panel = SubResource("StyleBoxTexture_xkuym")
+
+[node name="Panel3" type="Panel" parent="."]
+offset_top = 351.0
+offset_right = 395.0
+offset_bottom = 646.0
+theme_override_styles/panel = SubResource("StyleBoxTexture_kv46l")
+
+[node name="Panel4" type="Panel" parent="."]
+offset_left = 395.0
+offset_top = 351.0
+offset_right = 781.0
+offset_bottom = 646.0
+theme_override_styles/panel = SubResource("StyleBoxTexture_2noyq")
+
+[node name="Panel5" type="Panel" parent="."]
+offset_left = 781.0
+offset_top = 351.0
+offset_right = 1152.0
+offset_bottom = 646.0
+theme_override_styles/panel = SubResource("StyleBoxTexture_08b4k")
+
+[node name="Panel6" type="Panel" parent="."]
+offset_left = 778.0
+offset_right = 1148.0
+offset_bottom = 351.0
+theme_override_styles/panel = SubResource("StyleBoxTexture_03bih")
+
+[node name="Button" type="Button" parent="."]
+offset_left = 238.0
+offset_top = 252.0
+offset_right = 894.0
+offset_bottom = 393.0
+theme_override_colors/font_disabled_color = Color(0.551294, 0.27248, 0.0778957, 1)
+theme_override_colors/font_hover_pressed_color = Color(0.543684, 0.235391, 0.0854247, 1)
+theme_override_colors/font_hover_color = Color(0.56124, 0.304915, 0.0736708, 1)
+theme_override_colors/icon_disabled_color = Color(0.534118, 0.267042, 0.0698814, 1)
+theme_override_colors/icon_hover_pressed_color = Color(0.571211, 0.296117, 0.0895641, 1)
+theme_override_colors/icon_hover_color = Color(0.604652, 0.308272, 0.09637, 1)
+theme_override_colors/icon_pressed_color = Color(0.495479, 0.216535, 0.0662891, 1)
+theme_override_colors/icon_focus_color = Color(0.680427, 0.347559, 0.0378582, 1)
+theme_override_colors/icon_normal_color = Color(0.63083, 0.284511, 0.0813724, 1)
+theme_override_colors/font_outline_color = Color(0.629431, 0.285498, 0.0911884, 1)
+theme_override_colors/font_color = Color(0.601597, 0.290496, 0.0823161, 1)
+theme_override_colors/font_focus_color = Color(0.63083, 0.284511, 0.0813724, 1)
+theme_override_colors/font_pressed_color = Color(0.560063, 0.304685, 0.1034, 1)
+theme_override_font_sizes/font_size = 60
+theme_override_styles/hover = SubResource("StyleBoxFlat_il8w8")
+theme_override_styles/normal = SubResource("StyleBoxFlat_a5ttr")
+text = "Back to Main menu"
+
+[node name="Button2" type="Button" parent="."]
+offset_left = 240.0
+offset_top = 411.0
+offset_right = 897.0
+offset_bottom = 551.0
+theme_override_colors/font_disabled_color = Color(0.583193, 0.028373, 0.18145, 1)
+theme_override_colors/font_hover_pressed_color = Color(0.600279, 0.0827592, 0.248981, 1)
+theme_override_colors/font_hover_color = Color(0.602184, 0.0907371, 0.212993, 1)
+theme_override_colors/icon_disabled_color = Color(0.682672, 0.0634558, 0.2332, 1)
+theme_override_colors/icon_hover_pressed_color = Color(0.722878, 0.0974245, 0.301005, 1)
+theme_override_colors/icon_hover_color = Color(0.756625, 0.115013, 0.295231, 1)
+theme_override_colors/icon_pressed_color = Color(0.669838, 0.134182, 0.313195, 1)
+theme_override_colors/icon_focus_color = Color(0.664608, 0.111532, 0.273186, 1)
+theme_override_colors/icon_normal_color = Color(0.676425, 0.126361, 0.289211, 1)
+theme_override_colors/font_outline_color = Color(0.672598, 0.0838588, 0.277139, 1)
+theme_override_colors/font_color = Color(0.608652, 0.0580292, 0.235118, 1)
+theme_override_colors/font_focus_color = Color(0.718884, 0.109164, 0.305133, 1)
+theme_override_colors/font_pressed_color = Color(0.652383, 0.103663, 0.238183, 1)
+theme_override_font_sizes/font_size = 60
+theme_override_styles/hover = SubResource("StyleBoxFlat_qin8g")
+theme_override_styles/normal = SubResource("StyleBoxFlat_xrkuj")
+text = "To bonus levels"
+
+[node name="Label" type="Label" parent="."]
+offset_left = 32.0
+offset_top = 97.0
+offset_right = 1145.0
+offset_bottom = 250.0
+theme_override_colors/font_color = Color(1.44392e-06, 0.879945, 0.21353, 1)
+theme_override_fonts/font = ExtResource("7_oc5sg")
+theme_override_font_sizes/font_size = 29
+text = "Congradulations! You have completed the main levels of Pinktune! 
+I thank you for playing my game! From here, you can either return 
+to the main menu, or try our bonus levels!"
+
+[node name="Label2" type="Label" parent="."]
+offset_left = 16.0
+offset_top = 439.0
+offset_right = 224.0
+offset_bottom = 590.0
+theme_override_colors/font_color = Color(0.171538, 0.428926, 0.975087, 1)
+theme_override_fonts/font = ExtResource("8_lploq")
+theme_override_font_sizes/font_size = 73
+text = "Try bonus 
+levels!"
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+position = Vector2(2526.25, 1953.5)
+scale = Vector2(1, 1.00407)
+stream = ExtResource("10_4eeoe")
+volume_db = 24.0
+autoplay = true
+max_distance = 4096.0
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="Button2" to="." method="_on_button_2_pressed"]

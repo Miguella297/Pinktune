@@ -1,4 +1,4 @@
-[gd_scene load_steps=37 format=3 uid="uid://bx5toqc06tyhk"]
+[gd_scene load_steps=38 format=3 uid="uid://bx5toqc06tyhk"]
 
 [ext_resource type="Texture2D" uid="uid://2vik1tsbirkl" path="res://Gray.png" id="1_j3n2a"]
 [ext_resource type="Texture2D" uid="uid://b6psmtajx6xjj" path="res://Terrain (16x16).png" id="2_ihvqa"]
@@ -19,6 +19,7 @@
 [ext_resource type="Script" uid="uid://dpnltkvoscii8" path="res://area_2d_10+10.gd" id="17_so8e5"]
 [ext_resource type="Script" uid="uid://cb5jj5h8s8tpf" path="res://area_2d_10+11.gd" id="18_4kf7b"]
 [ext_resource type="Script" uid="uid://bm5ekm7rwflkr" path="res://area_2d_10+15.gd" id="19_yec1j"]
+[ext_resource type="AudioStream" uid="uid://bqcpmh2dt3cdb" path="res://cake by the ocean.mp3" id="20_crwpm"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_qdayu"]
 texture = ExtResource("2_ihvqa")
@@ -453,7 +454,6 @@ script = ExtResource("13_3ah58")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D10+6"]
 position = Vector2(9.02781, -9.13486)
-scale = Vector2(1, 1)
 shape = SubResource("RectangleShape2D_f2hb5")
 
 [node name="Area2D10+7" type="Area2D" parent="."]
@@ -498,3 +498,10 @@ script = ExtResource("19_yec1j")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D10+15"]
 position = Vector2(336.5, 123.5)
 shape = SubResource("RectangleShape2D_yec1j")
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+position = Vector2(2385.13, 1984.25)
+stream = ExtResource("20_crwpm")
+volume_db = 24.0
+autoplay = true
+max_distance = 2875.0

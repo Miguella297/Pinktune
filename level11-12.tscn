@@ -1,0 +1,130 @@
+[gd_scene load_steps=16 format=3 uid="uid://3fej58gascvo"]
+
+[ext_resource type="Script" uid="uid://c0xyflmqci8bt" path="res://level_11_12.gd" id="1_jki1c"]
+[ext_resource type="Texture2D" uid="uid://be41df6fld6mg" path="res://hills.png" id="1_l7g15"]
+[ext_resource type="FontFile" uid="uid://bsah4p2405t81" path="res://Super Joyful.ttf" id="1_w3if5"]
+[ext_resource type="Texture2D" uid="uid://cb5m7cxotwiwe" path="res://car.png" id="2_jki1c"]
+[ext_resource type="Texture2D" uid="uid://dcwgavt41vv5r" path="res://mask man.png" id="3_74olc"]
+[ext_resource type="Texture2D" uid="uid://c1k4qugv87pr7" path="res://doggo.png" id="4_gbkd0"]
+[ext_resource type="AudioStream" uid="uid://begq1uu686u5e" path="res://coolsound.mp3" id="7_74olc"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_0nuxv"]
+texture = ExtResource("1_l7g15")
+modulate_color = Color(0.925353, 0.925353, 0.925353, 1)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_hk521"]
+texture = ExtResource("2_jki1c")
+modulate_color = Color(0.969006, 0.578982, 0.338888, 1)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_8j0a5"]
+texture = ExtResource("3_74olc")
+modulate_color = Color(0.248383, 0.455973, 0.995601, 1)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_tlqww"]
+texture = ExtResource("4_gbkd0")
+modulate_color = Color(0.923536, 0.701588, 0.224542, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_2tyan"]
+bg_color = Color(0.044002, 0.250979, 0.589643, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_w3if5"]
+bg_color = Color(0.44536, 0.594489, 0.929029, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_0hq6x"]
+bg_color = Color(0.38332, 0.250276, 0.0391544, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_5iywq"]
+bg_color = Color(0.824052, 0.521725, 0.1759, 1)
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource("1_jki1c")
+
+[node name="Panel4" type="Panel" parent="."]
+offset_left = 526.0
+offset_top = 356.0
+offset_right = 1151.0
+offset_bottom = 648.0
+theme_override_styles/panel = SubResource("StyleBoxTexture_0nuxv")
+
+[node name="Panel3" type="Panel" parent="."]
+offset_top = 356.0
+offset_right = 526.0
+offset_bottom = 648.0
+theme_override_styles/panel = SubResource("StyleBoxTexture_hk521")
+
+[node name="Panel" type="Panel" parent="."]
+offset_right = 527.0
+offset_bottom = 356.0
+theme_override_styles/panel = SubResource("StyleBoxTexture_8j0a5")
+
+[node name="Panel2" type="Panel" parent="."]
+offset_left = 527.0
+offset_right = 1151.0
+offset_bottom = 356.0
+theme_override_styles/panel = SubResource("StyleBoxTexture_tlqww")
+
+[node name="Button" type="Button" parent="."]
+offset_left = 232.0
+offset_top = 243.0
+offset_right = 908.0
+offset_bottom = 386.0
+theme_override_colors/font_disabled_color = Color(0.478753, 0.27287, 0.048958, 1)
+theme_override_colors/font_hover_pressed_color = Color(0.646386, 0.409259, 0.134498, 1)
+theme_override_colors/font_hover_color = Color(0.509007, 0.322706, 0.113649, 1)
+theme_override_colors/icon_disabled_color = Color(0.464747, 0.244524, 0.0617682, 1)
+theme_override_colors/icon_hover_pressed_color = Color(0.586398, 0.304251, 0.0733275, 1)
+theme_override_colors/icon_hover_color = Color(0.510387, 0.245878, 0.0754365, 1)
+theme_override_colors/icon_pressed_color = Color(0.551568, 0.273345, 0.0447992, 1)
+theme_override_colors/icon_focus_color = Color(0.746796, 0.349845, 0.0738422, 1)
+theme_override_colors/icon_normal_color = Color(0.539218, 0.302414, 0.0817974, 1)
+theme_override_colors/font_outline_color = Color(0.581868, 0.287382, 0.0758003, 1)
+theme_override_colors/font_color = Color(0.496636, 0.278192, 0.0568553, 1)
+theme_override_colors/font_focus_color = Color(0.405606, 0.231895, 0.0694402, 1)
+theme_override_colors/font_pressed_color = Color(0.52364, 0.330173, 0.12818, 1)
+theme_override_font_sizes/font_size = 70
+theme_override_styles/hover = SubResource("StyleBoxFlat_2tyan")
+theme_override_styles/normal = SubResource("StyleBoxFlat_w3if5")
+text = "ONWARDS!"
+
+[node name="Button2" type="Button" parent="."]
+offset_left = 232.0
+offset_top = 410.0
+offset_right = 905.0
+offset_bottom = 547.0
+theme_override_colors/font_disabled_color = Color(0.644785, 0.0812073, 0.194755, 1)
+theme_override_colors/font_hover_pressed_color = Color(0.623731, 0.0174499, 0.160494, 1)
+theme_override_colors/font_hover_color = Color(0.57204, 0.0673595, 0.205955, 1)
+theme_override_colors/icon_disabled_color = Color(0.652932, 0.0375726, 0.207491, 1)
+theme_override_colors/icon_hover_pressed_color = Color(0.670798, 0.0450915, 0.200867, 1)
+theme_override_colors/icon_hover_color = Color(0.520783, 0.071056, 0.140955, 1)
+theme_override_colors/icon_pressed_color = Color(0.708232, 0.0999084, 0.259821, 1)
+theme_override_colors/icon_focus_color = Color(0.649484, 0.0604894, 0.198867, 1)
+theme_override_colors/icon_normal_color = Color(0.810968, 0.0679053, 0.240516, 1)
+theme_override_colors/font_outline_color = Color(0.561803, 0.0592361, 0.14015, 1)
+theme_override_colors/font_color = Color(0.62208, 0.0270084, 0.160529, 1)
+theme_override_colors/font_focus_color = Color(0.641331, 0.0275479, 0.146398, 1)
+theme_override_colors/font_pressed_color = Color(0.634276, 0.109422, 0.164251, 1)
+theme_override_font_sizes/font_size = 70
+theme_override_styles/hover = SubResource("StyleBoxFlat_0hq6x")
+theme_override_styles/normal = SubResource("StyleBoxFlat_5iywq")
+text = "BACKWARDS!"
+
+[node name="Label" type="Label" parent="."]
+offset_left = 408.0
+offset_top = 118.0
+offset_right = 739.0
+offset_bottom = 214.0
+theme_override_colors/font_color = Color(0.153299, 0.352263, 0.145996, 1)
+theme_override_fonts/font = ExtResource("1_w3if5")
+theme_override_font_sizes/font_size = 80
+text = "Keep it up"
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+position = Vector2(2385.13, 1984.25)
+stream = ExtResource("7_74olc")
+volume_db = 24.0
+autoplay = true
+max_distance = 2875.0
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="Button2" to="." method="_on_button_2_pressed"]

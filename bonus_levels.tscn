@@ -1,0 +1,97 @@
+[gd_scene load_steps=10 format=3 uid="uid://dc8l3h3ptrlb2"]
+
+[ext_resource type="Script" uid="uid://60f1eqpofcwr" path="res://bonus_levels.gd" id="1_3mthd"]
+[ext_resource type="Texture2D" uid="uid://bax0yfo0qu2f7" path="res://Main Characters/Mask Dude/bonus.png" id="1_bn8ah"]
+[ext_resource type="FontFile" uid="uid://c6n15j2w0ogps" path="res://LAUGHTER.ttf" id="2_743da"]
+[ext_resource type="Texture2D" uid="uid://b7h65cqtvldxg" path="res://Main Characters/Pink Man/Jump (32x32).png" id="3_743da"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_4eskv"]
+texture = ExtResource("1_bn8ah")
+modulate_color = Color(0.0641977, 0.415756, 0.151591, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_bn8ah"]
+bg_color = Color(0.587669, 0.295717, 0, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_743da"]
+bg_color = Color(0.773685, 0.555484, 0.115664, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_3mthd"]
+bg_color = Color(0.218459, 0.472406, 0, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_8mx6r"]
+bg_color = Color(0.508726, 0.666345, 0, 1)
+
+[node name="Node2D" type="Node2D"]
+scale = Vector2(1.00679, 1.00713)
+script = ExtResource("1_3mthd")
+
+[node name="Panel" type="Panel" parent="."]
+texture_filter = 1
+offset_right = 1152.0
+offset_bottom = 648.0
+theme_override_styles/panel = SubResource("StyleBoxTexture_4eskv")
+
+[node name="Label" type="Label" parent="."]
+offset_left = 19.0
+offset_top = 92.0
+offset_right = 1152.0
+offset_bottom = 160.0
+theme_override_colors/font_color = Color(0.172962, 0.381649, 1, 1)
+theme_override_fonts/font = ExtResource("2_743da")
+theme_override_font_sizes/font_size = 70
+text = "All bonus levels will be accessible here! "
+
+[node name="Button" type="Button" parent="."]
+offset_left = 32.0
+offset_top = 185.0
+offset_right = 526.0
+offset_bottom = 283.0
+theme_override_colors/font_disabled_color = Color(0.589841, 0.0817611, 0.176214, 1)
+theme_override_colors/font_hover_pressed_color = Color(0.606951, 0.0633949, 0.238582, 1)
+theme_override_colors/font_hover_color = Color(0.57531, 0.0405524, 0.230358, 1)
+theme_override_colors/icon_disabled_color = Color(0.675978, 0.096591, 0.21622, 1)
+theme_override_colors/icon_hover_pressed_color = Color(0.663545, 0.0427826, 0.269943, 1)
+theme_override_colors/icon_hover_color = Color(0.545786, 0.0610375, 0.215514, 1)
+theme_override_colors/icon_pressed_color = Color(0.537196, 0.029671, 0.229245, 1)
+theme_override_colors/icon_focus_color = Color(0.567525, 0, 0.206011, 1)
+theme_override_colors/icon_normal_color = Color(0.622985, 0.0542343, 0.275285, 1)
+theme_override_colors/font_outline_color = Color(0.717649, 0, 0.329914, 1)
+theme_override_colors/font_color = Color(0.556366, 0.0666394, 0.27674, 1)
+theme_override_colors/font_focus_color = Color(0.554046, 0.0467257, 0.23845, 1)
+theme_override_colors/font_pressed_color = Color(0.642438, 0, 0.330992, 1)
+theme_override_font_sizes/font_size = 30
+theme_override_styles/hover = SubResource("StyleBoxFlat_bn8ah")
+theme_override_styles/normal = SubResource("StyleBoxFlat_743da")
+text = "Bonus level1: Cruel summer-Bananarama"
+
+[node name="Jump(32x32)" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(937, 399.5)
+scale = Vector2(7, 6.34375)
+texture = ExtResource("3_743da")
+
+[node name="Button2" type="Button" parent="."]
+offset_left = 841.0
+offset_top = 530.0
+offset_right = 1123.0
+offset_bottom = 621.0
+theme_override_colors/font_disabled_color = Color(0.0474814, 0.380922, 0.44978, 1)
+theme_override_colors/font_hover_pressed_color = Color(0.0763001, 0.426118, 0.4884, 1)
+theme_override_colors/font_hover_color = Color(0.0706281, 0.402692, 0.470914, 1)
+theme_override_colors/icon_disabled_color = Color(0.0700459, 0.389676, 0.4686, 1)
+theme_override_colors/icon_hover_pressed_color = Color(0.0959293, 0.41557, 0.462737, 1)
+theme_override_colors/icon_hover_color = Color(0.107772, 0.447358, 0.507364, 1)
+theme_override_colors/icon_pressed_color = Color(0.0939749, 0.457362, 0.533747, 1)
+theme_override_colors/icon_focus_color = Color(0.0922365, 0.423822, 0.495165, 1)
+theme_override_colors/icon_normal_color = Color(0.0568912, 0.356116, 0.434695, 1)
+theme_override_colors/font_outline_color = Color(0.0914226, 0.440514, 0.552977, 1)
+theme_override_colors/font_color = Color(0.0893758, 0.385948, 0.48089, 1)
+theme_override_colors/font_focus_color = Color(0.10261, 0.426864, 0.54805, 1)
+theme_override_colors/font_pressed_color = Color(0.102302, 0.361317, 0.45956, 1)
+theme_override_font_sizes/font_size = 50
+theme_override_styles/hover = SubResource("StyleBoxFlat_3mthd")
+theme_override_styles/normal = SubResource("StyleBoxFlat_8mx6r")
+text = "Main menu"
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="Button2" to="." method="_on_button_2_pressed"]
