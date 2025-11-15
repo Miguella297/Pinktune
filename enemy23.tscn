@@ -435,7 +435,7 @@ position = Vector2(-500, 32)
 scale = Vector2(3.55555, 3.19444)
 sprite_frames = SubResource("SpriteFrames_8hoqc")
 autoplay = "default"
-frame_progress = 0.136614
+frame_progress = 0.652194
 
 [node name="Area2D14+6" type="Area2D" parent="AnimatedSprite2D3"]
 script = ExtResource("5_gbh0d")
