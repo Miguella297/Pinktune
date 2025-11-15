@@ -1,8 +1,10 @@
-[gd_scene load_steps=7 format=3 uid="uid://dai8s2frnoatn"]
+[gd_scene load_steps=11 format=3 uid="uid://dai8s2frnoatn"]
 
 [ext_resource type="Texture2D" uid="uid://dvwf2nulxi0h7" path="res://Main Characters/Pink Man/Pink.png" id="1_ywyst"]
 [ext_resource type="Texture2D" uid="uid://b6psmtajx6xjj" path="res://Terrain (16x16).png" id="2_8exm5"]
 [ext_resource type="Script" uid="uid://ctr3xowe7l6gt" path="res://area_2d_15.gd" id="3_61kim"]
+[ext_resource type="Texture2D" uid="uid://6ayfq5jnomhy" path="res://Idle.png" id="4_2s3r6"]
+[ext_resource type="PackedScene" uid="uid://d242ikxry6kci" path="res://character2/character_body_2d.tscn" id="5_4lhnl"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_61kim"]
 texture = ExtResource("2_8exm5")
@@ -157,6 +159,13 @@ sources/0 = SubResource("TileSetAtlasSource_61kim")
 [sub_resource type="CircleShape2D" id="CircleShape2D_2s3r6"]
 radius = 28.6531
 
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_4lhnl"]
+texture = ExtResource("4_2s3r6")
+0:0/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_ytgmk"]
+sources/0 = SubResource("TileSetAtlasSource_4lhnl")
+
 [node name="Node2D" type="Node2D"]
 position = Vector2(381, 276)
 
@@ -189,3 +198,12 @@ script = ExtResource("3_61kim")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D15"]
 position = Vector2(-267, -208)
 shape = SubResource("CircleShape2D_2s3r6")
+
+[node name="TileMap2" type="TileMap" parent="."]
+texture_filter = 1
+tile_set = SubResource("TileSet_ytgmk")
+format = 2
+layer_0/tile_data = PackedInt32Array(-393228, 0, 0, -393227, 0, 0, -262156, 0, 0, -262155, 0, 0, -262154, 0, 0, -131084, 0, 0, -131083, 0, 0, -131082, 0, 0, -12, 0, 0, -11, 0, 0, -10, 0, 0, 131060, 0, 0, 131061, 0, 0, 131062, 0, 0, 262132, 0, 0, 262133, 0, 0, 262134, 0, 0, 393204, 0, 0, 393205, 0, 0, 393206, 0, 0)
+
+[node name="CharacterBody2D" parent="." instance=ExtResource("5_4lhnl")]
+position = Vector2(-1231, -284)
