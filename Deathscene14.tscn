@@ -1,6 +1,22 @@
-[gd_scene load_steps=4 format=3 uid="uid://dfycajpelaxwr"]
+[gd_scene load_steps=13 format=3 uid="uid://dfycajpelaxwr"]
 
 [ext_resource type="Script" uid="uid://bj726mbdlkdpd" path="res://deathscene_14.gd" id="1_eucbu"]
+[ext_resource type="Texture2D" uid="uid://bujgc6gxihwl8" path="res://spongey.png" id="2_76xun"]
+[ext_resource type="FontFile" uid="uid://dhxwcpaho7v34" path="res://ROUGH-STROKE.ttf" id="2_j6j32"]
+[ext_resource type="Texture2D" uid="uid://bquygua6u34ge" path="res://Screenshot 2025-10-24 140326.png" id="3_galim"]
+[ext_resource type="Texture2D" uid="uid://bfeldw1tmer5t" path="res://thumbs up.png" id="4_xhm42"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_04eke"]
+texture = ExtResource("2_76xun")
+modulate_color = Color(0.443929, 0.538804, 0.942927, 1)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_n6kud"]
+texture = ExtResource("3_galim")
+modulate_color = Color(0.819391, 0.596298, 0.276866, 1)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_re7pg"]
+texture = ExtResource("4_xhm42")
+modulate_color = Color(0.459838, 0.578712, 0.243555, 1)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_2r4tx"]
 bg_color = Color(6.257e-07, 0.347509, 0.480391, 1)
@@ -8,29 +24,38 @@ bg_color = Color(6.257e-07, 0.347509, 0.480391, 1)
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_eucbu"]
 bg_color = Color(1.54018e-06, 0.675831, 0.757134, 1)
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_j6j32"]
+bg_color = Color(0.277117, 0.433746, 0.14223, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_lq3q7"]
+bg_color = Color(0.564296, 0.744903, 0.291436, 1)
+
 [node name="Node2D" type="Node2D"]
 script = ExtResource("1_eucbu")
 
 [node name="Panel" type="Panel" parent="."]
 offset_right = 1151.0
 offset_bottom = 338.0
+theme_override_styles/panel = SubResource("StyleBoxTexture_04eke")
 
 [node name="Panel2" type="Panel" parent="."]
 offset_top = 338.0
 offset_right = 586.0
 offset_bottom = 647.0
+theme_override_styles/panel = SubResource("StyleBoxTexture_n6kud")
 
 [node name="Panel3" type="Panel" parent="."]
 offset_left = 586.0
 offset_top = 338.0
 offset_right = 1151.0
 offset_bottom = 648.0
+theme_override_styles/panel = SubResource("StyleBoxTexture_re7pg")
 
 [node name="Button" type="Button" parent="."]
-offset_left = 289.0
-offset_top = 241.0
-offset_right = 885.0
-offset_bottom = 354.0
+offset_left = 278.0
+offset_top = 269.0
+offset_right = 874.0
+offset_bottom = 394.0
 theme_override_colors/font_disabled_color = Color(0.507563, 0.306498, 0.0917263, 1)
 theme_override_colors/font_hover_pressed_color = Color(0.487321, 0.303073, 0.069881, 1)
 theme_override_colors/font_hover_color = Color(0.511611, 0.321673, 0.0971666, 1)
@@ -50,10 +75,27 @@ theme_override_styles/normal = SubResource("StyleBoxFlat_eucbu")
 text = "Try it again !"
 
 [node name="Button2" type="Button" parent="."]
-offset_left = 291.0
-offset_top = 370.0
-offset_right = 887.0
-offset_bottom = 467.0
+offset_left = 275.0
+offset_top = 409.0
+offset_right = 873.0
+offset_bottom = 545.0
+theme_override_colors/font_disabled_color = Color(0.638332, 0.196733, 0.501554, 1)
+theme_override_colors/font_hover_pressed_color = Color(0.570695, 0.168159, 0.411108, 1)
+theme_override_colors/font_hover_color = Color(0.724591, 0.167627, 0.478656, 1)
+theme_override_colors/icon_disabled_color = Color(0.682402, 0.0796415, 0.445157, 1)
+theme_override_colors/icon_hover_pressed_color = Color(0.67101, 0.151913, 0.471657, 1)
+theme_override_colors/icon_hover_color = Color(0.662877, 0.172411, 0.463263, 1)
+theme_override_colors/icon_pressed_color = Color(0.704059, 0.138094, 0.443909, 1)
+theme_override_colors/icon_focus_color = Color(0.694889, 0.138389, 0.482806, 1)
+theme_override_colors/icon_normal_color = Color(0.684792, 0.10188, 0.405484, 1)
+theme_override_colors/font_outline_color = Color(0.702826, 0.111255, 0.399407, 1)
+theme_override_colors/font_color = Color(0.707919, 0.171594, 0.450478, 1)
+theme_override_colors/font_focus_color = Color(0.702526, 0.129199, 0.366979, 1)
+theme_override_colors/font_pressed_color = Color(0.667467, 0.122112, 0.356263, 1)
+theme_override_font_sizes/font_size = 60
+theme_override_styles/hover = SubResource("StyleBoxFlat_j6j32")
+theme_override_styles/normal = SubResource("StyleBoxFlat_lq3q7")
+text = "Back to main menu"
 
 [node name="Button3" type="Button" parent="."]
 offset_left = 164.496
@@ -61,4 +103,15 @@ offset_top = 476.137
 offset_right = 172.496
 offset_bottom = 484.137
 
+[node name="Label" type="Label" parent="."]
+offset_left = 136.0
+offset_top = 88.0
+offset_right = 1035.0
+offset_bottom = 232.0
+theme_override_colors/font_color = Color(0.559514, 0.801828, 1.15514e-06, 1)
+theme_override_fonts/font = ExtResource("2_j6j32")
+theme_override_font_sizes/font_size = 144
+text = "Dont die. Why die"
+
 [connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="Button2" to="." method="_on_button_2_pressed"]
