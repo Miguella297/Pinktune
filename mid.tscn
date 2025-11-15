@@ -1,4 +1,27 @@
-[gd_scene load_steps=3 format=3 uid="uid://crepcabaand2e"]
+[gd_scene load_steps=16 format=3 uid="uid://crepcabaand2e"]
+
+[ext_resource type="Script" uid="uid://bvlg7mo2ka7j7" path="res://mid.gd" id="1_qchdc"]
+[ext_resource type="FontFile" uid="uid://ytg3ax0foex2" path="res://FortalesiaPlain_PERSONAL_USE_ONLY.otf" id="1_s67m3"]
+[ext_resource type="Texture2D" uid="uid://w78er3s3x6f4" path="res://swirl.png" id="1_wmiml"]
+[ext_resource type="Texture2D" uid="uid://byl0yxf1nbwxx" path="res://purple.png" id="2_uqh3i"]
+[ext_resource type="Texture2D" uid="uid://dhpfcn2rqu7rp" path="res://doggy.png" id="3_kahmw"]
+[ext_resource type="Texture2D" uid="uid://cyb3mgw01puat" path="res://kitty.png" id="4_kahmw"]
+[ext_resource type="AudioStream" uid="uid://c0jdq1y1e2br1" path="res://jarico.mp3" id="7_it0tr"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_6e5j0"]
+texture = ExtResource("1_wmiml")
+modulate_color = Color(0.868591, 0, 0.366098, 1)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_qchdc"]
+texture = ExtResource("2_uqh3i")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_it0tr"]
+texture = ExtResource("3_kahmw")
+modulate_color = Color(0.488575, 0.582609, 0.587307, 1)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_5m357"]
+texture = ExtResource("4_kahmw")
+modulate_color = Color(1, 0.6, 0.6, 1)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_hoqhn"]
 bg_color = Color(0.953481, 0.367669, 0.794479, 1)
@@ -6,44 +29,55 @@ bg_color = Color(0.953481, 0.367669, 0.794479, 1)
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_s67m3"]
 bg_color = Color(1, 0.0169971, 0.862175, 1)
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_wmiml"]
+bg_color = Color(0.456351, 0.253184, 0.036191, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_6e5j0"]
+bg_color = Color(0.792625, 0.443034, 0.129208, 1)
+
 [node name="Node2D" type="Node2D"]
+script = ExtResource("1_qchdc")
 
 [node name="Panel" type="Panel" parent="."]
 offset_right = 591.0
 offset_bottom = 350.0
+theme_override_styles/panel = SubResource("StyleBoxTexture_6e5j0")
 
 [node name="Panel2" type="Panel" parent="."]
 offset_left = 591.0
 offset_right = 1151.0
 offset_bottom = 349.0
+theme_override_styles/panel = SubResource("StyleBoxTexture_qchdc")
 
 [node name="Panel3" type="Panel" parent="."]
 offset_left = 1.0
 offset_top = 350.0
 offset_right = 593.0
 offset_bottom = 648.0
+theme_override_styles/panel = SubResource("StyleBoxTexture_it0tr")
 
 [node name="Panel4" type="Panel" parent="."]
 offset_left = 593.0
 offset_top = 349.0
 offset_right = 1153.0
 offset_bottom = 647.0
+theme_override_styles/panel = SubResource("StyleBoxTexture_5m357")
 
 [node name="Button" type="Button" parent="."]
-offset_left = 287.0
+offset_left = 279.0
 offset_top = 245.0
-offset_right = 877.0
+offset_right = 899.0
 offset_bottom = 393.0
-theme_override_colors/font_disabled_color = Color(0, 0, 0, 1)
-theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 1)
-theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
-theme_override_colors/icon_disabled_color = Color(0, 0, 0, 1)
-theme_override_colors/icon_hover_pressed_color = Color(0, 0, 0, 1)
-theme_override_colors/icon_hover_color = Color(0, 0, 0, 1)
-theme_override_colors/icon_pressed_color = Color(0, 0, 0, 1)
-theme_override_colors/icon_focus_color = Color(0, 0, 0, 1)
-theme_override_colors/icon_normal_color = Color(0, 0, 0, 1)
-theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_colors/font_disabled_color = Color(0.147624, 0.577596, 0.67045, 1)
+theme_override_colors/font_hover_pressed_color = Color(0.14325, 0.530032, 0.635473, 1)
+theme_override_colors/font_hover_color = Color(0.160982, 0.622745, 0.714601, 1)
+theme_override_colors/icon_disabled_color = Color(0.123663, 0.522358, 0.611623, 1)
+theme_override_colors/icon_hover_pressed_color = Color(0.115907, 0.57654, 0.689673, 1)
+theme_override_colors/icon_hover_color = Color(0.127268, 0.566975, 0.663134, 1)
+theme_override_colors/icon_pressed_color = Color(0.153734, 0.528117, 0.640707, 1)
+theme_override_colors/icon_focus_color = Color(0.174281, 0.536608, 0.657638, 1)
+theme_override_colors/icon_normal_color = Color(0.153695, 0.506308, 0.598395, 1)
+theme_override_colors/font_outline_color = Color(0.104462, 0.517255, 0.675302, 1)
 theme_override_colors/font_color = Color(0.157361, 0.648996, 0.931027, 1)
 theme_override_colors/font_focus_color = Color(0.140943, 0.548954, 0.691998, 1)
 theme_override_colors/font_pressed_color = Color(0.104376, 0.505478, 0.799836, 1)
@@ -51,3 +85,46 @@ theme_override_font_sizes/font_size = 60
 theme_override_styles/hover = SubResource("StyleBoxFlat_hoqhn")
 theme_override_styles/normal = SubResource("StyleBoxFlat_s67m3")
 text = "Keep going !"
+
+[node name="Button2" type="Button" parent="."]
+offset_left = 274.0
+offset_top = 407.0
+offset_right = 896.0
+offset_bottom = 545.0
+theme_override_colors/font_disabled_color = Color(0.642626, 0.160077, 0.396804, 1)
+theme_override_colors/font_hover_pressed_color = Color(0.614555, 0.131502, 0.39877, 1)
+theme_override_colors/font_hover_color = Color(0.650618, 0.162518, 0.349734, 1)
+theme_override_colors/icon_disabled_color = Color(0.697395, 0.157279, 0.326809, 1)
+theme_override_colors/icon_hover_pressed_color = Color(0.714993, 0.0975475, 0.354241, 1)
+theme_override_colors/icon_hover_color = Color(0.77763, 0.117941, 0.408192, 1)
+theme_override_colors/icon_pressed_color = Color(0.69304, 0.116409, 0.333388, 1)
+theme_override_colors/icon_focus_color = Color(0.727738, 0.0780367, 0.301188, 1)
+theme_override_colors/icon_normal_color = Color(0.729629, 0.12459, 0.330178, 1)
+theme_override_colors/font_outline_color = Color(0.680196, 0.100485, 0.324447, 1)
+theme_override_colors/font_color = Color(0.674369, 0.129269, 0.318464, 1)
+theme_override_colors/font_focus_color = Color(0.64091, 0.0767153, 0.24254, 1)
+theme_override_colors/font_pressed_color = Color(0.738592, 0.0797457, 0.355013, 1)
+theme_override_font_sizes/font_size = 60
+theme_override_styles/hover = SubResource("StyleBoxFlat_wmiml")
+theme_override_styles/normal = SubResource("StyleBoxFlat_6e5j0")
+text = "To main menu"
+
+[node name="Label" type="Label" parent="."]
+offset_left = 146.0
+offset_top = 92.0
+offset_right = 1020.0
+offset_bottom = 218.0
+theme_override_fonts/font = ExtResource("1_s67m3")
+theme_override_font_sizes/font_size = 120
+text = "To the next bonus level! "
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+position = Vector2(2525, 1954)
+scale = Vector2(1, 1.00407)
+stream = ExtResource("7_it0tr")
+volume_db = 24.0
+autoplay = true
+max_distance = 4096.0
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="Button2" to="." method="_on_button_2_pressed"]

@@ -1,10 +1,11 @@
-[gd_scene load_steps=13 format=3 uid="uid://dfycajpelaxwr"]
+[gd_scene load_steps=14 format=3 uid="uid://dfycajpelaxwr"]
 
 [ext_resource type="Script" uid="uid://bj726mbdlkdpd" path="res://deathscene_14.gd" id="1_eucbu"]
 [ext_resource type="Texture2D" uid="uid://bujgc6gxihwl8" path="res://spongey.png" id="2_76xun"]
 [ext_resource type="FontFile" uid="uid://dhxwcpaho7v34" path="res://ROUGH-STROKE.ttf" id="2_j6j32"]
 [ext_resource type="Texture2D" uid="uid://bquygua6u34ge" path="res://Screenshot 2025-10-24 140326.png" id="3_galim"]
 [ext_resource type="Texture2D" uid="uid://bfeldw1tmer5t" path="res://thumbs up.png" id="4_xhm42"]
+[ext_resource type="AudioStream" uid="uid://c380nba3ah3jo" path="res://christmas jazz.mp3" id="6_galim"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_04eke"]
 texture = ExtResource("2_76xun")
@@ -112,6 +113,14 @@ theme_override_colors/font_color = Color(0.559514, 0.801828, 1.15514e-06, 1)
 theme_override_fonts/font = ExtResource("2_j6j32")
 theme_override_font_sizes/font_size = 144
 text = "Dont die. Why die"
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+position = Vector2(2537, 1984)
+scale = Vector2(1, 1.00407)
+stream = ExtResource("6_galim")
+volume_db = 24.0
+autoplay = true
+max_distance = 4096.0
 
 [connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
 [connection signal="pressed" from="Button2" to="." method="_on_button_2_pressed"]
