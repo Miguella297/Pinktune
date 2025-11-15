@@ -1,4 +1,4 @@
-[gd_scene load_steps=42 format=3 uid="uid://cdxexdhr5q7ub"]
+[gd_scene load_steps=43 format=3 uid="uid://cdxexdhr5q7ub"]
 
 [ext_resource type="Texture2D" uid="uid://2vik1tsbirkl" path="res://Gray.png" id="1_8rhn2"]
 [ext_resource type="Texture2D" uid="uid://b6psmtajx6xjj" path="res://Terrain (16x16).png" id="2_ac6uv"]
@@ -8,6 +8,7 @@
 [ext_resource type="Texture2D" uid="uid://6ayfq5jnomhy" path="res://Idle.png" id="5_uurhq"]
 [ext_resource type="Script" uid="uid://cu26mrn34hbst" path="res://area_2d_14+2.gd" id="7_bm1lv"]
 [ext_resource type="PackedScene" uid="uid://bl6l5tqyiwyys" path="res://enemy23.tscn" id="8_km2uh"]
+[ext_resource type="PackedScene" uid="uid://bq8k7tn7ppqai" path="res://enemy24.tscn" id="9_anlux"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_j5v2g"]
 texture = ExtResource("2_ac6uv")
@@ -555,3 +556,9 @@ shape = SubResource("CircleShape2D_j5v2g")
 
 [node name="Node2D" parent="." instance=ExtResource("8_km2uh")]
 position = Vector2(666, 590)
+
+[node name="Node2D2" parent="." instance=ExtResource("9_anlux")]
+position = Vector2(-8, 412)
+
+[node name="Node2D3" parent="." instance=ExtResource("9_anlux")]
+position = Vector2(-8, 412)
