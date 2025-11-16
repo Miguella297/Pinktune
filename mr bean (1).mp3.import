@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://cy0eo4ftd60m1"
+path="res://.godot/imported/mr bean (1).mp3-2588d2e615bda5fd93f3c6899e8f2950.mp3str"
+
+[deps]
+
+source_file="res://mr bean (1).mp3"
+dest_files=["res://.godot/imported/mr bean (1).mp3-2588d2e615bda5fd93f3c6899e8f2950.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

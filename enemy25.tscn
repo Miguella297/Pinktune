@@ -506,9 +506,10 @@ autoplay = "default"
 frame = 1
 frame_progress = 0.753075
 
-[node name="Area2D" type="Area2D" parent="AnimatedSprite2D4"]
+[node name="Area2D15+3" type="Area2D" parent="AnimatedSprite2D4"]
+script = ExtResource("2_3utkl")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="AnimatedSprite2D4/Area2D"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="AnimatedSprite2D4/Area2D15+3"]
 position = Vector2(0.782715, 2.63292)
 shape = SubResource("RectangleShape2D_ao6q8")
 

@@ -1,12 +1,10 @@
-[gd_scene load_steps=64 format=3 uid="uid://b7mbxx27dr4f"]
+[gd_scene load_steps=45 format=3 uid="uid://b7mbxx27dr4f"]
 
 [ext_resource type="Texture2D" uid="uid://du6axlls2vs3i" path="res://On (38x38).png" id="1_uwigd"]
 [ext_resource type="Texture2D" uid="uid://i5ewpp6153q2" path="res://Main Characters/Pink Man/Run (32x32).png" id="2_adwbn"]
 [ext_resource type="Script" uid="uid://yiwyx2momfq0" path="res://area_2d_15+3.gd" id="3_dnxck"]
 [ext_resource type="Texture2D" uid="uid://byitgs6gx1gld" path="res://Bottom Hit (54x52).png" id="4_0baix"]
 [ext_resource type="Script" uid="uid://cny5tugn45307" path="res://area_2d_15+8.gd" id="5_e7jdh"]
-[ext_resource type="Texture2D" uid="uid://dbebvtvyel3ll" path="res://Main Characters/Virtual Guy/Run (32x32).png" id="6_ssgxd"]
-[ext_resource type="Script" uid="uid://sitrjk8agm4g" path="res://area_2d_15+9.gd" id="7_wg534"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_adwbn"]
 atlas = ExtResource("1_uwigd")
@@ -323,148 +321,17 @@ _data = {
 &"spik": SubResource("Animation_0baix")
 }
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_1yyxg"]
-atlas = ExtResource("6_ssgxd")
-region = Rect2(0, 0, 32, 32)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_67id8"]
-atlas = ExtResource("6_ssgxd")
-region = Rect2(32, 0, 32, 32)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_sqkcb"]
-atlas = ExtResource("6_ssgxd")
-region = Rect2(64, 0, 32, 32)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_e7686"]
-atlas = ExtResource("6_ssgxd")
-region = Rect2(96, 0, 32, 32)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_saccj"]
-atlas = ExtResource("6_ssgxd")
-region = Rect2(128, 0, 32, 32)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_4h07d"]
-atlas = ExtResource("6_ssgxd")
-region = Rect2(160, 0, 32, 32)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_08fgn"]
-atlas = ExtResource("6_ssgxd")
-region = Rect2(192, 0, 32, 32)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_c4856"]
-atlas = ExtResource("6_ssgxd")
-region = Rect2(224, 0, 32, 32)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_bb1te"]
-atlas = ExtResource("6_ssgxd")
-region = Rect2(256, 0, 32, 32)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_0pp58"]
-atlas = ExtResource("6_ssgxd")
-region = Rect2(288, 0, 32, 32)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_j22yk"]
-atlas = ExtResource("6_ssgxd")
-region = Rect2(320, 0, 32, 32)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_laeiy"]
-atlas = ExtResource("6_ssgxd")
-region = Rect2(352, 0, 32, 32)
-
-[sub_resource type="SpriteFrames" id="SpriteFrames_2mjbo"]
-animations = [{
-"frames": [{
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_1yyxg")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_67id8")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_sqkcb")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_e7686")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_saccj")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_4h07d")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_08fgn")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_c4856")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_bb1te")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_0pp58")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_j22yk")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_laeiy")
-}],
-"loop": true,
-"name": &"default",
-"speed": 22.0
-}]
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_ssgxd"]
-size = Vector2(22.8571, 24.1657)
-
-[sub_resource type="Animation" id="Animation_ssgxd"]
-resource_name = "blub"
-length = 3.0
-loop_mode = 1
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("../AnimatedSprite2D4:position")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 1.5, 3),
-"transitions": PackedFloat32Array(1, 1, 1),
-"update": 0,
-"values": [Vector2(-1090, -50), Vector2(-1029, -50), Vector2(-1090, -50)]
-}
-
-[sub_resource type="Animation" id="Animation_wg534"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("../AnimatedSprite2D4:position")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector2(-1090, -50)]
-}
-
-[sub_resource type="AnimationLibrary" id="AnimationLibrary_wg534"]
-_data = {
-&"RESET": SubResource("Animation_wg534"),
-&"blub": SubResource("Animation_ssgxd")
-}
-
 [node name="Node2D" type="Node2D"]
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 texture_filter = 1
 scale = Vector2(0.815789, 0.684211)
 sprite_frames = SubResource("SpriteFrames_p6ggo")
+autoplay = "default"
 frame_progress = 0.808013
 
 [node name="Area2D15+3" type="Area2D" parent="AnimatedSprite2D"]
+script = ExtResource("3_dnxck")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="AnimatedSprite2D/Area2D15+3"]
 position = Vector2(-0.612903, -1.04537e-06)
@@ -531,29 +398,3 @@ libraries = {
 &"": SubResource("AnimationLibrary_ssgxd")
 }
 autoplay = "spik"
-
-[node name="AnimatedSprite2D4" type="AnimatedSprite2D" parent="."]
-texture_filter = 1
-position = Vector2(-1090, -50)
-scale = Vector2(1.09375, 1.05889)
-sprite_frames = SubResource("SpriteFrames_2mjbo")
-frame = 5
-frame_progress = 0.487249
-
-[node name="Area2D15+9" type="Area2D" parent="AnimatedSprite2D4"]
-script = ExtResource("7_wg534")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="AnimatedSprite2D4/Area2D15+9"]
-position = Vector2(0.457153, 3.97162)
-scale = Vector2(1, 1)
-shape = SubResource("RectangleShape2D_ssgxd")
-
-[node name="AnimationPlayer4" type="AnimationPlayer" parent="."]
-root_node = NodePath("../Marker2D3")
-libraries = {
-&"": SubResource("AnimationLibrary_wg534")
-}
-autoplay = "blub"
-
-[node name="Marker2D4" type="Marker2D" parent="."]
-position = Vector2(-1029, -47)

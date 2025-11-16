@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=3 uid="uid://dvuct1lsga8tw"]
+[gd_scene load_steps=16 format=3 uid="uid://dvuct1lsga8tw"]
 
 [ext_resource type="Script" uid="uid://daiwfbuu4hhai" path="res://deathscene_15.gd" id="1_mcj18"]
 [ext_resource type="Texture2D" uid="uid://clufpafq3sw7i" path="res://boulder push.png" id="2_x4q1u"]
@@ -6,6 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://c1ys4j14ahiw0" path="res://coolguy.png" id="4_fmkrr"]
 [ext_resource type="Texture2D" uid="uid://bprkjtmo3i3id" path="res://egghead.png" id="5_idcai"]
 [ext_resource type="FontFile" uid="uid://c6n15j2w0ogps" path="res://LAUGHTER.ttf" id="6_ca8jx"]
+[ext_resource type="AudioStream" uid="uid://cm41rmd4ftjs8" path="res://cheerful death (2).mp3" id="7_x4q1u"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_xub2x"]
 texture = ExtResource("2_x4q1u")
@@ -115,6 +116,14 @@ theme_override_colors/font_color = Color(0.981096, 0, 0.417273, 1)
 theme_override_fonts/font = ExtResource("6_ca8jx")
 theme_override_font_sizes/font_size = 120
 text = "You got this!"
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+position = Vector2(2816, 2385)
+scale = Vector2(1, 1.00407)
+stream = ExtResource("7_x4q1u")
+volume_db = 24.0
+autoplay = true
+max_distance = 4096.0
 
 [connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
 [connection signal="pressed" from="Button2" to="." method="_on_button_2_pressed"]

@@ -101,6 +101,21 @@ animations = [{
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_mbsi6"]
 size = Vector2(20, 26.1818)
 
+[sub_resource type="Animation" id="Animation_x855k"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("../AnimatedSprite2D:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-3, 1)]
+}
+
 [sub_resource type="Animation" id="Animation_v4wfg"]
 resource_name = "pinky winky"
 length = 2.0
@@ -116,21 +131,6 @@ tracks/0/keys = {
 "transitions": PackedFloat32Array(1, 1, 1),
 "update": 0,
 "values": [Vector2(-3, 1), Vector2(60, 1), Vector2(-3, 1)]
-}
-
-[sub_resource type="Animation" id="Animation_x855k"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("../AnimatedSprite2D:position")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector2(-3, 1)]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_xlcph"]
@@ -234,6 +234,21 @@ animations = [{
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_tbhhw"]
 size = Vector2(25.6, 29.4737)
 
+[sub_resource type="Animation" id="Animation_0pdhu"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("../AnimatedSprite2D2:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(292, 3)]
+}
+
 [sub_resource type="Animation" id="Animation_05355"]
 resource_name = "brick"
 length = 2.0
@@ -249,21 +264,6 @@ tracks/0/keys = {
 "transitions": PackedFloat32Array(1, 1, 1),
 "update": 0,
 "values": [Vector2(292, 3), Vector2(350, 3), Vector2(292, 3)]
-}
-
-[sub_resource type="Animation" id="Animation_0pdhu"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("../AnimatedSprite2D2:position")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector2(292, 3)]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_iln82"]
@@ -339,6 +339,21 @@ animations = [{
 [sub_resource type="CircleShape2D" id="CircleShape2D_0pdhu"]
 radius = 19.2354
 
+[sub_resource type="Animation" id="Animation_wlp63"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("AnimatedSprite2D3:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(456, -30)]
+}
+
 [sub_resource type="Animation" id="Animation_iln82"]
 resource_name = "rolly"
 length = 3.0
@@ -354,21 +369,6 @@ tracks/0/keys = {
 "transitions": PackedFloat32Array(1, 1, 1),
 "update": 0,
 "values": [Vector2(456, -30), Vector2(812, -30), Vector2(456, -30)]
-}
-
-[sub_resource type="Animation" id="Animation_wlp63"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("AnimatedSprite2D3:position")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector2(456, -30)]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_ouj4o"]
@@ -393,7 +393,6 @@ script = ExtResource("2_tbhhw")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="AnimatedSprite2D/Area2D14+5"]
 position = Vector2(0, 2.18182)
-scale = Vector2(1, 1)
 shape = SubResource("RectangleShape2D_mbsi6")
 
 [node name="Marker2D" type="Marker2D" parent="."]

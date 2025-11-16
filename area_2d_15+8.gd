@@ -10,7 +10,7 @@ func _ready():
 func _on_body_entered(body):
 	# Check if the body is in your player (assuming its a Kinematicbody2D or a Characterbody2D)
 	
-	if body.is_in_grouo("player"):
+	if body.is_in_group("player"):
 		call_deferred("_fix")
 
 func _fix():

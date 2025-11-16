@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=3 uid="uid://08ovavnlatmd"]
+
+[ext_resource type="PackedScene" uid="uid://wjx5ddwnfs06" path="res://THANKS FOR PLAYING!!.tscn" id="1_eduxp"]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="Node2D" parent="." instance=ExtResource("1_eduxp")]
