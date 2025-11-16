@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://dc8l3h3ptrlb2"]
+[gd_scene load_steps=12 format=3 uid="uid://dc8l3h3ptrlb2"]
 
 [ext_resource type="Script" uid="uid://60f1eqpofcwr" path="res://bonus_levels.gd" id="1_3mthd"]
 [ext_resource type="Texture2D" uid="uid://bax0yfo0qu2f7" path="res://Main Characters/Mask Dude/bonus.png" id="1_bn8ah"]
@@ -20,6 +20,12 @@ bg_color = Color(0.218459, 0.472406, 0, 1)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_8mx6r"]
 bg_color = Color(0.508726, 0.666345, 0, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_yvtxs"]
+bg_color = Color(0.148572, 0.354588, 0.187755, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_btwym"]
+bg_color = Color(0.222656, 0.700005, 0.462863, 1)
 
 [node name="Node2D" type="Node2D"]
 scale = Vector2(1.00679, 1.00713)
@@ -93,5 +99,29 @@ theme_override_styles/hover = SubResource("StyleBoxFlat_3mthd")
 theme_override_styles/normal = SubResource("StyleBoxFlat_8mx6r")
 text = "Main menu"
 
+[node name="Button3" type="Button" parent="."]
+offset_left = 31.0
+offset_top = 302.0
+offset_right = 634.0
+offset_bottom = 398.0
+theme_override_colors/font_disabled_color = Color(0.601325, 0.157759, 0.399164, 1)
+theme_override_colors/font_hover_pressed_color = Color(0.779784, 0.171396, 0.396458, 1)
+theme_override_colors/font_hover_color = Color(0.641386, 0.0975449, 0.329431, 1)
+theme_override_colors/icon_disabled_color = Color(0.716559, 0.0918375, 0.354208, 1)
+theme_override_colors/icon_hover_pressed_color = Color(0.651291, 0.0824703, 0.29561, 1)
+theme_override_colors/icon_hover_color = Color(0.699948, 0.116518, 0.28485, 1)
+theme_override_colors/icon_pressed_color = Color(0.703161, 0.147145, 0.318169, 1)
+theme_override_colors/icon_focus_color = Color(0.624823, 0.115634, 0.268861, 1)
+theme_override_colors/icon_normal_color = Color(0.794009, 0.125314, 0.272932, 1)
+theme_override_colors/font_outline_color = Color(0.529461, 0.122759, 0.219953, 1)
+theme_override_colors/font_color = Color(0.644365, 0.109638, 0.284377, 1)
+theme_override_colors/font_focus_color = Color(0.597364, 0.0858135, 0.263061, 1)
+theme_override_colors/font_pressed_color = Color(0.71243, 0, 0.22137, 1)
+theme_override_font_sizes/font_size = 30
+theme_override_styles/hover = SubResource("StyleBoxFlat_yvtxs")
+theme_override_styles/normal = SubResource("StyleBoxFlat_btwym")
+text = "Bonus level2: Eyes closed- Jisoo & Zayn"
+
 [connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
 [connection signal="pressed" from="Button2" to="." method="_on_button_2_pressed"]
+[connection signal="pressed" from="Button3" to="." method="_on_button_3_pressed"]

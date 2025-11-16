@@ -1,4 +1,4 @@
-[gd_scene load_steps=41 format=3 uid="uid://dai8s2frnoatn"]
+[gd_scene load_steps=42 format=3 uid="uid://dai8s2frnoatn"]
 
 [ext_resource type="Texture2D" uid="uid://dvwf2nulxi0h7" path="res://Main Characters/Pink Man/Pink.png" id="1_ywyst"]
 [ext_resource type="Texture2D" uid="uid://b6psmtajx6xjj" path="res://Terrain (16x16).png" id="2_8exm5"]
@@ -7,6 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://d242ikxry6kci" path="res://character2/character_body_2d.tscn" id="5_4lhnl"]
 [ext_resource type="Script" uid="uid://bpgimm3dbyoy0" path="res://character2/character_body_2d.gd" id="6_ytgmk"]
 [ext_resource type="Script" uid="uid://co8f7ogokqoao" path="res://area_2d_15+1.gd" id="7_srcfs"]
+[ext_resource type="PackedScene" uid="uid://87gcihkhxdpy" path="res://enemy25.tscn" id="8_2xrje"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_61kim"]
 texture = ExtResource("2_8exm5")
@@ -553,3 +554,6 @@ shape = SubResource("RectangleShape2D_j0be3")
 [node name="CollisionShape2D28" type="CollisionShape2D" parent="Area2D15+1"]
 position = Vector2(-296, -146.5)
 shape = SubResource("RectangleShape2D_d5jpu")
+
+[node name="Node2D" parent="." instance=ExtResource("8_2xrje")]
+position = Vector2(-110, 11)

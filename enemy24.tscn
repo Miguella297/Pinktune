@@ -1,11 +1,10 @@
-[gd_scene load_steps=54 format=3 uid="uid://bq8k7tn7ppqai"]
+[gd_scene load_steps=53 format=3 uid="uid://bq8k7tn7ppqai"]
 
 [ext_resource type="Texture2D" uid="uid://i5ewpp6153q2" path="res://Main Characters/Pink Man/Run (32x32).png" id="1_qs7fg"]
 [ext_resource type="Script" uid="uid://b6x1u6ejuwcrf" path="res://area_2d_14+5.gd" id="2_tbhhw"]
 [ext_resource type="Texture2D" uid="uid://v2d8yn65sco" path="res://Main Characters/Mask Dude/Run (32x32).png" id="3_tbhhw"]
 [ext_resource type="Script" uid="uid://bfwvx68bcwetr" path="res://area_2d_14+7.gd" id="4_05355"]
 [ext_resource type="Texture2D" uid="uid://du6axlls2vs3i" path="res://On (38x38).png" id="5_0pdhu"]
-[ext_resource type="Script" uid="uid://bow6ygxvdw6k1" path="res://area_2d_14+8.gd" id="6_iln82"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_05355"]
 atlas = ExtResource("1_qs7fg")
@@ -439,10 +438,10 @@ position = Vector2(456, -30)
 sprite_frames = SubResource("SpriteFrames_05355")
 autoplay = "default"
 
-[node name="Area2D14+8" type="Area2D" parent="AnimatedSprite2D3"]
-script = ExtResource("6_iln82")
+[node name="Area2D14+7" type="Area2D" parent="AnimatedSprite2D3"]
+script = ExtResource("4_05355")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="AnimatedSprite2D3/Area2D14+8"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="AnimatedSprite2D3/Area2D14+7"]
 shape = SubResource("CircleShape2D_0pdhu")
 
 [node name="Marker2D3" type="Marker2D" parent="."]
