@@ -1,3 +1,120 @@
-[gd_scene format=3 uid="uid://dvuct1lsga8tw"]
+[gd_scene load_steps=15 format=3 uid="uid://dvuct1lsga8tw"]
+
+[ext_resource type="Script" uid="uid://daiwfbuu4hhai" path="res://deathscene_15.gd" id="1_mcj18"]
+[ext_resource type="Texture2D" uid="uid://clufpafq3sw7i" path="res://boulder push.png" id="2_x4q1u"]
+[ext_resource type="Texture2D" uid="uid://dn7sf3w83u8qa" path="res://boy.png" id="3_amtj0"]
+[ext_resource type="Texture2D" uid="uid://c1ys4j14ahiw0" path="res://coolguy.png" id="4_fmkrr"]
+[ext_resource type="Texture2D" uid="uid://bprkjtmo3i3id" path="res://egghead.png" id="5_idcai"]
+[ext_resource type="FontFile" uid="uid://c6n15j2w0ogps" path="res://LAUGHTER.ttf" id="6_ca8jx"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_xub2x"]
+texture = ExtResource("2_x4q1u")
+modulate_color = Color(0.56, 0.56, 0.56, 1)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_cc4os"]
+texture = ExtResource("3_amtj0")
+modulate_color = Color(0.481789, 0.481789, 0.481789, 1)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_5mqcv"]
+texture = ExtResource("4_fmkrr")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_gxnv4"]
+texture = ExtResource("5_idcai")
+modulate_color = Color(0.259449, 0.653822, 0.529026, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_c1ucq"]
+bg_color = Color(0.443496, 0.288449, 0.066046, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_whyd8"]
+bg_color = Color(0.845817, 0.50711, 0.154934, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_eu47a"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_61eo4"]
+bg_color = Color(0.0161881, 0.436939, 0.514362, 1)
 
 [node name="Node2D" type="Node2D"]
+script = ExtResource("1_mcj18")
+
+[node name="Panel" type="Panel" parent="."]
+offset_right = 576.0
+offset_bottom = 338.0
+theme_override_styles/panel = SubResource("StyleBoxTexture_xub2x")
+
+[node name="Panel2" type="Panel" parent="."]
+offset_left = 576.0
+offset_right = 1152.0
+offset_bottom = 338.0
+theme_override_styles/panel = SubResource("StyleBoxTexture_cc4os")
+
+[node name="Panel3" type="Panel" parent="."]
+offset_top = 338.0
+offset_right = 578.0
+offset_bottom = 647.0
+theme_override_styles/panel = SubResource("StyleBoxTexture_5mqcv")
+
+[node name="Panel4" type="Panel" parent="."]
+offset_left = 578.0
+offset_top = 338.0
+offset_right = 1150.0
+offset_bottom = 648.0
+theme_override_styles/panel = SubResource("StyleBoxTexture_gxnv4")
+
+[node name="Button" type="Button" parent="."]
+offset_left = 292.0
+offset_top = 276.0
+offset_right = 865.0
+offset_bottom = 412.0
+theme_override_colors/font_disabled_color = Color(0.0787581, 0.42812, 0.550863, 1)
+theme_override_colors/font_hover_pressed_color = Color(0.0742415, 0.380807, 0.513098, 1)
+theme_override_colors/font_hover_color = Color(0.077544, 0.441264, 0.554036, 1)
+theme_override_colors/icon_disabled_color = Color(0.0971729, 0.453497, 0.623613, 1)
+theme_override_colors/icon_hover_pressed_color = Color(0.122552, 0.436885, 0.625094, 1)
+theme_override_colors/icon_hover_color = Color(0.0959525, 0.429058, 0.539487, 1)
+theme_override_colors/icon_pressed_color = Color(0.0849055, 0.418737, 0.526268, 1)
+theme_override_colors/icon_focus_color = Color(0.101431, 0.456295, 0.608718, 1)
+theme_override_colors/icon_normal_color = Color(0.0568395, 0.392389, 0.529712, 1)
+theme_override_colors/font_outline_color = Color(0.0902085, 0.418413, 0.593469, 1)
+theme_override_colors/font_color = Color(0.0947736, 0.358578, 0.541562, 1)
+theme_override_colors/font_focus_color = Color(0.121892, 0.452486, 0.681628, 1)
+theme_override_colors/font_pressed_color = Color(0.0970319, 0.389004, 0.594522, 1)
+theme_override_font_sizes/font_size = 50
+theme_override_styles/hover = SubResource("StyleBoxFlat_c1ucq")
+theme_override_styles/normal = SubResource("StyleBoxFlat_whyd8")
+text = "Give it another go!"
+
+[node name="Button2" type="Button" parent="."]
+offset_left = 291.0
+offset_top = 431.0
+offset_right = 864.0
+offset_bottom = 557.0
+theme_override_colors/font_disabled_color = Color(0.177315, 0.412482, 0.128884, 1)
+theme_override_colors/font_hover_pressed_color = Color(0.270521, 0.433934, 0.1166, 1)
+theme_override_colors/font_hover_color = Color(0.207297, 0.420281, 0.12913, 1)
+theme_override_colors/icon_disabled_color = Color(0.211503, 0.418596, 0.152409, 1)
+theme_override_colors/icon_hover_pressed_color = Color(0.162027, 0.404258, 0.0554553, 1)
+theme_override_colors/icon_hover_color = Color(0.296685, 0.465337, 0.167741, 1)
+theme_override_colors/icon_pressed_color = Color(0.29602, 0.453932, 0.126628, 1)
+theme_override_colors/icon_focus_color = Color(0.273513, 0.412065, 0.0689667, 1)
+theme_override_colors/icon_normal_color = Color(0.235614, 0.360967, 0.110455, 1)
+theme_override_colors/font_outline_color = Color(0.17379, 0.399357, 0.153654, 1)
+theme_override_colors/font_color = Color(0.231297, 0.363287, 0.0698851, 1)
+theme_override_colors/font_focus_color = Color(0.39268, 0.575806, 0.109581, 1)
+theme_override_colors/font_pressed_color = Color(0.257102, 0.441313, 9.62615e-08, 1)
+theme_override_font_sizes/font_size = 50
+theme_override_styles/hover = SubResource("StyleBoxFlat_eu47a")
+theme_override_styles/normal = SubResource("StyleBoxFlat_61eo4")
+text = "Main menu :("
+
+[node name="Label" type="Label" parent="."]
+offset_left = 261.0
+offset_top = 100.0
+offset_right = 879.0
+offset_bottom = 216.0
+theme_override_colors/font_color = Color(0.981096, 0, 0.417273, 1)
+theme_override_fonts/font = ExtResource("6_ca8jx")
+theme_override_font_sizes/font_size = 120
+text = "You got this!"
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="Button2" to="." method="_on_button_2_pressed"]
