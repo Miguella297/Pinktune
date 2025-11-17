@@ -1,0 +1,121 @@
+[gd_scene load_steps=15 format=3 uid="uid://bdr3rple0bp8b"]
+
+[ext_resource type="FontFile" uid="uid://b8p5dkkrlussn" path="res://Returns.ttf" id="1_6n33j"]
+[ext_resource type="Texture2D" uid="uid://c1k4qugv87pr7" path="res://doggo.png" id="1_8oiir"]
+[ext_resource type="Script" uid="uid://8g0d8slo14py" path="res://bonus_2_3.gd" id="1_i6ml1"]
+[ext_resource type="Texture2D" uid="uid://dxtbiq6606h7n" path="res://your time.png" id="2_i6ml1"]
+[ext_resource type="Texture2D" uid="uid://boq7tklgo1hr5" path="res://halloween 4.png" id="3_bmh0j"]
+[ext_resource type="Texture2D" uid="uid://c36o21hdsx6wa" path="res://h 2.png" id="4_s7x70"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_005wr"]
+texture = ExtResource("1_8oiir")
+modulate_color = Color(0.707623, 0.936726, 0.986382, 1)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_pw1dd"]
+texture = ExtResource("2_i6ml1")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_bpd3i"]
+texture = ExtResource("3_bmh0j")
+modulate_color = Color(0.955795, 0.523608, 0.198933, 1)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_bnjb7"]
+texture = ExtResource("4_s7x70")
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_sida1"]
+bg_color = Color(0.0530986, 0.368726, 0.488418, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_kjrga"]
+bg_color = Color(0.161696, 0.657371, 0.822896, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_h83bo"]
+bg_color = Color(0.374355, 0.324768, 0.099187, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_8oiir"]
+bg_color = Color(0.753836, 0.568421, 0, 1)
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource("1_i6ml1")
+
+[node name="Panel" type="Panel" parent="."]
+offset_right = 588.0
+offset_bottom = 356.0
+theme_override_styles/panel = SubResource("StyleBoxTexture_005wr")
+
+[node name="Panel2" type="Panel" parent="."]
+offset_left = 588.0
+offset_top = 1.0
+offset_right = 1151.0
+offset_bottom = 357.0
+theme_override_styles/panel = SubResource("StyleBoxTexture_pw1dd")
+
+[node name="Panel3" type="Panel" parent="."]
+offset_top = 356.0
+offset_right = 587.0
+offset_bottom = 650.0
+theme_override_styles/panel = SubResource("StyleBoxTexture_bpd3i")
+
+[node name="Panel4" type="Panel" parent="."]
+offset_left = 587.0
+offset_top = 357.0
+offset_right = 1153.0
+offset_bottom = 650.0
+theme_override_styles/panel = SubResource("StyleBoxTexture_bnjb7")
+
+[node name="Label" type="Label" parent="."]
+offset_left = 188.0
+offset_top = 117.0
+offset_right = 1012.0
+offset_bottom = 224.0
+theme_override_colors/font_color = Color(0.824132, 0.38702, 5.77569e-07, 1)
+theme_override_fonts/font = ExtResource("1_6n33j")
+theme_override_font_sizes/font_size = 78
+text = "2 Levels to go!"
+
+[node name="Button" type="Button" parent="."]
+offset_left = 246.0
+offset_top = 256.0
+offset_right = 931.0
+offset_bottom = 391.0
+theme_override_colors/font_disabled_color = Color(0.59362, 0.387969, 0.186201, 1)
+theme_override_colors/font_hover_pressed_color = Color(0.642126, 0.374269, 0.15645, 1)
+theme_override_colors/font_hover_color = Color(0.588865, 0.390871, 0.188728, 1)
+theme_override_colors/icon_disabled_color = Color(0.701703, 0.386932, 0.14507, 1)
+theme_override_colors/icon_hover_pressed_color = Color(0.59752, 0.331373, 0.153311, 1)
+theme_override_colors/icon_hover_color = Color(0.750969, 0.339804, 0.191489, 1)
+theme_override_colors/icon_pressed_color = Color(0.742412, 0.390648, 0.198477, 1)
+theme_override_colors/icon_focus_color = Color(0.730032, 0.385655, 0.0944642, 1)
+theme_override_colors/icon_normal_color = Color(0.604926, 0.326128, 0.141724, 1)
+theme_override_colors/font_outline_color = Color(0.706503, 0.401051, 0.177987, 1)
+theme_override_colors/font_color = Color(0.677201, 0.404282, 0.171942, 1)
+theme_override_colors/font_focus_color = Color(0.56751, 0.336417, 0.124828, 1)
+theme_override_colors/font_pressed_color = Color(0.687927, 0.356872, 0.165853, 1)
+theme_override_font_sizes/font_size = 60
+theme_override_styles/hover = SubResource("StyleBoxFlat_sida1")
+theme_override_styles/normal = SubResource("StyleBoxFlat_kjrga")
+text = "Keep going!!"
+
+[node name="Button2" type="Button" parent="."]
+offset_left = 246.0
+offset_top = 413.0
+offset_right = 933.0
+offset_bottom = 552.0
+theme_override_colors/font_disabled_color = Color(0.684196, 0.168353, 0.232847, 1)
+theme_override_colors/font_hover_pressed_color = Color(0.651458, 0.0805775, 0.101048, 1)
+theme_override_colors/font_hover_color = Color(0.719451, 0.0988207, 0.125347, 1)
+theme_override_colors/icon_disabled_color = Color(0.771504, 0.151285, 0.212255, 1)
+theme_override_colors/icon_hover_pressed_color = Color(0.785199, 0.172333, 0.167156, 1)
+theme_override_colors/icon_hover_color = Color(0.625724, 0.143446, 0.14224, 1)
+theme_override_colors/icon_pressed_color = Color(0.709453, 0.0770071, 0.0490901, 1)
+theme_override_colors/icon_focus_color = Color(0.689944, 0.118659, 0.191646, 1)
+theme_override_colors/icon_normal_color = Color(0.80463, 0.163056, 0.219184, 1)
+theme_override_colors/font_outline_color = Color(0.709902, 0.120215, 0.171758, 1)
+theme_override_colors/font_color = Color(0.640381, 0.15387, 0.138597, 1)
+theme_override_colors/font_focus_color = Color(0.646115, 0.145727, 0.107939, 1)
+theme_override_colors/font_pressed_color = Color(0.601351, 0.111838, 0.137607, 1)
+theme_override_font_sizes/font_size = 60
+theme_override_styles/hover = SubResource("StyleBoxFlat_h83bo")
+theme_override_styles/normal = SubResource("StyleBoxFlat_8oiir")
+text = "Dont keep going!!"
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="Button2" to="." method="_on_button_2_pressed"]

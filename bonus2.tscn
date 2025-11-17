@@ -547,6 +547,5 @@ position = Vector2(2145, 1680)
 scale = Vector2(1, 1.00407)
 stream = ExtResource("11_w2dt8")
 volume_db = 24.0
-pitch_scale = 0.85
 autoplay = true
 max_distance = 4096.0

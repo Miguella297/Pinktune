@@ -283,6 +283,21 @@ animations = [{
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_0baix"]
 size = Vector2(53.9998, 37.8182)
 
+[sub_resource type="Animation" id="Animation_e7jdh"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("../AnimatedSprite2D3:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-623, -46)]
+}
+
 [sub_resource type="Animation" id="Animation_0baix"]
 resource_name = "spik"
 length = 2.0
@@ -298,21 +313,6 @@ tracks/0/keys = {
 "transitions": PackedFloat32Array(1, 1, 1),
 "update": 0,
 "values": [Vector2(-623, -46), Vector2(-715, -46), Vector2(-623, -46)]
-}
-
-[sub_resource type="Animation" id="Animation_e7jdh"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("../AnimatedSprite2D3:position")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector2(-623, -46)]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_ssgxd"]
@@ -386,7 +386,6 @@ script = ExtResource("5_e7jdh")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="AnimatedSprite2D3/Area2D15+8"]
 position = Vector2(0, 2.36364)
-scale = Vector2(1, 1)
 shape = SubResource("RectangleShape2D_0baix")
 
 [node name="Marker2D3" type="Marker2D" parent="."]
