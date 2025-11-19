@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://dc8l3h3ptrlb2"]
+[gd_scene load_steps=14 format=3 uid="uid://dc8l3h3ptrlb2"]
 
 [ext_resource type="Script" uid="uid://60f1eqpofcwr" path="res://bonus_levels.gd" id="1_3mthd"]
 [ext_resource type="Texture2D" uid="uid://bax0yfo0qu2f7" path="res://Main Characters/Mask Dude/bonus.png" id="1_bn8ah"]
@@ -26,6 +26,12 @@ bg_color = Color(0.148572, 0.354588, 0.187755, 1)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_btwym"]
 bg_color = Color(0.222656, 0.700005, 0.462863, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_f8h1h"]
+bg_color = Color(0.362626, 0.235096, 0.596246, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ga3if"]
+bg_color = Color(0.335504, 0.398578, 0.55857, 1)
 
 [node name="Node2D" type="Node2D"]
 scale = Vector2(1.00679, 1.00713)
@@ -122,6 +128,30 @@ theme_override_styles/hover = SubResource("StyleBoxFlat_yvtxs")
 theme_override_styles/normal = SubResource("StyleBoxFlat_btwym")
 text = "Bonus level2: Eyes closed- Jisoo & Zayn"
 
+[node name="Button4" type="Button" parent="."]
+offset_left = 30.0
+offset_top = 407.0
+offset_right = 637.0
+offset_bottom = 506.0
+theme_override_colors/font_disabled_color = Color(0.626857, 0.0597537, 0.445957, 1)
+theme_override_colors/font_hover_pressed_color = Color(0.668688, 0.067355, 0.510604, 1)
+theme_override_colors/font_hover_color = Color(0.639244, 0.0365386, 0.412978, 1)
+theme_override_colors/icon_disabled_color = Color(0.651787, 0.147322, 0.472941, 1)
+theme_override_colors/icon_hover_pressed_color = Color(0.66174, 0.0996293, 0.423364, 1)
+theme_override_colors/icon_hover_color = Color(0.613769, 0.0623193, 0.415556, 1)
+theme_override_colors/icon_pressed_color = Color(0.553575, 0.0615984, 0.414326, 1)
+theme_override_colors/icon_focus_color = Color(0.640401, 0.0658517, 0.466215, 1)
+theme_override_colors/icon_normal_color = Color(0.657066, 0.0229816, 0.507743, 1)
+theme_override_colors/font_outline_color = Color(0.711947, 0.0845456, 0.484135, 1)
+theme_override_colors/font_color = Color(0.654164, 0.0642274, 0.410673, 1)
+theme_override_colors/font_focus_color = Color(0.612385, 0.0602615, 0.33175, 1)
+theme_override_colors/font_pressed_color = Color(0.666453, 0.101107, 0.399306, 1)
+theme_override_font_sizes/font_size = 25
+theme_override_styles/hover = SubResource("StyleBoxFlat_f8h1h")
+theme_override_styles/normal = SubResource("StyleBoxFlat_ga3if")
+text = "Bonus level 3: Where is the love - Black eyed peas"
+
 [connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
 [connection signal="pressed" from="Button2" to="." method="_on_button_2_pressed"]
 [connection signal="pressed" from="Button3" to="." method="_on_button_3_pressed"]
+[connection signal="pressed" from="Button4" to="." method="_on_button_4_pressed"]

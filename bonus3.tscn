@@ -1,4 +1,4 @@
-[gd_scene load_steps=44 format=3 uid="uid://8evrihwcg1u8"]
+[gd_scene load_steps=52 format=3 uid="uid://8evrihwcg1u8"]
 
 [ext_resource type="Texture2D" uid="uid://uujg530lhrey" path="res://Green.png" id="1_bciy1"]
 [ext_resource type="Texture2D" uid="uid://b6psmtajx6xjj" path="res://Terrain (16x16).png" id="2_2p32c"]
@@ -8,6 +8,9 @@
 [ext_resource type="PackedScene" uid="uid://d242ikxry6kci" path="res://character2/character_body_2d.tscn" id="6_wfs64"]
 [ext_resource type="Script" uid="uid://bpgimm3dbyoy0" path="res://character2/character_body_2d.gd" id="7_1gjdm"]
 [ext_resource type="Script" uid="uid://bhu8fx4s56vq5" path="res://area_2d_16+4.gd" id="8_1gjdm"]
+[ext_resource type="Script" uid="uid://20f3cssa7ck7" path="res://area_2d_16+5.gd" id="9_evqwy"]
+[ext_resource type="Script" uid="uid://dam506kdpsp08" path="res://area_2d_16+6.gd" id="10_qgkr1"]
+[ext_resource type="PackedScene" uid="uid://dmlgaot1q3tap" path="res://enemy27.tscn" id="11_d8rq2"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_8ln55"]
 texture = ExtResource("2_2p32c")
@@ -311,6 +314,24 @@ texture = ExtResource("3_2p32c")
 sources/0 = SubResource("TileSetAtlasSource_wx5nt")
 
 [sub_resource type="GDScript" id="GDScript_wx5nt"]
+script/source = "extends Area2D
+
+# Path to the new scene you want to load
+@export var target_scene_path : String = \"res://Deathscene16.tscn\"
+
+func _ready():
+	# Connect the signal (if not already connected in the editor)
+	connect(\"body_entered\", _on_body_entered)
+
+func _on_body_entered(body):
+	# Check if the body is in your player (assuming its a Kinematicbody2D or a Characterbody2D)
+	
+	if body.is_in_group(\"player\"):
+		call_deferred(\"_fix\")
+
+func _fix():
+	get_tree().change_scene_to_file(target_scene_path)
+"
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_wfs64"]
 size = Vector2(254, 6)
@@ -344,6 +365,9 @@ size = Vector2(13, 7)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_hqbtv"]
 size = Vector2(13, 6)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_rli2s"]
+size = Vector2(30, 6)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_mpnws"]
 size = Vector2(30.5, 6)
@@ -384,7 +408,7 @@ size = Vector2(30, 7)
 size = Vector2(189.5, 8.5)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_g06k6"]
-size = Vector2(172, 45)
+size = Vector2(172, 47.5)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_un8oe"]
 size = Vector2(60, 20)
@@ -393,13 +417,25 @@ size = Vector2(60, 20)
 size = Vector2(42, 20)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_l50cq"]
-size = Vector2(74, 56)
+size = Vector2(80, 56)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_vakur"]
 size = Vector2(62, 20)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_2cw7u"]
 size = Vector2(95, 9)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_lrich"]
+size = Vector2(15.25, 7)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_bnd25"]
+size = Vector2(14, 6)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_pvtim"]
+size = Vector2(13, 7)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_vh45s"]
+size = Vector2(46, 43)
 
 [node name="Node2D" type="Node2D"]
 
@@ -471,6 +507,10 @@ shape = SubResource("RectangleShape2D_psjcq")
 position = Vector2(247.5, 557)
 shape = SubResource("RectangleShape2D_hqbtv")
 
+[node name="CollisionShape2D7" type="CollisionShape2D" parent="Area2D16+1"]
+position = Vector2(1134, 188)
+shape = SubResource("RectangleShape2D_rli2s")
+
 [node name="Area2D16+2" type="Area2D" parent="."]
 script = ExtResource("6_5cwy8")
 
@@ -499,6 +539,7 @@ position = Vector2(24.5, 332.5)
 shape = SubResource("RectangleShape2D_5doe2")
 
 [node name="Area2D16+3" type="Area2D" parent="."]
+position = Vector2(-2, 1)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D16+3"]
 position = Vector2(336, 413.5)
@@ -529,32 +570,69 @@ position = Vector2(-49, 482)
 script = ExtResource("7_1gjdm")
 
 [node name="Area2D16+4" type="Area2D" parent="."]
+position = Vector2(152, 61)
 script = ExtResource("8_1gjdm")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D16+4"]
-position = Vector2(832.25, 444.25)
+position = Vector2(682, 386)
 shape = SubResource("RectangleShape2D_loh72")
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="Area2D16+4"]
-position = Vector2(903, 416.5)
+position = Vector2(750, 356.75)
 shape = SubResource("RectangleShape2D_g06k6")
 
 [node name="CollisionShape2D3" type="CollisionShape2D" parent="Area2D16+4"]
-position = Vector2(864, 388)
+position = Vector2(712, 326)
 shape = SubResource("RectangleShape2D_un8oe")
 
 [node name="CollisionShape2D4" type="CollisionShape2D" parent="Area2D16+4"]
-position = Vector2(968, 389)
+position = Vector2(813, 327)
 shape = SubResource("RectangleShape2D_loqpq")
 
 [node name="CollisionShape2D5" type="CollisionShape2D" parent="Area2D16+4"]
-position = Vector2(727, 436)
+position = Vector2(575, 374)
 shape = SubResource("RectangleShape2D_l50cq")
 
 [node name="CollisionShape2D6" type="CollisionShape2D" parent="Area2D16+4"]
-position = Vector2(496, 276)
+position = Vector2(345, 216)
 shape = SubResource("RectangleShape2D_vakur")
 
 [node name="CollisionShape2D7" type="CollisionShape2D" parent="Area2D16+4"]
-position = Vector2(720.5, 235.5)
+position = Vector2(563, 178)
 shape = SubResource("RectangleShape2D_2cw7u")
+
+[node name="Area2D16+5" type="Area2D" parent="."]
+position = Vector2(483, 158)
+script = ExtResource("9_evqwy")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D16+5"]
+position = Vector2(596.375, 158.5)
+shape = SubResource("RectangleShape2D_lrich")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Area2D16+5"]
+position = Vector2(597, 239)
+shape = SubResource("RectangleShape2D_bnd25")
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="Area2D16+5"]
+position = Vector2(597.5, 350.5)
+shape = SubResource("RectangleShape2D_pvtim")
+
+[node name="Area2D16+6" type="Area2D" parent="."]
+position = Vector2(902, 417.75)
+script = ExtResource("10_qgkr1")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D16+6"]
+position = Vector2(219, 146.75)
+shape = SubResource("RectangleShape2D_vh45s")
+
+[node name="Node2D" parent="." instance=ExtResource("11_d8rq2")]
+position = Vector2(796, 560)
+
+[node name="Label" type="Label" parent="."]
+offset_left = 1095.0
+offset_top = 549.0
+offset_right = 1148.0
+offset_bottom = 589.0
+theme_override_colors/font_color = Color(0.538158, 0.260855, 0, 1)
+theme_override_font_sizes/font_size = 29
+text = "End"
