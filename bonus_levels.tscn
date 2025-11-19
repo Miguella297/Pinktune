@@ -146,10 +146,10 @@ theme_override_colors/font_outline_color = Color(0.711947, 0.0845456, 0.484135, 
 theme_override_colors/font_color = Color(0.654164, 0.0642274, 0.410673, 1)
 theme_override_colors/font_focus_color = Color(0.612385, 0.0602615, 0.33175, 1)
 theme_override_colors/font_pressed_color = Color(0.666453, 0.101107, 0.399306, 1)
-theme_override_font_sizes/font_size = 25
+theme_override_font_sizes/font_size = 28
 theme_override_styles/hover = SubResource("StyleBoxFlat_f8h1h")
 theme_override_styles/normal = SubResource("StyleBoxFlat_ga3if")
-text = "Bonus level 3: Where is the love - Black eyed peas"
+text = "Bonus level3: All eyes on me dropbeat-Jisoo"
 
 [connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
 [connection signal="pressed" from="Button2" to="." method="_on_button_2_pressed"]

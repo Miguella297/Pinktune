@@ -636,3 +636,5 @@ offset_bottom = 589.0
 theme_override_colors/font_color = Color(0.538158, 0.260855, 0, 1)
 theme_override_font_sizes/font_size = 29
 text = "End"
+
+[node name="Node2D" parent="Label" instance=ExtResource("11_d8rq2")]

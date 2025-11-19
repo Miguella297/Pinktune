@@ -142,7 +142,7 @@ offset_bottom = 250.0
 theme_override_colors/font_color = Color(1.44392e-06, 0.879945, 0.21353, 1)
 theme_override_fonts/font = ExtResource("7_oc5sg")
 theme_override_font_sizes/font_size = 29
-text = "Congradulations! You have completed the main levels of Pinktune! 
+text = "Congratulations! You have completed the main levels of Pinktune! 
 I thank you for playing my game! From here, you can either return 
 to the main menu, or try our bonus levels!"
 
