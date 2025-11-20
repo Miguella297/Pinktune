@@ -1,4 +1,4 @@
-[gd_scene load_steps=52 format=3 uid="uid://8evrihwcg1u8"]
+[gd_scene load_steps=53 format=3 uid="uid://8evrihwcg1u8"]
 
 [ext_resource type="Texture2D" uid="uid://uujg530lhrey" path="res://Green.png" id="1_bciy1"]
 [ext_resource type="Texture2D" uid="uid://b6psmtajx6xjj" path="res://Terrain (16x16).png" id="2_2p32c"]
@@ -11,6 +11,7 @@
 [ext_resource type="Script" uid="uid://20f3cssa7ck7" path="res://area_2d_16+5.gd" id="9_evqwy"]
 [ext_resource type="Script" uid="uid://dam506kdpsp08" path="res://area_2d_16+6.gd" id="10_qgkr1"]
 [ext_resource type="PackedScene" uid="uid://dmlgaot1q3tap" path="res://enemy27.tscn" id="11_d8rq2"]
+[ext_resource type="PackedScene" uid="uid://drlha116g1hnl" path="res://enemy28.tscn" id="12_ow881"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_8ln55"]
 texture = ExtResource("2_2p32c")
@@ -637,4 +638,5 @@ theme_override_colors/font_color = Color(0.538158, 0.260855, 0, 1)
 theme_override_font_sizes/font_size = 29
 text = "End"
 
-[node name="Node2D" parent="Label" instance=ExtResource("11_d8rq2")]
+[node name="Node2D2" parent="." instance=ExtResource("12_ow881")]
+position = Vector2(49, 439)
