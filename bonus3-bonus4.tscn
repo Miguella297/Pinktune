@@ -1,3 +1,81 @@
-[gd_scene format=3 uid="uid://8m2nyjopuo77"]
+[gd_scene load_steps=5 format=3 uid="uid://8m2nyjopuo77"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_3f6u3"]
+bg_color = Color(0.32791, 0.451128, 0.148915, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_16yr1"]
+bg_color = Color(0.57003, 0.64592, 0.135114, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_kl4ty"]
+bg_color = Color(0.511199, 0.146006, 0.518405, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_6dih7"]
+bg_color = Color(0.774157, 0.483371, 0.733673, 1)
 
 [node name="Node2D" type="Node2D"]
+
+[node name="Panel" type="Panel" parent="."]
+offset_right = 369.0
+offset_bottom = 649.0
+
+[node name="Panel2" type="Panel" parent="."]
+offset_left = 369.0
+offset_right = 799.0
+offset_bottom = 650.0
+
+[node name="Panel3" type="Panel" parent="."]
+offset_left = 799.0
+offset_right = 1153.0
+offset_bottom = 648.0
+
+[node name="Button" type="Button" parent="."]
+offset_left = 235.0
+offset_top = 224.0
+offset_right = 880.0
+offset_bottom = 384.0
+theme_override_colors/font_disabled_color = Color(0.561998, 0.0365316, 0.592369, 1)
+theme_override_colors/font_hover_pressed_color = Color(0.550662, 0.0423254, 0.563, 1)
+theme_override_colors/font_hover_color = Color(0.522834, 0.0279973, 0.529571, 1)
+theme_override_colors/icon_disabled_color = Color(0.658718, 0.142352, 0.660824, 1)
+theme_override_colors/icon_hover_pressed_color = Color(0.606663, 0.0948952, 0.610264, 1)
+theme_override_colors/icon_hover_color = Color(0.593494, 0.0597975, 0.554988, 1)
+theme_override_colors/icon_pressed_color = Color(0.671374, 0.0790133, 0.625528, 1)
+theme_override_colors/icon_focus_color = Color(0.608431, 0.0989993, 0.602142, 1)
+theme_override_colors/icon_normal_color = Color(0.596973, 0.0924864, 0.636043, 1)
+theme_override_colors/font_outline_color = Color(0.63666, 0.0951729, 0.588644, 1)
+theme_override_colors/font_color = Color(0.509226, 0.0502182, 0.601519, 1)
+theme_override_colors/font_focus_color = Color(0.5244, 0.0763827, 0.602994, 1)
+theme_override_colors/font_pressed_color = Color(0.592601, 0.0426685, 0.567399, 1)
+theme_override_font_sizes/font_size = 50
+theme_override_styles/hover = SubResource("StyleBoxFlat_3f6u3")
+theme_override_styles/normal = SubResource("StyleBoxFlat_16yr1")
+text = "On to the last bonus level!"
+
+[node name="Button2" type="Button" parent="."]
+offset_left = 235.0
+offset_top = 399.0
+offset_right = 881.0
+offset_bottom = 546.0
+theme_override_colors/font_disabled_color = Color(0.538158, 0.0342254, 0.34019, 1)
+theme_override_colors/font_hover_pressed_color = Color(0.702953, 0.0852621, 0.435542, 1)
+theme_override_colors/font_hover_color = Color(0.545358, 0.0988936, 0.310291, 1)
+theme_override_colors/icon_disabled_color = Color(0.569126, 0.035814, 0.375795, 1)
+theme_override_colors/icon_hover_pressed_color = Color(0.684335, 0.0457898, 0.466614, 1)
+theme_override_colors/icon_hover_color = Color(0.525055, 0.0826668, 0.339813, 1)
+theme_override_colors/icon_pressed_color = Color(0.711791, 0.062001, 0.41812, 1)
+theme_override_colors/icon_focus_color = Color(0.585341, 0.0441723, 0.384233, 1)
+theme_override_colors/icon_normal_color = Color(0.688662, 0.0762051, 0.420561, 1)
+theme_override_colors/font_outline_color = Color(0.600247, 0.0644236, 0.385998, 1)
+theme_override_colors/font_color = Color(0.698483, 0.0146008, 0.424917, 1)
+theme_override_colors/font_focus_color = Color(0.592569, 0.116637, 0.430096, 1)
+theme_override_colors/font_pressed_color = Color(0.50557, 0.116122, 0.360536, 1)
+theme_override_font_sizes/font_size = 50
+theme_override_styles/hover = SubResource("StyleBoxFlat_kl4ty")
+theme_override_styles/normal = SubResource("StyleBoxFlat_6dih7")
+text = "To main menu"
+
+[node name="Label" type="Label" parent="."]
+offset_left = 393.0
+offset_top = 86.0
+offset_right = 678.0
+offset_bottom = 197.0

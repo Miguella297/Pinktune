@@ -1,0 +1,155 @@
+[gd_scene load_steps=19 format=3 uid="uid://dshxeoxnt47t7"]
+
+[ext_resource type="Texture2D" uid="uid://b2nqo0fsc2cwm" path="res://Main Characters/Ninja Frog/Idle (32x32).png" id="1_631id"]
+[ext_resource type="Script" uid="uid://d0nksv15vb8of" path="res://area_2d_16+18.gd" id="2_8fgo5"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_oalvc"]
+atlas = ExtResource("1_631id")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lq125"]
+atlas = ExtResource("1_631id")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8dv8h"]
+atlas = ExtResource("1_631id")
+region = Rect2(64, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3bcg5"]
+atlas = ExtResource("1_631id")
+region = Rect2(96, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5wpmo"]
+atlas = ExtResource("1_631id")
+region = Rect2(320, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fo673"]
+atlas = ExtResource("1_631id")
+region = Rect2(288, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_iyrqh"]
+atlas = ExtResource("1_631id")
+region = Rect2(256, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_l8eop"]
+atlas = ExtResource("1_631id")
+region = Rect2(224, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_v4laq"]
+atlas = ExtResource("1_631id")
+region = Rect2(192, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1mcai"]
+atlas = ExtResource("1_631id")
+region = Rect2(160, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ksd1w"]
+atlas = ExtResource("1_631id")
+region = Rect2(128, 0, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_wbiyt"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_oalvc")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_lq125")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8dv8h")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3bcg5")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5wpmo")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fo673")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_iyrqh")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_l8eop")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_v4laq")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1mcai")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ksd1w")
+}],
+"loop": true,
+"name": &"default",
+"speed": 21.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_c3dqr"]
+size = Vector2(20, 26)
+
+[sub_resource type="Animation" id="Animation_h7kbp"]
+resource_name = "froggy"
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("../AnimatedSprite2D:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5, 1),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(0, 0), Vector2(30, 0), Vector2(0, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_be8dp"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("../AnimatedSprite2D:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_vcuvg"]
+_data = {
+&"RESET": SubResource("Animation_be8dp"),
+&"froggy": SubResource("Animation_h7kbp")
+}
+
+[node name="Node2D" type="Node2D"]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+texture_filter = 1
+sprite_frames = SubResource("SpriteFrames_wbiyt")
+autoplay = "default"
+frame = 4
+frame_progress = 0.928146
+
+[node name="Area2D16+18" type="Area2D" parent="AnimatedSprite2D"]
+script = ExtResource("2_8fgo5")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="AnimatedSprite2D/Area2D16+18"]
+position = Vector2(0, 3)
+shape = SubResource("RectangleShape2D_c3dqr")
+
+[node name="Marker2D" type="Marker2D" parent="."]
+position = Vector2(30, 0)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+root_node = NodePath("../Marker2D")
+libraries = {
+&"": SubResource("AnimationLibrary_vcuvg")
+}
+autoplay = "froggy"
