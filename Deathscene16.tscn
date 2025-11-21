@@ -1,36 +1,123 @@
-[gd_scene format=3 uid="uid://5ww6b2xrhk3t"]
+[gd_scene load_steps=15 format=3 uid="uid://5ww6b2xrhk3t"]
+
+[ext_resource type="Script" uid="uid://1hmnkdgoaycc" path="res://deathscene_16.gd" id="1_nouhk"]
+[ext_resource type="FontFile" uid="uid://bs7v6v6inp1k" path="res://Spicy Sale.ttf" id="2_jlnwm"]
+[ext_resource type="Texture2D" uid="uid://c4ik8rkues2ae" path="res://Screenshot 2025-10-19 153524.png" id="2_vawwm"]
+[ext_resource type="Texture2D" uid="uid://chcxm5mqvlh7a" path="res://Screenshot 2025-10-19 004133.png" id="3_6tnd6"]
+[ext_resource type="Texture2D" uid="uid://k38dbb04rnn8" path="res://Screenshot 2025-10-24 195505.png" id="4_x4u4q"]
+[ext_resource type="Texture2D" uid="uid://cijniw2fk10kk" path="res://Screenshot 2025-10-19 234957.png" id="5_sey8o"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_no0jp"]
+texture = ExtResource("2_vawwm")
+modulate_color = Color(0.1634, 0.43, 0.43, 1)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_cfkbs"]
+texture = ExtResource("3_6tnd6")
+modulate_color = Color(0.896905, 0.789469, 0.17169, 1)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_01at2"]
+texture = ExtResource("4_x4u4q")
+modulate_color = Color(0.591715, 0.556503, 0.390774, 1)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_8bg5o"]
+texture = ExtResource("5_sey8o")
+modulate_color = Color(0.413349, 0.426159, 0.506611, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_doi5c"]
+bg_color = Color(0.30486, 0.342477, 0.0685067, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_nouhk"]
+bg_color = Color(0.561569, 0.648305, 0.151565, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_jlnwm"]
+bg_color = Color(0.425057, 0.399012, 0.211097, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_an7ir"]
+bg_color = Color(0.673814, 0.6079, 0, 1)
 
 [node name="Node2D" type="Node2D"]
+script = ExtResource("1_nouhk")
 
 [node name="Panel" type="Panel" parent="."]
 offset_right = 607.0
 offset_bottom = 325.0
+theme_override_styles/panel = SubResource("StyleBoxTexture_no0jp")
 
 [node name="Panel2" type="Panel" parent="."]
 offset_left = -2.0
 offset_top = 325.0
 offset_right = 607.0
 offset_bottom = 645.0
+theme_override_styles/panel = SubResource("StyleBoxTexture_cfkbs")
 
 [node name="Panel3" type="Panel" parent="."]
 offset_left = 607.0
 offset_right = 1150.0
 offset_bottom = 324.0
+theme_override_styles/panel = SubResource("StyleBoxTexture_01at2")
 
 [node name="Panel4" type="Panel" parent="."]
 offset_left = 607.0
 offset_top = 324.0
 offset_right = 1152.0
 offset_bottom = 646.0
+theme_override_styles/panel = SubResource("StyleBoxTexture_8bg5o")
 
 [node name="Button" type="Button" parent="."]
 offset_left = 251.0
-offset_top = 255.0
+offset_top = 230.0
 offset_right = 895.0
 offset_bottom = 372.0
+theme_override_colors/font_disabled_color = Color(0.611915, 0.235681, 0, 1)
+theme_override_colors/font_hover_pressed_color = Color(0.540429, 0.218338, 0, 1)
+theme_override_colors/font_hover_color = Color(0.629126, 0.265419, 9.62615e-08, 1)
+theme_override_colors/icon_disabled_color = Color(0.610585, 0.237256, 3.85046e-07, 1)
+theme_override_colors/icon_hover_pressed_color = Color(0.580912, 0.221547, 0, 1)
+theme_override_colors/icon_hover_color = Color(0.664391, 0.190557, 0.0163352, 1)
+theme_override_colors/icon_pressed_color = Color(0.519813, 0.184084, 2.40654e-07, 1)
+theme_override_colors/icon_focus_color = Color(0.509906, 0.213354, 0.0191072, 1)
+theme_override_colors/icon_normal_color = Color(0.611855, 0.206345, 0, 1)
+theme_override_colors/font_outline_color = Color(0.574196, 0.203569, 9.62615e-08, 1)
+theme_override_colors/font_color = Color(0.5427, 0.194658, 0, 1)
+theme_override_colors/font_focus_color = Color(0.636333, 0.204563, 0, 1)
+theme_override_colors/font_pressed_color = Color(0.609678, 0.182403, 0, 1)
+theme_override_font_sizes/font_size = 40
+theme_override_styles/hover = SubResource("StyleBoxFlat_doi5c")
+theme_override_styles/normal = SubResource("StyleBoxFlat_nouhk")
+text = "Try again! For the sake of sake!"
 
 [node name="Button2" type="Button" parent="."]
 offset_left = 252.0
-offset_top = 383.0
-offset_right = 900.0
-offset_bottom = 500.0
+offset_top = 394.0
+offset_right = 897.0
+offset_bottom = 523.0
+theme_override_colors/font_disabled_color = Color(0.0327035, 0.352812, 0.383545, 1)
+theme_override_colors/font_hover_pressed_color = Color(0.0790545, 0.391599, 0.366404, 1)
+theme_override_colors/font_hover_color = Color(0.0491726, 0.388412, 0.402854, 1)
+theme_override_colors/icon_disabled_color = Color(0.0502503, 0.43564, 0.436485, 1)
+theme_override_colors/icon_hover_pressed_color = Color(0.0090925, 0.367181, 0.383119, 1)
+theme_override_colors/icon_hover_color = Color(0.122641, 0.461307, 0.495599, 1)
+theme_override_colors/icon_pressed_color = Color(0.0577497, 0.436324, 0.429013, 1)
+theme_override_colors/icon_focus_color = Color(0.0713344, 0.43106, 0.459726, 1)
+theme_override_colors/icon_normal_color = Color(0.0372147, 0.393833, 0.45532, 1)
+theme_override_colors/font_outline_color = Color(0.120859, 0.358269, 0.643717, 1)
+theme_override_colors/font_color = Color(0.0564164, 0.338132, 0.348905, 1)
+theme_override_colors/font_focus_color = Color(3.36915e-07, 0.332929, 0.306683, 1)
+theme_override_colors/font_pressed_color = Color(2.31028e-06, 0.36522, 0.49373, 1)
+theme_override_font_sizes/font_size = 40
+theme_override_styles/hover = SubResource("StyleBoxFlat_jlnwm")
+theme_override_styles/normal = SubResource("StyleBoxFlat_an7ir")
+text = "Main menu for the 16th time"
+
+[node name="Label" type="Label" parent="."]
+offset_left = 155.0
+offset_top = 87.0
+offset_right = 1003.0
+offset_bottom = 224.0
+theme_override_colors/font_color = Color(0.917816, 0.12313, 0.403538, 1)
+theme_override_fonts/font = ExtResource("2_jlnwm")
+theme_override_font_sizes/font_size = 100
+text = "Keep on trying!"
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="Button2" to="." method="_on_button_2_pressed"]

@@ -389,7 +389,7 @@ offset_bottom = 171.0
 theme_override_colors/font_color = Color(0.72909, 0.391256, 1, 1)
 theme_override_fonts/font = ExtResource("1_0e48y")
 theme_override_font_sizes/font_size = 72
-text = "PINK NOTE"
+text = "PINK TUNE"
 
 [node name="Fall(32x32)" type="Sprite2D" parent="."]
 texture_filter = 1

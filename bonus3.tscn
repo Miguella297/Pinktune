@@ -639,4 +639,4 @@ theme_override_font_sizes/font_size = 29
 text = "End"
 
 [node name="Node2D2" parent="." instance=ExtResource("12_ow881")]
-position = Vector2(49, 439)
+position = Vector2(51, 446)

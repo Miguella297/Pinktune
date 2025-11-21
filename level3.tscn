@@ -462,7 +462,7 @@ position = Vector2(946, 583)
 position = Vector2(991, 448)
 stream = ExtResource("14_0m7xm")
 volume_db = 9.905
-pitch_scale = 1.1
+pitch_scale = 0.91
 autoplay = true
 
 [node name="Label" type="Label" parent="."]
