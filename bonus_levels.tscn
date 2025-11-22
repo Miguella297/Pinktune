@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=3 uid="uid://dc8l3h3ptrlb2"]
+[gd_scene load_steps=16 format=3 uid="uid://dc8l3h3ptrlb2"]
 
 [ext_resource type="Script" uid="uid://60f1eqpofcwr" path="res://bonus_levels.gd" id="1_3mthd"]
 [ext_resource type="Texture2D" uid="uid://bax0yfo0qu2f7" path="res://Main Characters/Mask Dude/bonus.png" id="1_bn8ah"]
@@ -33,6 +33,12 @@ bg_color = Color(0.362626, 0.235096, 0.596246, 1)
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ga3if"]
 bg_color = Color(0.335504, 0.398578, 0.55857, 1)
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_qdowb"]
+bg_color = Color(0.30249, 0.481863, 0.26211, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_dxuho"]
+bg_color = Color(0.490687, 0.667975, 0.193572, 1)
+
 [node name="Node2D" type="Node2D"]
 scale = Vector2(1.00679, 1.00713)
 script = ExtResource("1_3mthd")
@@ -54,10 +60,10 @@ theme_override_font_sizes/font_size = 70
 text = "All bonus levels will be accessible here! "
 
 [node name="Button" type="Button" parent="."]
-offset_left = 32.0
-offset_top = 185.0
-offset_right = 526.0
-offset_bottom = 283.0
+offset_left = 32.7774
+offset_top = 193.619
+offset_right = 633.777
+offset_bottom = 291.619
 theme_override_colors/font_disabled_color = Color(0.589841, 0.0817611, 0.176214, 1)
 theme_override_colors/font_hover_pressed_color = Color(0.606951, 0.0633949, 0.238582, 1)
 theme_override_colors/font_hover_color = Color(0.57531, 0.0405524, 0.230358, 1)
@@ -149,9 +155,33 @@ theme_override_colors/font_pressed_color = Color(0.666453, 0.101107, 0.399306, 1
 theme_override_font_sizes/font_size = 28
 theme_override_styles/hover = SubResource("StyleBoxFlat_f8h1h")
 theme_override_styles/normal = SubResource("StyleBoxFlat_ga3if")
-text = "Bonus level3: All eyes on me dropbeat-Jisoo"
+text = "Bonus level3: All eyes on me (dropbeat)-Jisoo"
+
+[node name="Button5" type="Button" parent="."]
+offset_left = 30.0
+offset_top = 513.0
+offset_right = 640.0
+offset_bottom = 612.0
+theme_override_colors/font_disabled_color = Color(0.658544, 0.119284, 0.296627, 1)
+theme_override_colors/font_hover_pressed_color = Color(0.619084, 0.0898345, 0.356977, 1)
+theme_override_colors/font_hover_color = Color(0.658129, 0.0180765, 0.332609, 1)
+theme_override_colors/icon_disabled_color = Color(0.639017, 0.0956544, 0.336047, 1)
+theme_override_colors/icon_hover_pressed_color = Color(0.732037, 0.119246, 0.325929, 1)
+theme_override_colors/icon_hover_color = Color(0.595173, 0.0559437, 0.325394, 1)
+theme_override_colors/icon_pressed_color = Color(0.690027, 0.0817541, 0.293076, 1)
+theme_override_colors/icon_focus_color = Color(0.731573, 0.110957, 0.346777, 1)
+theme_override_colors/icon_normal_color = Color(0.588027, 0.0763345, 0.209539, 1)
+theme_override_colors/font_outline_color = Color(0.614347, 0.0699666, 0.307061, 1)
+theme_override_colors/font_color = Color(0.567545, 0.0750256, 0.23358, 1)
+theme_override_colors/font_focus_color = Color(0.677495, 0.0635105, 0.330783, 1)
+theme_override_colors/font_pressed_color = Color(0.686103, 0.071462, 0.33607, 1)
+theme_override_font_sizes/font_size = 26
+theme_override_styles/hover = SubResource("StyleBoxFlat_qdowb")
+theme_override_styles/normal = SubResource("StyleBoxFlat_dxuho")
+text = "Bonus level4:  Where is the love- Black eyes peas"
 
 [connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
 [connection signal="pressed" from="Button2" to="." method="_on_button_2_pressed"]
 [connection signal="pressed" from="Button3" to="." method="_on_button_3_pressed"]
 [connection signal="pressed" from="Button4" to="." method="_on_button_4_pressed"]
+[connection signal="pressed" from="Button5" to="." method="_on_button_5_pressed"]

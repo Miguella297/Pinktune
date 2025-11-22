@@ -1,9 +1,10 @@
-[gd_scene load_steps=11 format=3 uid="uid://ca825okeqntuj"]
+[gd_scene load_steps=12 format=3 uid="uid://ca825okeqntuj"]
 
 [ext_resource type="Script" uid="uid://bjafpsshgq2j0" path="res://deathscene_17.gd" id="1_fj8v7"]
 [ext_resource type="Texture2D" uid="uid://dm3r6whw4ldyj" path="res://winter 1.png" id="2_2a7r1"]
 [ext_resource type="Texture2D" uid="uid://cetskbhsurgvx" path="res://winter 2.png" id="3_roe7l"]
 [ext_resource type="FontFile" uid="uid://dkmblvowvadvd" path="res://Animal Chariot.ttf" id="4_xw1hh"]
+[ext_resource type="AudioStream" uid="uid://fch6ook5t1oq" path="res://Deathscene17.mp3" id="5_2a7r1"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_0rhr6"]
 texture = ExtResource("2_2a7r1")
@@ -95,6 +96,14 @@ theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("4_xw1hh")
 theme_override_font_sizes/font_size = 80
 text = "ANOTHER TRY!!!!!"
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+position = Vector2(3051, 2784)
+scale = Vector2(1, 1.00407)
+stream = ExtResource("5_2a7r1")
+volume_db = 24.0
+autoplay = true
+max_distance = 4096.0
 
 [connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
 [connection signal="pressed" from="Button2" to="." method="_on_button_2_pressed"]
