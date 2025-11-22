@@ -1,4 +1,4 @@
-[gd_scene load_steps=55 format=3 uid="uid://8evrihwcg1u8"]
+[gd_scene load_steps=56 format=3 uid="uid://8evrihwcg1u8"]
 
 [ext_resource type="Texture2D" uid="uid://uujg530lhrey" path="res://Green.png" id="1_bciy1"]
 [ext_resource type="Texture2D" uid="uid://b6psmtajx6xjj" path="res://Terrain (16x16).png" id="2_2p32c"]
@@ -13,6 +13,7 @@
 [ext_resource type="PackedScene" uid="uid://dmlgaot1q3tap" path="res://enemy27.tscn" id="11_d8rq2"]
 [ext_resource type="PackedScene" uid="uid://drlha116g1hnl" path="res://enemy28.tscn" id="12_ow881"]
 [ext_resource type="PackedScene" uid="uid://dshxeoxnt47t7" path="res://enemy29.tscn" id="13_psjcq"]
+[ext_resource type="AudioStream" uid="uid://bsev7446atq4r" path="res://bonus 3.mp3" id="14_hqbtv"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_8ln55"]
 texture = ExtResource("2_2p32c")
@@ -570,10 +571,6 @@ shape = SubResource("RectangleShape2D_x7tb0")
 position = Vector2(320, 316.5)
 shape = SubResource("RectangleShape2D_ehekr")
 
-[node name="CharacterBody2D" parent="." groups=["player"] instance=ExtResource("6_wfs64")]
-position = Vector2(-49, 482)
-script = ExtResource("7_1gjdm")
-
 [node name="Area2D16+4" type="Area2D" parent="."]
 position = Vector2(152, 61)
 script = ExtResource("8_1gjdm")
@@ -651,3 +648,15 @@ position = Vector2(51, 446)
 
 [node name="Node2D3" parent="." instance=ExtResource("13_psjcq")]
 position = Vector2(968, 176)
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+position = Vector2(3718, 2802.75)
+scale = Vector2(1, 1.00407)
+stream = ExtResource("14_hqbtv")
+volume_db = 24.0
+autoplay = true
+max_distance = 4096.0
+
+[node name="CharacterBody2D" parent="." groups=["player"] instance=ExtResource("6_wfs64")]
+position = Vector2(998, 571)
+script = ExtResource("7_1gjdm")

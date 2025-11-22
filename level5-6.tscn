@@ -2,7 +2,6 @@
 
 [ext_resource type="FontFile" uid="uid://bkn1da7sfppe3" path="res://Oups.otf" id="1_0e7j5"]
 [ext_resource type="Texture2D" uid="uid://bt6a8v2vrgdsp" path="res://happy.png" id="1_58qhk"]
-[ext_resource type="Script" uid="uid://iqog5u72l3hk" path="res://button_2.gd" id="2_tn0sx"]
 [ext_resource type="AudioStream" uid="uid://dxey24mgpl3qa" path="res://err.mp3" id="4_rdhqi"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_tn0sx"]
@@ -18,6 +17,16 @@ bg_color = Color(0.879721, 0.457506, 0.436193, 1)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_tn0sx"]
 bg_color = Color(0.32549, 0.6, 0.6, 1)
+
+[sub_resource type="GDScript" id="GDScript_ddnj0"]
+script/source = "extends Button
+
+func _on_button_pressed() -> void:
+	get_tree().change_scene_to_file(\"level6.tscn\")
+
+func _on_pressed() -> void:
+	get_tree().change_scene_to_file(\"res://node_2d.tscn\")
+"
 
 [node name="Node2D" type="Node2D"]
 
@@ -71,7 +80,7 @@ theme_override_font_sizes/font_size = 60
 theme_override_styles/hover = SubResource("StyleBoxFlat_58qhk")
 theme_override_styles/normal = SubResource("StyleBoxFlat_tn0sx")
 text = "Main menu"
-script = ExtResource("2_tn0sx")
+script = SubResource("GDScript_ddnj0")
 
 [node name="Label" type="Label" parent="."]
 offset_left = 71.0

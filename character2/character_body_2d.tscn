@@ -194,10 +194,11 @@ animations = [{
 size = Vector2(21.7907, 26.9474)
 
 [node name="CharacterBody2D" type="CharacterBody2D"]
+position = Vector2(32, 18)
 
 [node name="Sprite2D" type="AnimatedSprite2D" parent="."]
 texture_filter = 1
-position = Vector2(1049.5, 89.0556)
+position = Vector2(-1.52588e-05, 1)
 rotation = 0.00814508
 scale = Vector2(1.34375, 1.19097)
 sprite_frames = SubResource("SpriteFrames_nm347")
@@ -205,6 +206,6 @@ animation = &"jump"
 autoplay = "running"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(1049.64, 91)
+position = Vector2(1, 3)
 scale = Vector2(1.34375, 1.1875)
 shape = SubResource("RectangleShape2D_ac6uv")

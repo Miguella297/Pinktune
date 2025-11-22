@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=3 uid="uid://5ww6b2xrhk3t"]
+[gd_scene load_steps=16 format=3 uid="uid://5ww6b2xrhk3t"]
 
 [ext_resource type="Script" uid="uid://1hmnkdgoaycc" path="res://deathscene_16.gd" id="1_nouhk"]
 [ext_resource type="FontFile" uid="uid://bs7v6v6inp1k" path="res://Spicy Sale.ttf" id="2_jlnwm"]
@@ -6,6 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://chcxm5mqvlh7a" path="res://Screenshot 2025-10-19 004133.png" id="3_6tnd6"]
 [ext_resource type="Texture2D" uid="uid://k38dbb04rnn8" path="res://Screenshot 2025-10-24 195505.png" id="4_x4u4q"]
 [ext_resource type="Texture2D" uid="uid://cijniw2fk10kk" path="res://Screenshot 2025-10-19 234957.png" id="5_sey8o"]
+[ext_resource type="AudioStream" uid="uid://d2a6en0d6jhl3" path="res://deathscene16.mp3" id="7_6tnd6"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_no0jp"]
 texture = ExtResource("2_vawwm")
@@ -118,6 +119,14 @@ theme_override_colors/font_color = Color(0.917816, 0.12313, 0.403538, 1)
 theme_override_fonts/font = ExtResource("2_jlnwm")
 theme_override_font_sizes/font_size = 100
 text = "Keep on trying!"
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+position = Vector2(2816, 2385)
+scale = Vector2(1, 1.00407)
+stream = ExtResource("7_6tnd6")
+volume_db = 24.0
+autoplay = true
+max_distance = 4096.0
 
 [connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
 [connection signal="pressed" from="Button2" to="." method="_on_button_2_pressed"]

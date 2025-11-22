@@ -1,4 +1,23 @@
-[gd_scene load_steps=5 format=3 uid="uid://8m2nyjopuo77"]
+[gd_scene load_steps=15 format=3 uid="uid://8m2nyjopuo77"]
+
+[ext_resource type="Script" uid="uid://cpmhi7dr03x01" path="res://bonus_3_bonus_4.gd" id="1_ddnj0"]
+[ext_resource type="Texture2D" uid="uid://dbtrlfo36x1pg" path="res://67 #2.png" id="2_makvm"]
+[ext_resource type="Texture2D" uid="uid://clufpafq3sw7i" path="res://boulder push.png" id="3_kduvb"]
+[ext_resource type="Texture2D" uid="uid://dhpfcn2rqu7rp" path="res://doggy.png" id="4_e3d1k"]
+[ext_resource type="FontFile" uid="uid://dhkly42qq462b" path="res://Main Characters/Pink Man/CRONDE.otf" id="5_f6uno"]
+[ext_resource type="AudioStream" uid="uid://cxbm8bsj0n0ao" path="res://bonus3-4.mp3" id="6_makvm"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_iuoc4"]
+texture = ExtResource("2_makvm")
+modulate_color = Color(0.668269, 0.398381, 0.190983, 1)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_u4uj0"]
+texture = ExtResource("3_kduvb")
+modulate_color = Color(0.873319, 0.570875, 1.34766e-06, 1)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_a1xyd"]
+texture = ExtResource("4_e3d1k")
+modulate_color = Color(0.605274, 0.605274, 0.605274, 1)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_3f6u3"]
 bg_color = Color(0.32791, 0.451128, 0.148915, 1)
@@ -12,21 +31,35 @@ bg_color = Color(0.511199, 0.146006, 0.518405, 1)
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_6dih7"]
 bg_color = Color(0.774157, 0.483371, 0.733673, 1)
 
+[sub_resource type="GDScript" id="GDScript_ddnj0"]
+script/source = "extends Button
+
+func _on_button_pressed() -> void:
+	get_tree().change_scene_to_file(\"level6.tscn\")
+
+func _on_pressed() -> void:
+	get_tree().change_scene_to_file(\"res://node_2d.tscn\")
+"
+
 [node name="Node2D" type="Node2D"]
+script = ExtResource("1_ddnj0")
 
 [node name="Panel" type="Panel" parent="."]
 offset_right = 369.0
 offset_bottom = 649.0
+theme_override_styles/panel = SubResource("StyleBoxTexture_iuoc4")
 
 [node name="Panel2" type="Panel" parent="."]
 offset_left = 369.0
 offset_right = 799.0
 offset_bottom = 650.0
+theme_override_styles/panel = SubResource("StyleBoxTexture_u4uj0")
 
 [node name="Panel3" type="Panel" parent="."]
 offset_left = 799.0
 offset_right = 1153.0
 offset_bottom = 648.0
+theme_override_styles/panel = SubResource("StyleBoxTexture_a1xyd")
 
 [node name="Button" type="Button" parent="."]
 offset_left = 235.0
@@ -73,9 +106,25 @@ theme_override_font_sizes/font_size = 50
 theme_override_styles/hover = SubResource("StyleBoxFlat_kl4ty")
 theme_override_styles/normal = SubResource("StyleBoxFlat_6dih7")
 text = "To main menu"
+script = SubResource("GDScript_ddnj0")
 
 [node name="Label" type="Label" parent="."]
-offset_left = 393.0
-offset_top = 86.0
-offset_right = 678.0
-offset_bottom = 197.0
+offset_left = 157.0
+offset_top = 94.0
+offset_right = 992.0
+offset_bottom = 190.0
+theme_override_colors/font_color = Color(0.282222, 0.717519, 0, 1)
+theme_override_fonts/font = ExtResource("5_f6uno")
+theme_override_font_sizes/font_size = 90
+text = "Moving on! LAST LEVEL!"
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+position = Vector2(3051, 2784)
+scale = Vector2(1, 1.00407)
+stream = ExtResource("6_makvm")
+volume_db = 24.0
+autoplay = true
+max_distance = 4096.0
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="Button2" to="." method="_on_button_2_pressed"]
