@@ -1,7 +1,8 @@
-[gd_scene load_steps=33 format=3 uid="uid://duyiverc3nmf2"]
+[gd_scene load_steps=43 format=3 uid="uid://duyiverc3nmf2"]
 
 [ext_resource type="Texture2D" uid="uid://du6axlls2vs3i" path="res://On (38x38).png" id="1_bnt3e"]
 [ext_resource type="Texture2D" uid="uid://v2d8yn65sco" path="res://Main Characters/Mask Dude/Run (32x32).png" id="2_if5l4"]
+[ext_resource type="Texture2D" uid="uid://byitgs6gx1gld" path="res://Bottom Hit (54x52).png" id="3_6hgel"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_if5l4"]
 atlas = ExtResource("1_bnt3e")
@@ -241,6 +242,83 @@ _data = {
 &"runby": SubResource("Animation_6hgel")
 }
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_snau0"]
+atlas = ExtResource("3_6hgel")
+region = Rect2(0, 0, 54, 52)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_x5h54"]
+atlas = ExtResource("3_6hgel")
+region = Rect2(54, 0, 54, 52)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mxl7n"]
+atlas = ExtResource("3_6hgel")
+region = Rect2(108, 0, 54, 52)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_csp18"]
+atlas = ExtResource("3_6hgel")
+region = Rect2(162, 0, 54, 52)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_sy5nq"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_snau0")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_x5h54")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_mxl7n")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_csp18")
+}],
+"loop": true,
+"name": &"default",
+"speed": 10.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_6hgel"]
+size = Vector2(53.5538, 37.2211)
+
+[sub_resource type="Animation" id="Animation_3fj3v"]
+resource_name = "spike LAST ENEMY"
+length = 4.0
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("../AnimatedSprite2D3:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1.96667, 4),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(212, -490), Vector2(650, -490), Vector2(212, -490)]
+}
+
+[sub_resource type="Animation" id="Animation_2xvet"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("../AnimatedSprite2D3:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(212, -490)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_1kexj"]
+_data = {
+&"RESET": SubResource("Animation_2xvet"),
+&"spike LAST ENEMY": SubResource("Animation_3fj3v")
+}
+
 [node name="Node2D" type="Node2D"]
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
@@ -293,3 +371,30 @@ libraries = {
 &"": SubResource("AnimationLibrary_3fj3v")
 }
 autoplay = "runby"
+
+[node name="AnimatedSprite2D3" type="AnimatedSprite2D" parent="."]
+texture_filter = 1
+position = Vector2(212, -490)
+scale = Vector2(0.840277, 0.913462)
+sprite_frames = SubResource("SpriteFrames_sy5nq")
+autoplay = "default"
+frame = 3
+frame_progress = 0.191678
+
+[node name="Area2D17" type="Area2D" parent="AnimatedSprite2D3"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="AnimatedSprite2D3/Area2D17"]
+position = Vector2(0.595032, 3.28424)
+scale = Vector2(1, 1)
+shape = SubResource("RectangleShape2D_6hgel")
+
+[node name="Marker2D3" type="Marker2D" parent="."]
+position = Vector2(650, -490)
+scale = Vector2(1.125, 1.25)
+
+[node name="AnimationPlayer3" type="AnimationPlayer" parent="."]
+root_node = NodePath("../Marker2D3")
+libraries = {
+&"": SubResource("AnimationLibrary_1kexj")
+}
+autoplay = "spike LAST ENEMY"

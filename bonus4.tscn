@@ -1,4 +1,4 @@
-[gd_scene load_steps=47 format=3 uid="uid://bk8is3pw1phpj"]
+[gd_scene load_steps=49 format=3 uid="uid://bk8is3pw1phpj"]
 
 [ext_resource type="Texture2D" uid="uid://dvwf2nulxi0h7" path="res://Main Characters/Pink Man/Pink.png" id="1_ixeeq"]
 [ext_resource type="Texture2D" uid="uid://b6psmtajx6xjj" path="res://Terrain (16x16).png" id="2_v1waf"]
@@ -7,6 +7,7 @@
 [ext_resource type="Texture2D" uid="uid://6ayfq5jnomhy" path="res://Idle.png" id="5_wl6ap"]
 [ext_resource type="Script" uid="uid://38e5l1ybohty" path="res://area_2d_17.gd" id="6_3s0lk"]
 [ext_resource type="PackedScene" uid="uid://duyiverc3nmf2" path="res://enemy30.tscn" id="7_51dox"]
+[ext_resource type="Script" uid="uid://dpyyh4lvi1yhp" path="res://area_2d_17+1.gd" id="8_epr4k"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_eqbgp"]
 texture = ExtResource("2_v1waf")
@@ -415,12 +416,17 @@ size = Vector2(14, 7)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_d734p"]
 size = Vector2(43, 8)
 
+[sub_resource type="CircleShape2D" id="CircleShape2D_5e6ay"]
+radius = 21.095
+
 [node name="Node2D" type="Node2D"]
 
 [node name="TextureRect" type="TextureRect" parent="."]
 texture_filter = 1
-offset_right = 1146.0
-offset_bottom = 640.0
+offset_left = -2.0
+offset_top = 12.0
+offset_right = 1144.0
+offset_bottom = 652.0
 texture = ExtResource("1_ixeeq")
 
 [node name="TileMap" type="TileMap" parent="."]
@@ -584,3 +590,22 @@ shape = SubResource("RectangleShape2D_d734p")
 
 [node name="Node2D" parent="Area2D17" instance=ExtResource("7_51dox")]
 position = Vector2(453, 627)
+
+[node name="Label" type="Label" parent="."]
+offset_left = 2.0
+offset_top = 557.0
+offset_right = 118.0
+offset_bottom = 644.0
+theme_override_colors/font_color = Color(0.639359, 0, 0.220501, 1)
+theme_override_font_sizes/font_size = 30
+text = "END!!!
+"
+
+[node name="Area2D17+1" type="Area2D" parent="."]
+position = Vector2(2, 557)
+script = ExtResource("8_epr4k")
+target_scene_path = null
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D17+1"]
+position = Vector2(22, 13)
+shape = SubResource("CircleShape2D_5e6ay")
