@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=3 uid="uid://dc8l3h3ptrlb2"]
+[gd_scene load_steps=18 format=3 uid="uid://dc8l3h3ptrlb2"]
 
 [ext_resource type="Script" uid="uid://60f1eqpofcwr" path="res://bonus_levels.gd" id="1_3mthd"]
 [ext_resource type="Texture2D" uid="uid://bax0yfo0qu2f7" path="res://Main Characters/Mask Dude/bonus.png" id="1_bn8ah"]
@@ -39,6 +39,12 @@ bg_color = Color(0.30249, 0.481863, 0.26211, 1)
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_dxuho"]
 bg_color = Color(0.490687, 0.667975, 0.193572, 1)
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_20aha"]
+bg_color = Color(0.272909, 0.431466, 0.20792, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_i2ijn"]
+bg_color = Color(0.612123, 0.63192, 0.0922436, 1)
+
 [node name="Node2D" type="Node2D"]
 scale = Vector2(1.00679, 1.00713)
 script = ExtResource("1_3mthd")
@@ -60,10 +66,10 @@ theme_override_font_sizes/font_size = 70
 text = "All bonus levels will be accessible here! "
 
 [node name="Button" type="Button" parent="."]
-offset_left = 32.7774
-offset_top = 193.619
-offset_right = 633.777
-offset_bottom = 291.619
+offset_left = 24.0
+offset_top = 155.0
+offset_right = 445.0
+offset_bottom = 227.0
 theme_override_colors/font_disabled_color = Color(0.589841, 0.0817611, 0.176214, 1)
 theme_override_colors/font_hover_pressed_color = Color(0.606951, 0.0633949, 0.238582, 1)
 theme_override_colors/font_hover_color = Color(0.57531, 0.0405524, 0.230358, 1)
@@ -77,7 +83,7 @@ theme_override_colors/font_outline_color = Color(0.717649, 0, 0.329914, 1)
 theme_override_colors/font_color = Color(0.556366, 0.0666394, 0.27674, 1)
 theme_override_colors/font_focus_color = Color(0.554046, 0.0467257, 0.23845, 1)
 theme_override_colors/font_pressed_color = Color(0.642438, 0, 0.330992, 1)
-theme_override_font_sizes/font_size = 30
+theme_override_font_sizes/font_size = 21
 theme_override_styles/hover = SubResource("StyleBoxFlat_bn8ah")
 theme_override_styles/normal = SubResource("StyleBoxFlat_743da")
 text = "Bonus level1: Cruel summer-Bananarama"
@@ -112,10 +118,10 @@ theme_override_styles/normal = SubResource("StyleBoxFlat_8mx6r")
 text = "Main menu"
 
 [node name="Button3" type="Button" parent="."]
-offset_left = 31.0
-offset_top = 302.0
-offset_right = 634.0
-offset_bottom = 398.0
+offset_left = 23.0
+offset_top = 231.0
+offset_right = 443.0
+offset_bottom = 302.0
 theme_override_colors/font_disabled_color = Color(0.601325, 0.157759, 0.399164, 1)
 theme_override_colors/font_hover_pressed_color = Color(0.779784, 0.171396, 0.396458, 1)
 theme_override_colors/font_hover_color = Color(0.641386, 0.0975449, 0.329431, 1)
@@ -129,16 +135,16 @@ theme_override_colors/font_outline_color = Color(0.529461, 0.122759, 0.219953, 1
 theme_override_colors/font_color = Color(0.644365, 0.109638, 0.284377, 1)
 theme_override_colors/font_focus_color = Color(0.597364, 0.0858135, 0.263061, 1)
 theme_override_colors/font_pressed_color = Color(0.71243, 0, 0.22137, 1)
-theme_override_font_sizes/font_size = 30
+theme_override_font_sizes/font_size = 21
 theme_override_styles/hover = SubResource("StyleBoxFlat_yvtxs")
 theme_override_styles/normal = SubResource("StyleBoxFlat_btwym")
 text = "Bonus level2: Eyes closed- Jisoo & Zayn"
 
 [node name="Button4" type="Button" parent="."]
-offset_left = 30.0
-offset_top = 407.0
-offset_right = 637.0
-offset_bottom = 506.0
+offset_left = 23.0
+offset_top = 308.0
+offset_right = 476.0
+offset_bottom = 374.0
 theme_override_colors/font_disabled_color = Color(0.626857, 0.0597537, 0.445957, 1)
 theme_override_colors/font_hover_pressed_color = Color(0.668688, 0.067355, 0.510604, 1)
 theme_override_colors/font_hover_color = Color(0.639244, 0.0365386, 0.412978, 1)
@@ -152,16 +158,16 @@ theme_override_colors/font_outline_color = Color(0.711947, 0.0845456, 0.484135, 
 theme_override_colors/font_color = Color(0.654164, 0.0642274, 0.410673, 1)
 theme_override_colors/font_focus_color = Color(0.612385, 0.0602615, 0.33175, 1)
 theme_override_colors/font_pressed_color = Color(0.666453, 0.101107, 0.399306, 1)
-theme_override_font_sizes/font_size = 28
+theme_override_font_sizes/font_size = 21
 theme_override_styles/hover = SubResource("StyleBoxFlat_f8h1h")
 theme_override_styles/normal = SubResource("StyleBoxFlat_ga3if")
 text = "Bonus level3: All eyes on me (dropbeat)-Jisoo"
 
 [node name="Button5" type="Button" parent="."]
-offset_left = 30.0
-offset_top = 513.0
-offset_right = 640.0
-offset_bottom = 612.0
+offset_left = 23.0
+offset_top = 379.0
+offset_right = 444.0
+offset_bottom = 449.0
 theme_override_colors/font_disabled_color = Color(0.658544, 0.119284, 0.296627, 1)
 theme_override_colors/font_hover_pressed_color = Color(0.619084, 0.0898345, 0.356977, 1)
 theme_override_colors/font_hover_color = Color(0.658129, 0.0180765, 0.332609, 1)
@@ -175,10 +181,33 @@ theme_override_colors/font_outline_color = Color(0.614347, 0.0699666, 0.307061, 
 theme_override_colors/font_color = Color(0.567545, 0.0750256, 0.23358, 1)
 theme_override_colors/font_focus_color = Color(0.677495, 0.0635105, 0.330783, 1)
 theme_override_colors/font_pressed_color = Color(0.686103, 0.071462, 0.33607, 1)
-theme_override_font_sizes/font_size = 26
+theme_override_font_sizes/font_size = 18
 theme_override_styles/hover = SubResource("StyleBoxFlat_qdowb")
 theme_override_styles/normal = SubResource("StyleBoxFlat_dxuho")
 text = "Bonus level4:  Where is the love- Black eyes peas"
+
+[node name="Button6" type="Button" parent="."]
+offset_left = 24.0
+offset_top = 453.0
+offset_right = 432.0
+offset_bottom = 519.0
+theme_override_colors/font_disabled_color = Color(0.95686, 0.273639, 0.487479, 1)
+theme_override_colors/font_hover_pressed_color = Color(0.852986, 0.197, 0.500929, 1)
+theme_override_colors/font_hover_color = Color(0.81532, 0.137088, 0.406741, 1)
+theme_override_colors/icon_disabled_color = Color(0.855535, 0.159152, 0.441408, 1)
+theme_override_colors/icon_hover_pressed_color = Color(0.828432, 0.232774, 0.407094, 1)
+theme_override_colors/icon_hover_color = Color(0.814315, 0.229802, 0.34537, 1)
+theme_override_colors/icon_pressed_color = Color(0.821955, 0.188621, 0.326775, 1)
+theme_override_colors/icon_focus_color = Color(0.832684, 0.210854, 0.34217, 1)
+theme_override_colors/icon_normal_color = Color(0.811784, 0.174857, 0.388257, 1)
+theme_override_colors/font_outline_color = Color(0.836202, 0.161987, 0.457548, 1)
+theme_override_colors/font_color = Color(0.867877, 0.147386, 0.481555, 1)
+theme_override_colors/font_focus_color = Color(0.814591, 0.150658, 0.428776, 1)
+theme_override_colors/font_pressed_color = Color(0.85541, 0.177086, 0.404477, 1)
+theme_override_font_sizes/font_size = 26
+theme_override_styles/hover = SubResource("StyleBoxFlat_20aha")
+theme_override_styles/normal = SubResource("StyleBoxFlat_i2ijn")
+text = "Bonus level5: Down - Jay Sean"
 
 [connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
 [connection signal="pressed" from="Button2" to="." method="_on_button_2_pressed"]

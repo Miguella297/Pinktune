@@ -1,10 +1,11 @@
-[gd_scene load_steps=56 format=3 uid="uid://8evrihwcg1u8"]
+[gd_scene load_steps=57 format=3 uid="uid://8evrihwcg1u8"]
 
 [ext_resource type="Texture2D" uid="uid://uujg530lhrey" path="res://Green.png" id="1_bciy1"]
 [ext_resource type="Texture2D" uid="uid://b6psmtajx6xjj" path="res://Terrain (16x16).png" id="2_2p32c"]
 [ext_resource type="Texture2D" uid="uid://6ayfq5jnomhy" path="res://Idle.png" id="3_2p32c"]
 [ext_resource type="Script" uid="uid://brw4y73g7av0y" path="res://area_2d_16+1.gd" id="5_wx5nt"]
 [ext_resource type="Script" uid="uid://bct8vfq52t2uv" path="res://area_2d_16+2.gd" id="6_5cwy8"]
+[ext_resource type="Script" uid="uid://c2vlmcgrt62fn" path="res://area_2d_16+3.gd" id="6_mpnws"]
 [ext_resource type="PackedScene" uid="uid://d242ikxry6kci" path="res://character2/character_body_2d.tscn" id="6_wfs64"]
 [ext_resource type="Script" uid="uid://bpgimm3dbyoy0" path="res://character2/character_body_2d.gd" id="7_1gjdm"]
 [ext_resource type="Script" uid="uid://bhu8fx4s56vq5" path="res://area_2d_16+4.gd" id="8_1gjdm"]
@@ -546,6 +547,7 @@ shape = SubResource("RectangleShape2D_5doe2")
 
 [node name="Area2D16+3" type="Area2D" parent="."]
 position = Vector2(-2, 1)
+script = ExtResource("6_mpnws")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D16+3"]
 position = Vector2(336, 413.5)

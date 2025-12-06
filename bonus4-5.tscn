@@ -1,0 +1,109 @@
+[gd_scene load_steps=13 format=3 uid="uid://b1rdwk57lvfpr"]
+
+[ext_resource type="Texture2D" uid="uid://bdo7qff43ptem" path="res://mountain.png" id="1_1mvam"]
+[ext_resource type="Script" uid="uid://gas077ujc6ng" path="res://bonus_4_5.gd" id="1_csvpd"]
+[ext_resource type="Texture2D" uid="uid://dcwgavt41vv5r" path="res://mask man.png" id="2_csvpd"]
+[ext_resource type="Texture2D" uid="uid://4xy6n7or5ke3" path="res://Screenshot 2025-10-24 140148.png" id="3_5ho5a"]
+[ext_resource type="FontFile" uid="uid://3jjdhgn8rpf0" path="res://Mamboe Trial.otf" id="4_5pakb"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_brea7"]
+texture = ExtResource("1_1mvam")
+modulate_color = Color(0.625597, 0.625597, 0.625597, 1)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_3uskm"]
+texture = ExtResource("2_csvpd")
+modulate_color = Color(0.879672, 0, 0.165111, 1)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_v1c4u"]
+texture = ExtResource("3_5ho5a")
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_us4jm"]
+bg_color = Color(0.455195, 0.144045, 0.0738183, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_oep52"]
+bg_color = Color(0.843321, 0.494796, 0.184359, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_8eli1"]
+bg_color = Color(0.294665, 0.701175, 0.321488, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_8nnry"]
+bg_color = Color(0.56164, 0.650456, 1.92523e-07, 1)
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource("1_csvpd")
+
+[node name="Panel" type="Panel" parent="."]
+offset_right = 376.0
+offset_bottom = 641.0
+theme_override_styles/panel = SubResource("StyleBoxTexture_brea7")
+
+[node name="Panel2" type="Panel" parent="."]
+offset_left = 376.0
+offset_right = 782.0
+offset_bottom = 642.0
+theme_override_styles/panel = SubResource("StyleBoxTexture_3uskm")
+
+[node name="Panel3" type="Panel" parent="."]
+offset_left = 782.0
+offset_right = 1153.0
+offset_bottom = 644.0
+theme_override_styles/panel = SubResource("StyleBoxTexture_v1c4u")
+
+[node name="Label" type="Label" parent="."]
+offset_left = 108.0
+offset_top = 111.0
+offset_right = 1063.0
+offset_bottom = 180.0
+theme_override_colors/font_color = Color(0.75163, 0, 0.187808, 1)
+theme_override_fonts/font = ExtResource("4_5pakb")
+theme_override_font_sizes/font_size = 50
+text = "Just kidding! Theres more if you would like!"
+
+[node name="Button" type="Button" parent="."]
+offset_left = 243.0
+offset_top = 228.0
+offset_right = 910.0
+offset_bottom = 388.0
+theme_override_colors/font_disabled_color = Color(0.238918, 0.424406, 0.190506, 1)
+theme_override_colors/font_hover_pressed_color = Color(0.242646, 0.462798, 0.182507, 1)
+theme_override_colors/font_hover_color = Color(0.25069, 0.437615, 0.183163, 1)
+theme_override_colors/icon_disabled_color = Color(0.274145, 0.417575, 0.174201, 1)
+theme_override_colors/icon_hover_pressed_color = Color(0.252432, 0.410176, 0.158386, 1)
+theme_override_colors/icon_hover_color = Color(0.269439, 0.400567, 0.146901, 1)
+theme_override_colors/icon_pressed_color = Color(0.232149, 0.400339, 0.180171, 1)
+theme_override_colors/icon_focus_color = Color(0.239861, 0.435085, 0.178876, 1)
+theme_override_colors/icon_normal_color = Color(0.270322, 0.482188, 0.20524, 1)
+theme_override_colors/font_outline_color = Color(0.271789, 0.46521, 0.232173, 1)
+theme_override_colors/font_color = Color(0.248589, 0.459697, 0.235035, 1)
+theme_override_colors/font_focus_color = Color(0.280248, 0.428899, 0.18316, 1)
+theme_override_colors/font_pressed_color = Color(0.343156, 0.479256, 0.194891, 1)
+theme_override_font_sizes/font_size = 60
+theme_override_styles/hover = SubResource("StyleBoxFlat_us4jm")
+theme_override_styles/normal = SubResource("StyleBoxFlat_oep52")
+text = "KEEP MOVING!"
+
+[node name="Button2" type="Button" parent="."]
+offset_left = 245.0
+offset_top = 414.0
+offset_right = 910.0
+offset_bottom = 574.0
+theme_override_colors/font_disabled_color = Color(0.125523, 0.563132, 0.685338, 1)
+theme_override_colors/font_hover_pressed_color = Color(0.0953354, 0.524423, 0.749396, 1)
+theme_override_colors/font_hover_color = Color(0.117894, 0.544845, 0.71211, 1)
+theme_override_colors/icon_disabled_color = Color(0.124236, 0.579665, 0.742575, 1)
+theme_override_colors/icon_hover_pressed_color = Color(0.0951545, 0.567504, 0.743642, 1)
+theme_override_colors/icon_hover_color = Color(0.11922, 0.62137, 0.811238, 1)
+theme_override_colors/icon_pressed_color = Color(0.165899, 0.598361, 0.770901, 1)
+theme_override_colors/icon_focus_color = Color(0.141966, 0.658836, 0.822614, 1)
+theme_override_colors/icon_normal_color = Color(0.172444, 0.689606, 0.864825, 1)
+theme_override_colors/font_outline_color = Color(0.243847, 0.658177, 0.848615, 1)
+theme_override_colors/font_color = Color(0.316313, 0.722084, 0.901789, 1)
+theme_override_colors/font_focus_color = Color(0.327668, 0.740515, 0.942887, 1)
+theme_override_colors/font_pressed_color = Color(0.244918, 0.606646, 0.824552, 1)
+theme_override_font_sizes/font_size = 60
+theme_override_styles/hover = SubResource("StyleBoxFlat_8eli1")
+theme_override_styles/normal = SubResource("StyleBoxFlat_8nnry")
+text = "STOP MOVING!"
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="Button2" to="." method="_on_button_2_pressed"]

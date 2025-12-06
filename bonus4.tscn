@@ -1,4 +1,4 @@
-[gd_scene load_steps=49 format=3 uid="uid://bk8is3pw1phpj"]
+[gd_scene load_steps=50 format=3 uid="uid://bk8is3pw1phpj"]
 
 [ext_resource type="Texture2D" uid="uid://dvwf2nulxi0h7" path="res://Main Characters/Pink Man/Pink.png" id="1_ixeeq"]
 [ext_resource type="Texture2D" uid="uid://b6psmtajx6xjj" path="res://Terrain (16x16).png" id="2_v1waf"]
@@ -405,14 +405,17 @@ size = Vector2(29, 7)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_qxe8c"]
 size = Vector2(12, 8)
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_v8i4j"]
-size = Vector2(12, 8)
-
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_pv0af"]
 size = Vector2(12.5, 8.5)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_k0yr7"]
 size = Vector2(14, 7)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_d734p"]
+size = Vector2(48.5, 5.5)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_v8i4j"]
+size = Vector2(12, 8)
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_5e6ay"]
 radius = 21.095
@@ -570,10 +573,6 @@ shape = SubResource("RectangleShape2D_pl3sv")
 position = Vector2(8, 204)
 shape = SubResource("RectangleShape2D_qxe8c")
 
-[node name="CollisionShape2D26" type="CollisionShape2D" parent="Area2D17/CollisionShape2D32"]
-position = Vector2(496, 81)
-shape = SubResource("RectangleShape2D_v8i4j")
-
 [node name="CollisionShape2D33" type="CollisionShape2D" parent="Area2D17"]
 position = Vector2(7.75, 332.25)
 shape = SubResource("RectangleShape2D_pv0af")
@@ -582,8 +581,13 @@ shape = SubResource("RectangleShape2D_pv0af")
 position = Vector2(8, 428.5)
 shape = SubResource("RectangleShape2D_k0yr7")
 
-[node name="Node2D" parent="Area2D17" instance=ExtResource("7_51dox")]
-position = Vector2(453, 627)
+[node name="CollisionShape2D26" type="CollisionShape2D" parent="Area2D17"]
+position = Vector2(422.75, 268.75)
+shape = SubResource("RectangleShape2D_d734p")
+
+[node name="CollisionShape2D35" type="CollisionShape2D" parent="Area2D17"]
+position = Vector2(504, 285)
+shape = SubResource("RectangleShape2D_v8i4j")
 
 [node name="Label" type="Label" parent="."]
 offset_left = 2.0
@@ -599,7 +603,7 @@ text = "END!!!
 position = Vector2(2, 557)
 script = ExtResource("8_epr4k")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D17+1"]
+[node name="CollisionShape2D36" type="CollisionShape2D" parent="Area2D17+1"]
 position = Vector2(22, 13)
 shape = SubResource("CircleShape2D_5e6ay")
 
@@ -610,3 +614,6 @@ stream = ExtResource("9_5e6ay")
 volume_db = 24.0
 autoplay = true
 max_distance = 4096.0
+
+[node name="Node2D" parent="." instance=ExtResource("7_51dox")]
+position = Vector2(453, 627)

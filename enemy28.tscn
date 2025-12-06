@@ -442,6 +442,21 @@ animations = [{
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ke0ii"]
 size = Vector2(16.2133, 30.6087)
 
+[sub_resource type="Animation" id="Animation_srfnj"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("../AnimatedSprite2D4:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(214, -176)]
+}
+
 [sub_resource type="Animation" id="Animation_ltp5o"]
 resource_name = "flame"
 length = 2.0
@@ -457,21 +472,6 @@ tracks/0/keys = {
 "transitions": PackedFloat32Array(1, 1, 1),
 "update": 0,
 "values": [Vector2(214, -176), Vector2(249, -176), Vector2(214, -176)]
-}
-
-[sub_resource type="Animation" id="Animation_srfnj"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("../AnimatedSprite2D4:position")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector2(214, -176)]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_2yixd"]
@@ -572,6 +572,21 @@ animations = [{
 "speed": 15.0
 }]
 
+[sub_resource type="Animation" id="Animation_2yixd"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("../AnimatedSprite2D5:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, -351)]
+}
+
 [sub_resource type="Animation" id="Animation_6ys4y"]
 resource_name = "blug"
 length = 3.0
@@ -587,21 +602,6 @@ tracks/0/keys = {
 "transitions": PackedFloat32Array(1, 1, 1),
 "update": 0,
 "values": [Vector2(0, -351), Vector2(60, -351), Vector2(0, -351)]
-}
-
-[sub_resource type="Animation" id="Animation_2yixd"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("../AnimatedSprite2D5:position")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector2(0, -351)]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_m3x3x"]
@@ -688,6 +688,21 @@ animations = [{
 "speed": 20.0
 }]
 
+[sub_resource type="Animation" id="Animation_qy4bb"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("../AnimatedSprite2D6:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(436, -404)]
+}
+
 [sub_resource type="Animation" id="Animation_m3x3x"]
 resource_name = "arrow"
 length = 3.0
@@ -703,21 +718,6 @@ tracks/0/keys = {
 "transitions": PackedFloat32Array(1, 1, 1, 1),
 "update": 0,
 "values": [Vector2(436, -404), Vector2(436, -404), Vector2(815, -404), Vector2(436, -404)]
-}
-
-[sub_resource type="Animation" id="Animation_qy4bb"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("../AnimatedSprite2D6:position")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector2(436, -404)]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_ciwx2"]

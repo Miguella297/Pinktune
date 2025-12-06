@@ -71,6 +71,21 @@ animations = [{
 [sub_resource type="CircleShape2D" id="CircleShape2D_5rcd7"]
 radius = 19.323
 
+[sub_resource type="Animation" id="Animation_if5l4"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("../AnimatedSprite2D:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(2.84217e-14, -1.78814e-07)]
+}
+
 [sub_resource type="Animation" id="Animation_bnt3e"]
 resource_name = "froggy"
 length = 3.0
@@ -86,21 +101,6 @@ tracks/0/keys = {
 "transitions": PackedFloat32Array(1, 1, 1),
 "update": 0,
 "values": [Vector2(2.84217e-14, -1.78814e-07), Vector2(150, 0), Vector2(2.84217e-14, -1.78814e-07)]
-}
-
-[sub_resource type="Animation" id="Animation_if5l4"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("../AnimatedSprite2D:position")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector2(2.84217e-14, -1.78814e-07)]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_6hgel"]
@@ -204,6 +204,21 @@ animations = [{
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_if5l4"]
 size = Vector2(24.2222, 30.4)
 
+[sub_resource type="Animation" id="Animation_fau45"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("../AnimatedSprite2D2:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(610, -19)]
+}
+
 [sub_resource type="Animation" id="Animation_6hgel"]
 resource_name = "runby"
 length = 2.0
@@ -219,21 +234,6 @@ tracks/0/keys = {
 "transitions": PackedFloat32Array(1, 1, 1),
 "update": 0,
 "values": [Vector2(610, -19), Vector2(670, -19), Vector2(610, -19)]
-}
-
-[sub_resource type="Animation" id="Animation_fau45"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("../AnimatedSprite2D2:position")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector2(610, -19)]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_3fj3v"]
@@ -281,6 +281,21 @@ animations = [{
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_6hgel"]
 size = Vector2(53.5538, 37.2211)
 
+[sub_resource type="Animation" id="Animation_2xvet"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("../AnimatedSprite2D3:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(212, -490)]
+}
+
 [sub_resource type="Animation" id="Animation_3fj3v"]
 resource_name = "spike LAST ENEMY"
 length = 4.0
@@ -296,21 +311,6 @@ tracks/0/keys = {
 "transitions": PackedFloat32Array(1, 1, 1),
 "update": 0,
 "values": [Vector2(212, -490), Vector2(650, -490), Vector2(212, -490)]
-}
-
-[sub_resource type="Animation" id="Animation_2xvet"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("../AnimatedSprite2D3:position")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector2(212, -490)]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_1kexj"]
@@ -385,7 +385,6 @@ frame_progress = 0.191678
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="AnimatedSprite2D3/Area2D17"]
 position = Vector2(0.595032, 3.28424)
-scale = Vector2(1, 1)
 shape = SubResource("RectangleShape2D_6hgel")
 
 [node name="Marker2D3" type="Marker2D" parent="."]

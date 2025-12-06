@@ -1,4 +1,4 @@
-[gd_scene load_steps=21 format=3 uid="uid://lkaspcyrx3ht"]
+[gd_scene load_steps=23 format=3 uid="uid://lkaspcyrx3ht"]
 
 [ext_resource type="FontFile" uid="uid://ciu0mwvn6bxab" path="res://Oups_Outline.otf" id="1_0e48y"]
 [ext_resource type="Texture2D" uid="uid://b21mkc35l8la" path="res://Screenshot 2025-10-14 001447.png" id="2_0hol4"]
@@ -29,6 +29,10 @@ func _on_button_3_pressed() -> void:
 
 func _on_button_4_pressed() -> void:
 	get_tree().change_scene_to_file(\"bonus_levels.tscn\")
+
+
+func _on_button_5_pressed() -> void:
+	get_tree().change_scene_to_file(\"Inspirtation.tscn\")
 "
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_kdubu"]
@@ -348,6 +352,12 @@ texture = ExtResource("7_rj586")
 physics_layer_0/collision_layer = 1
 sources/0 = SubResource("TileSetAtlasSource_4d7sh")
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_hqns4"]
+bg_color = Color(0.0580925, 0.228959, 0.300699, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_x0ka3"]
+bg_color = Color(0.347969, 0.820228, 0.944454, 1)
+
 [node name="Main menu" type="Node2D"]
 script = SubResource("GDScript_epypp")
 
@@ -359,10 +369,10 @@ offset_bottom = 651.0
 theme_override_styles/panel = SubResource("StyleBoxTexture_kdubu")
 
 [node name="Button" type="Button" parent="."]
-offset_left = 301.0
-offset_top = 195.0
-offset_right = 827.0
-offset_bottom = 295.0
+offset_left = 298.0
+offset_top = 179.0
+offset_right = 824.0
+offset_bottom = 279.0
 theme_override_colors/font_disabled_color = Color(0.670588, 0, 0, 1)
 theme_override_colors/font_hover_pressed_color = Color(0.605674, 1.31156e-06, 2.88785e-07, 1)
 theme_override_colors/font_hover_color = Color(0.552941, 0, 0, 1)
@@ -393,15 +403,15 @@ text = "PINK TUNE"
 
 [node name="Fall(32x32)" type="Sprite2D" parent="."]
 texture_filter = 1
-position = Vector2(984.25, 461)
+position = Vector2(983, 433)
 scale = Vector2(4.67188, 5.5)
 texture = ExtResource("4_q6r6c")
 
 [node name="Button2" type="Button" parent="."]
-offset_left = 303.0
-offset_top = 309.0
-offset_right = 829.0
-offset_bottom = 415.0
+offset_left = 298.0
+offset_top = 285.0
+offset_right = 824.0
+offset_bottom = 391.0
 theme_override_colors/font_disabled_color = Color(0.67451, 0, 0, 1)
 theme_override_colors/font_hover_pressed_color = Color(0.639216, 0, 0, 1)
 theme_override_colors/font_hover_color = Color(0.603922, 0, 0, 1)
@@ -422,10 +432,10 @@ theme_override_styles/normal = SubResource("StyleBoxFlat_d21ai")
 text = "How to play"
 
 [node name="Button3" type="Button" parent="."]
-offset_left = 303.0
-offset_top = 425.0
-offset_right = 830.0
-offset_bottom = 522.0
+offset_left = 300.0
+offset_top = 395.0
+offset_right = 827.0
+offset_bottom = 492.0
 theme_override_colors/font_disabled_color = Color(0.82881, 2.71939e-06, 5.77569e-07, 1)
 theme_override_colors/font_hover_pressed_color = Color(0.760784, 0, 0, 1)
 theme_override_colors/font_hover_color = Color(0.772549, 0, 0, 1)
@@ -462,10 +472,10 @@ text = "My house -FLO RIDA
 -->> cause we be hitting Florida this Winter"
 
 [node name="Button4" type="Button" parent="."]
-offset_left = 305.0
-offset_top = 530.0
-offset_right = 832.0
-offset_bottom = 625.0
+offset_left = 303.0
+offset_top = 501.0
+offset_right = 830.0
+offset_bottom = 596.0
 theme_override_colors/font_disabled_color = Color(0.828577, 0.0018191, 0.000997077, 1)
 theme_override_colors/font_hover_pressed_color = Color(0.779269, 4.86602e-05, 0.0695227, 1)
 theme_override_colors/font_hover_color = Color(0.75339, 8.90419e-07, 5.77569e-07, 1)
@@ -495,7 +505,32 @@ tile_set = SubResource("TileSet_ir8iy")
 format = 2
 layer_0/tile_data = PackedInt32Array(1048577, 786432, 5, 1048586, 786432, 5, 1114114, 1114112, 1, 1114115, 1179648, 1, 1114116, 1245184, 1, 1114117, 1114112, 1, 1114118, 1179648, 1, 1114119, 1114112, 1, 1114120, 1179648, 1, 1114121, 1245184, 1, 1179649, 1114112, 9, 1179650, 1114112, 2, 1179651, 1179648, 2, 1179652, 1114112, 2, 1179653, 1179648, 2, 1179654, 1245184, 2, 1179655, 1114112, 2, 1179656, 1179648, 2, 1179657, 1245184, 2, 1114113, 1376256, 4, 1114122, 1376256, 4, 1179658, 1114112, 9, 851969, 0, 5, 917505, 0, 5, 983041, 0, 6, 786433, 0, 4, 786434, 65536, 4, 786435, 131072, 4, 786436, 0, 4, 786437, 65536, 4, 786438, 131072, 4, 786439, 0, 4, 786440, 65536, 4, 786442, 131072, 4, 786441, 65536, 4, 851978, 131072, 5, 917514, 131072, 5, 983050, 131072, 6)
 
+[node name="Button5" type="Button" parent="."]
+offset_left = 882.0
+offset_top = 536.0
+offset_right = 1092.0
+offset_bottom = 630.0
+theme_override_colors/font_disabled_color = Color(0.224857, 0.411606, 0.872611, 1)
+theme_override_colors/font_hover_pressed_color = Color(0.263553, 0.396966, 0.88813, 1)
+theme_override_colors/font_hover_color = Color(0.263691, 0.323799, 0.839319, 1)
+theme_override_colors/icon_disabled_color = Color(0.158633, 0.345167, 0.761882, 1)
+theme_override_colors/icon_hover_pressed_color = Color(0.243654, 0.402182, 0.840899, 1)
+theme_override_colors/icon_hover_color = Color(0.265291, 0.370575, 0.83403, 1)
+theme_override_colors/icon_pressed_color = Color(0.206488, 0.334068, 0.809077, 1)
+theme_override_colors/icon_focus_color = Color(0.206488, 0.334068, 0.809077, 1)
+theme_override_colors/icon_normal_color = Color(0.208848, 0.353754, 0.804396, 1)
+theme_override_colors/font_outline_color = Color(0.178629, 0.286528, 0.80071, 1)
+theme_override_colors/font_color = Color(0.229745, 0.346056, 0.85401, 1)
+theme_override_colors/font_focus_color = Color(0.210257, 0.316504, 0.923057, 1)
+theme_override_colors/font_pressed_color = Color(0.214591, 0.238989, 0.826218, 1)
+theme_override_font_sizes/font_size = 21
+theme_override_styles/hover = SubResource("StyleBoxFlat_hqns4")
+theme_override_styles/normal = SubResource("StyleBoxFlat_x0ka3")
+text = "Pinktune 
+Inspiration"
+
 [connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
 [connection signal="pressed" from="Button2" to="." method="_on_button_2_pressed"]
 [connection signal="pressed" from="Button3" to="." method="_on_button_3_pressed"]
 [connection signal="pressed" from="Button4" to="." method="_on_button_4_pressed"]
+[connection signal="pressed" from="Button5" to="." method="_on_button_5_pressed"]

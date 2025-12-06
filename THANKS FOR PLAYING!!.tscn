@@ -270,7 +270,7 @@ theme_override_fonts/font = ExtResource("12_2mu0x")
 theme_override_font_sizes/font_size = 26
 text = "Game developer: Michael Z. I (Miguella297 on Github)
 Game sources: Pixel Adventure pack- Pixel frog.
-Time spent working on Game: 64 hours 44 mins"
+Time spent working on Game: 76  hours 7 mins"
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 texture_filter = 1
