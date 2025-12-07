@@ -90,8 +90,8 @@ text = "Bonus level1: Cruel summer-Bananarama"
 
 [node name="Jump(32x32)" type="Sprite2D" parent="."]
 texture_filter = 1
-position = Vector2(937, 399.5)
-scale = Vector2(7, 6.34375)
+position = Vector2(993.256, 433.906)
+scale = Vector2(6.16937, 5.2508)
 texture = ExtResource("3_743da")
 
 [node name="Button2" type="Button" parent="."]
@@ -190,7 +190,7 @@ text = "Bonus level4:  Where is the love- Black eyes peas"
 offset_left = 24.0
 offset_top = 453.0
 offset_right = 432.0
-offset_bottom = 519.0
+offset_bottom = 513.0
 theme_override_colors/font_disabled_color = Color(0.95686, 0.273639, 0.487479, 1)
 theme_override_colors/font_hover_pressed_color = Color(0.852986, 0.197, 0.500929, 1)
 theme_override_colors/font_hover_color = Color(0.81532, 0.137088, 0.406741, 1)

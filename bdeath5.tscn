@@ -1,3 +1,132 @@
-[gd_scene format=3 uid="uid://7bwjcg5pqdbj"]
+[gd_scene load_steps=16 format=3 uid="uid://7bwjcg5pqdbj"]
+
+[ext_resource type="FontFile" uid="uid://v88n0pcng14y" path="res://Main Characters/Mask Dude/SwirlyCanalope_PERSONAL_USE_ONLY.otf" id="1_hf5pr"]
+[ext_resource type="Script" uid="uid://dmyeucddepkvm" path="res://bdeath_5.gd" id="1_oe7n7"]
+[ext_resource type="Texture2D" uid="uid://c1ys4j14ahiw0" path="res://coolguy.png" id="2_vt2cl"]
+[ext_resource type="Texture2D" uid="uid://cb5m7cxotwiwe" path="res://car.png" id="3_3mykd"]
+[ext_resource type="Texture2D" uid="uid://w78er3s3x6f4" path="res://swirl.png" id="4_3tb80"]
+[ext_resource type="Texture2D" uid="uid://dxtbiq6606h7n" path="res://your time.png" id="5_bkhva"]
+[ext_resource type="AudioStream" uid="uid://d3xxec2q4hk3j" path="res://deathscene5.mp3" id="7_vt2cl"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_0w3u5"]
+texture = ExtResource("2_vt2cl")
+modulate_color = Color(0.610292, 0.305817, 0.0682905, 1)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_j4mbf"]
+texture = ExtResource("3_3mykd")
+modulate_color = Color(0.132566, 0.426193, 0.531403, 1)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_mui00"]
+texture = ExtResource("4_3tb80")
+modulate_color = Color(0.654232, 0.654232, 0.654232, 1)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_3c33f"]
+texture = ExtResource("5_bkhva")
+modulate_color = Color(0.684619, 0.848564, 0.596975, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_y17y4"]
+bg_color = Color(0.160386, 0.282182, 0.105033, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_hf5pr"]
+bg_color = Color(0.486634, 0.66703, 0.248552, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_2clmh"]
+bg_color = Color(0.549418, 0.365732, 0.0666475, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_rnfme"]
+bg_color = Color(0.805453, 0.534664, 0.160278, 1)
 
 [node name="Node2D" type="Node2D"]
+script = ExtResource("1_oe7n7")
+
+[node name="Panel" type="Panel" parent="."]
+offset_right = 580.0
+offset_bottom = 338.0
+theme_override_styles/panel = SubResource("StyleBoxTexture_0w3u5")
+
+[node name="Panel2" type="Panel" parent="."]
+offset_left = 580.0
+offset_top = 1.0
+offset_right = 1152.0
+offset_bottom = 338.0
+theme_override_styles/panel = SubResource("StyleBoxTexture_j4mbf")
+
+[node name="Panel3" type="Panel" parent="."]
+offset_top = 338.0
+offset_right = 578.0
+offset_bottom = 643.0
+theme_override_styles/panel = SubResource("StyleBoxTexture_mui00")
+
+[node name="Panel4" type="Panel" parent="."]
+offset_left = 578.0
+offset_top = 338.0
+offset_right = 1150.0
+offset_bottom = 644.0
+theme_override_styles/panel = SubResource("StyleBoxTexture_3c33f")
+
+[node name="Button" type="Button" parent="."]
+offset_left = 264.0
+offset_top = 236.0
+offset_right = 877.0
+offset_bottom = 382.0
+theme_override_colors/font_disabled_color = Color(0.389408, 0.194699, 0.655968, 1)
+theme_override_colors/font_hover_pressed_color = Color(0.445786, 0.152095, 0.552895, 1)
+theme_override_colors/font_hover_color = Color(0.571036, 0.100661, 0.617919, 1)
+theme_override_colors/icon_disabled_color = Color(0.576683, 0.0680148, 0.545237, 1)
+theme_override_colors/icon_hover_pressed_color = Color(0.624964, 0.100853, 0.486122, 1)
+theme_override_colors/icon_hover_color = Color(0.625078, 0.0360135, 0.538357, 1)
+theme_override_colors/icon_pressed_color = Color(0.61551, 0.0615671, 0.552111, 1)
+theme_override_colors/icon_focus_color = Color(0.626106, 0.0811828, 0.56894, 1)
+theme_override_colors/icon_normal_color = Color(0.571805, 0.0744542, 0.544314, 1)
+theme_override_colors/font_outline_color = Color(0.669143, 0.0936261, 0.483842, 1)
+theme_override_colors/font_color = Color(0.64332, 0.0831581, 0.513463, 1)
+theme_override_colors/font_focus_color = Color(0.651616, 0.0726947, 0.624594, 1)
+theme_override_colors/font_pressed_color = Color(0.631805, 0.0358238, 0.580819, 1)
+theme_override_font_sizes/font_size = 50
+theme_override_styles/hover = SubResource("StyleBoxFlat_y17y4")
+theme_override_styles/normal = SubResource("StyleBoxFlat_hf5pr")
+text = "	Give it another go!"
+
+[node name="Button2" type="Button" parent="."]
+offset_left = 264.0
+offset_top = 394.0
+offset_right = 878.0
+offset_bottom = 537.0
+theme_override_colors/font_disabled_color = Color(0.28582, 0.328916, 0.721644, 1)
+theme_override_colors/font_hover_pressed_color = Color(0.241384, 0.28806, 0.761922, 1)
+theme_override_colors/font_hover_color = Color(0.214846, 0.288755, 0.735949, 1)
+theme_override_colors/icon_disabled_color = Color(0.230847, 0.337301, 0.830628, 1)
+theme_override_colors/icon_hover_pressed_color = Color(0.213581, 0.293164, 0.809508, 1)
+theme_override_colors/icon_hover_color = Color(0.197291, 0.30219, 0.801594, 1)
+theme_override_colors/icon_pressed_color = Color(0.244816, 0.309684, 0.78912, 1)
+theme_override_colors/icon_focus_color = Color(0.239454, 0.35946, 0.943845, 1)
+theme_override_colors/icon_normal_color = Color(0.220211, 0.322518, 0.867732, 1)
+theme_override_colors/font_outline_color = Color(0.231911, 0.348557, 0.847179, 1)
+theme_override_colors/font_color = Color(0.254704, 0.289505, 0.831501, 1)
+theme_override_colors/font_focus_color = Color(0.222588, 0.326378, 0.817393, 1)
+theme_override_colors/font_pressed_color = Color(0.198441, 0.281595, 0.800395, 1)
+theme_override_font_sizes/font_size = 50
+theme_override_styles/hover = SubResource("StyleBoxFlat_2clmh")
+theme_override_styles/normal = SubResource("StyleBoxFlat_rnfme")
+text = "Back to main menu."
+
+[node name="Label" type="Label" parent="."]
+offset_left = 348.0
+offset_top = 94.0
+offset_right = 810.0
+offset_bottom = 203.0
+theme_override_colors/font_color = Color(0.798571, 1.20327e-06, 0.410084, 1)
+theme_override_fonts/font = ExtResource("1_hf5pr")
+theme_override_font_sizes/font_size = 120
+text = "You got this!!"
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+position = Vector2(3315, 3178)
+scale = Vector2(1, 1.00407)
+stream = ExtResource("7_vt2cl")
+volume_db = 24.0
+autoplay = true
+max_distance = 4096.0
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="Button2" to="." method="_on_button_2_pressed"]

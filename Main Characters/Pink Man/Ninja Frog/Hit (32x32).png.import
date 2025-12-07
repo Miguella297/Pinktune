@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b2nqo0fsc2cwm"
-path="res://.godot/imported/Idle (32x32).png-c7aaccf4e2cd38d6b567a70ec8cbe2d8.ctex"
+uid="uid://cgy0tlvgl66mq"
+path="res://.godot/imported/Hit (32x32).png-1fd2bce5b9b4d31c1fc3f92e7d2f6063.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Main Characters/Ninja Frog/Idle (32x32).png"
-dest_files=["res://.godot/imported/Idle (32x32).png-c7aaccf4e2cd38d6b567a70ec8cbe2d8.ctex"]
+source_file="res://Main Characters/Pink Man/Ninja Frog/Hit (32x32).png"
+dest_files=["res://.godot/imported/Hit (32x32).png-1fd2bce5b9b4d31c1fc3f92e7d2f6063.ctex"]
 
 [params]
 

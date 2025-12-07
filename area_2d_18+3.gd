@@ -1,4 +1,4 @@
-extends Area2D
+extends Area2D 
 
 # Path to the new scene you want to load
 @export var target_scene_path : String = "res://bdeath5.tscn"
@@ -6,9 +6,9 @@ extends Area2D
 func _ready():
 	# Connect the signal (if not already connected in the editor)
 	connect("body_entered", _on_body_entered)
-	
+
 func _on_body_entered(body):
-	# Check if the body is in your player (assuming its a Kinematicbody2D or a Characterbody2D)
+	# Check if the body is in your player (assuming its a Characterbody2D or a Kinematicbody2D)
 	
 	if body.is_in_group("player"):
 		call_deferred("_fix")

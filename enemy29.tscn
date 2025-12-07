@@ -1,6 +1,6 @@
 [gd_scene load_steps=19 format=3 uid="uid://dshxeoxnt47t7"]
 
-[ext_resource type="Texture2D" uid="uid://b2nqo0fsc2cwm" path="res://Main Characters/Ninja Frog/Idle (32x32).png" id="1_631id"]
+[ext_resource type="Texture2D" uid="uid://b2nqo0fsc2cwm" path="res://Main Characters/Pink Man/Ninja Frog/Idle (32x32).png" id="1_631id"]
 [ext_resource type="Script" uid="uid://d0nksv15vb8of" path="res://area_2d_16+18.gd" id="2_8fgo5"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_oalvc"]

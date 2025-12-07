@@ -1,7 +1,7 @@
 extends Area2D
 
 # Path to the new scene you want to load
-@export var target_scene_path : String = "res://bonus5-6.tscn"
+@export var target_scene_path : String = "res://greatjob.tscn"
 
 func _ready():
 	# Connect the signal (if not already connected in the editor)

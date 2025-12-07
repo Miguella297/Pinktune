@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bmc0n3ggdcmop"
-path="res://.godot/imported/Fall (32x32).png-42de7504513f0d71aa74a11ac61254c3.ctex"
+uid="uid://b2nqo0fsc2cwm"
+path="res://.godot/imported/Idle (32x32).png-3ba3ddf30dffd8b5043985ac20ddd514.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Main Characters/Ninja Frog/Fall (32x32).png"
-dest_files=["res://.godot/imported/Fall (32x32).png-42de7504513f0d71aa74a11ac61254c3.ctex"]
+source_file="res://Main Characters/Pink Man/Ninja Frog/Idle (32x32).png"
+dest_files=["res://.godot/imported/Idle (32x32).png-3ba3ddf30dffd8b5043985ac20ddd514.ctex"]
 
 [params]
 

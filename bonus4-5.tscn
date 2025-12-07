@@ -1,10 +1,11 @@
-[gd_scene load_steps=13 format=3 uid="uid://b1rdwk57lvfpr"]
+[gd_scene load_steps=14 format=3 uid="uid://b1rdwk57lvfpr"]
 
 [ext_resource type="Texture2D" uid="uid://bdo7qff43ptem" path="res://mountain.png" id="1_1mvam"]
 [ext_resource type="Script" uid="uid://gas077ujc6ng" path="res://bonus_4_5.gd" id="1_csvpd"]
 [ext_resource type="Texture2D" uid="uid://dcwgavt41vv5r" path="res://mask man.png" id="2_csvpd"]
 [ext_resource type="Texture2D" uid="uid://4xy6n7or5ke3" path="res://Screenshot 2025-10-24 140148.png" id="3_5ho5a"]
 [ext_resource type="FontFile" uid="uid://3jjdhgn8rpf0" path="res://Mamboe Trial.otf" id="4_5pakb"]
+[ext_resource type="AudioStream" uid="uid://b0wesgxlknuh" path="res://level4-5.mp3" id="6_5ho5a"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_brea7"]
 texture = ExtResource("1_1mvam")
@@ -104,6 +105,14 @@ theme_override_font_sizes/font_size = 60
 theme_override_styles/hover = SubResource("StyleBoxFlat_8eli1")
 theme_override_styles/normal = SubResource("StyleBoxFlat_8nnry")
 text = "STOP MOVING!"
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+position = Vector2(3051, 2784)
+scale = Vector2(1, 1.00407)
+stream = ExtResource("6_5ho5a")
+volume_db = 24.0
+autoplay = true
+max_distance = 4096.0
 
 [connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
 [connection signal="pressed" from="Button2" to="." method="_on_button_2_pressed"]

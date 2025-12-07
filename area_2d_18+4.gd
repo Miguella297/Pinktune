@@ -4,9 +4,9 @@ extends Area2D
 @export var target_scene_path : String = "res://bdeath5.tscn"
 
 func _ready():
-	 # Connect thw signal (if not already connected in the editor)
+	# Connect the signal (if not already connected in the editor)
 	connect("body_entered", _on_body_entered)
-	
+
 func _on_body_entered(body):
 	# Check if the body is in your player (assuming its a Kinematicbody2D or a Characterbody2D)
 	

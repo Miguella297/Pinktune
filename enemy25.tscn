@@ -1,6 +1,6 @@
 [gd_scene load_steps=57 format=3 uid="uid://87gcihkhxdpy"]
 
-[ext_resource type="Texture2D" uid="uid://b2nqo0fsc2cwm" path="res://Main Characters/Ninja Frog/Idle (32x32).png" id="1_5506q"]
+[ext_resource type="Texture2D" uid="uid://b2nqo0fsc2cwm" path="res://Main Characters/Pink Man/Ninja Frog/Idle (32x32).png" id="1_5506q"]
 [ext_resource type="Script" uid="uid://yiwyx2momfq0" path="res://area_2d_15+3.gd" id="2_3utkl"]
 [ext_resource type="Texture2D" uid="uid://v2d8yn65sco" path="res://Main Characters/Mask Dude/Run (32x32).png" id="2_l7kpc"]
 [ext_resource type="Texture2D" uid="uid://ck4lwfj0vso1c" path="res://Blink (54x52).png" id="4_gag2q"]
